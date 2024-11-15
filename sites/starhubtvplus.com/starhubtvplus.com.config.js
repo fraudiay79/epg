@@ -7,29 +7,8 @@ const SESSION_KEY = '01G2QG0N3RWDNCBA1S5MK1MD2K17CE4431A2'
 module.exports = {
   site: 'starhubtvplus.com',
   days: 2,
-  request: {
-    headers: {
-      'x-application-key': APP_KEY,
-      'x-application-session': SESSION_KEY
-    },
-    cache: {
-      ttl: 60 * 60 * 1000 // 1h
-    }
-  },
-  url: function ({ date }) {
-    const variables = JSON.stringify({
-      category: '',
-      dateFrom: date.format('YYYY-MM-DD'),
-      dateTo: date.add(1, 'd').format('YYYY-MM-DD')
-    })
-    const query =
-      'query webFilteredEpg($category: String, $dateFrom: DateWithoutTime, $dateTo: DateWithoutTime!) { nagraEpg(category: $category) { items { id: tvChannel image name: longName programs: programsByDate(dateFrom: $dateFrom, dateTo: $dateTo) { id title description Categories startTime endTime }}}}'
-
-    const params = `operationName=webFilteredEpg&variables=${encodeURIComponent(
-      variables
-    )}&query=${encodeURIComponent(query)}`
-
-    return `https://api.starhubtvplus.com/epg?${params}`
+  url: function ({ date, channel }) {
+    return `https://waf-starhub-metadata-api-p001.ifs.vubiquity.com/v3.1/epg/schedules?locale=en_US&locale_default=en_US&device=1&in_channel_id=${channel.site_id}&gt_end=${date.unix()}&lt_start=${date.add(1, 'd').unix()}&limit=100&page=1`
   },
   parser: function ({ content, channel }) {
     let programs = []
@@ -38,7 +17,6 @@ module.exports = {
       programs.push({
         title: item.title,
         description: item.description,
-        category: item.Categories,
         start: parseStart(item),
         stop: parseStop(item)
       })
@@ -49,38 +27,29 @@ module.exports = {
   async channels() {
     const items = await axios
       .get(
-        'https://api.starhubtvplus.com/epg?operationName=webFilteredEpg&variables=%7B%22category%22%3A%22%22,%22dateFrom%22%3A%222022-05-10%22,%22dateTo%22%3A%222022-05-11%22%7D&query=query%20webFilteredEpg(%24category%3A%20String)%20%7B%20nagraEpg(category%3A%20%24category)%20%7B%20items%20%7B%20id%3A%20tvChannel%20image%20name%3A%20longName%20%7D%7D%7D',
-        {
-          headers: {
-            'x-application-key': APP_KEY,
-            'x-application-session': SESSION_KEY
-          }
-        }
+        'https://waf-starhub-metadata-api-p001.ifs.vubiquity.com/v3.1/epg/channels?locale=en_US&locale_default=en_US&device=1&limit=200&page=1',
       )
-      .then(r => r.data.data.nagraEpg.items)
+      .then(r => r.data.resources)
       .catch(console.log)
 
     return items.map(item => ({
       lang: 'en',
       site_id: item.id,
-      name: item.name.replace('_DASH', '')
+      name: item.title.replace('_DASH', ''),
+      logo: item.pictures[0] ? item.pictures[0].url : null
     }))
   }
 }
 
 function parseStart(item) {
-  return dayjs(item.startTime)
+  return dayjs.unix(item.start)
 }
 
 function parseStop(item) {
-  return dayjs(item.endTime)
+  return dayjs.unix(item.end)
 }
 
 function parseItems(content, channel) {
   const data = JSON.parse(content)
-  if (!data || !data.data || !data.data.nagraEpg || !Array.isArray(data.data.nagraEpg.items))
-    return []
-  const ch = data.data.nagraEpg.items.find(ch => ch.id == channel.site_id)
-
-  return ch && Array.isArray(ch.programs) ? ch.programs : []
+  return data.resources ? data.resources : []
 }
