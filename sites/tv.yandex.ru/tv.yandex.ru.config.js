@@ -2,19 +2,34 @@ const dayjs = require('dayjs')
 const debug = require('debug')('site:tv.yandex.ru')
 
 // enable to fetch guide description but its take a longer time
-const detailedGuide = true
+const detailedGuide = false
 
 // update this data by heading to https://tv.yandex.ru and change the values accordingly
 const cookies = {
-  yuidss: '2832850201715994330',
+  yuidss: '3287112741663001154',
+  _ym_uid: '1680528827297031136',
+  ymex: '1746653392.yrts.1715117392',
+  amcuid: '8207217321716070866',
+  _ym_isad: '1',
+  L: 'dhNbVlhAeQVqA3xrV3sMc2cAAUBlVHJ2OgQmWlRJWgwneisKAgM=.1716071063.15737.366088.860776fd6946ff6a0381528a8fc1ef7b',
+  yandex_login: 'nphne-mgw5jxke',
+  gdpr: '0',
   is_gdpr: '0',
-  is_gdpr_b: 'CIKREhDM/AE=',
-  i: 'a4pvyrQJNZhPbBe3ohQgb//ebZCIFVdQK/vEN28FvQTF1Ssqetwt1zp8cC4h5pAeWW4mlMJB2RQLd1+ymw/nWOVb8vM=',
-  bh: 'EigiTm90LUEuQnJhbmQiO3Y9Ijk5IiwgIkNocm9taXVtIjt2PSIxMjQiKgI/MToJIkFuZHJvaWQiYJDYsLUGah7cyqXsBs+fnO8Liv/v6wP8ua//B9/978cM5bXNhwg=',
-  yandexuid: '2832850201715994330',
-  yashr: '326716401715994330',
-  amcuid: '3768111411721627144',
-  user_display: 696
+  is_gdpr_b: 'CO26fhDP/QEoAg==',
+  yp: '2031826771.pcs.0#2031431063.udn.cDpNZXN1dCBHb2toYW4%3D#1717071254.szm.1%3A1920x1080%3A1903x911#1719144856.hdrc.0#1721650769.atds.1',
+  Session_id: '3:1727283954.5.0.1716071063242:5fKUWw:2f.1.2:1|1982016303.0.0.3:1716071063|3:10295807.51217.mwSwUAnPtgZeKnds1FLpl2gjIR0',
+  sessar: '1.1194.CiAv079mTgmaiBMwRsUm8tB4oUfD0sSoiTmpzmAyEIgalw.eRWi_5AxuuZJifFOxkMu_sSoJFygkWr5L-XkjEFSZP0',
+  sessionid2: '3:1727283954.5.0.1716071063242:5fKUWw:2f.1.2:1|1982016303.0.0.3:1716071063|3:10295807.51217.fakesign0000000000000000000',
+  _ym_d: '1716466454',
+  i: 'paRCMOlTxFXWBHQAXTGkWEiSieg5KdAsvZORuPGsSJS2YQGH4j2NEnHhvrGsqt+obIMaCbOYRo4fcn33GvW6DdOb0JU=',
+  bh: 'EkEiQ2hyb21pdW0iO3Y9IjEzMCIsICJHb29nbGUgQ2hyb21lIjt2PSIxMzAiLCAiTm90P0FfQnJhbmQiO3Y9Ijk5IioCPzA6CSJXaW5kb3dzImDWxei5Bmoe3Mrh/wiS2KGxA5/P4eoD+/rw5w3r//32D6fIzIcI',
+  _yasc: '51D8YjmhIY7anJEHdPvTg1Zbli3ByHkQHYEM3MJbQ4UekVRLKPIGGMuRKjh+gtOoN7FdnO4=',
+  _ym_visorc: '1',
+  tvoid: '1',
+  bltsr: '1',
+  yandexuid: '3287112741663001154',
+  yashr: '6879724121729042210',
+  user_display: 1070
 }
 const headers = {
   'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 OPR/104.0.0.0',
