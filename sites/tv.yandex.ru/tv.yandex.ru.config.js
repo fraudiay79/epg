@@ -2,19 +2,19 @@ const dayjs = require('dayjs')
 const debug = require('debug')('site:tv.yandex.ru')
 
 // enable to fetch guide description but its take a longer time
-const detailedGuide = true
+const detailedGuide = false
 
 // update this data by heading to https://tv.yandex.ru and change the values accordingly
 const cookies = {
-  yuidss: '2832850201715994330',
+  yuidss: '3287112741663001154',
   is_gdpr: '0',
-  is_gdpr_b: 'CIKREhDM/AE=',
-  i: 'a4pvyrQJNZhPbBe3ohQgb//ebZCIFVdQK/vEN28FvQTF1Ssqetwt1zp8cC4h5pAeWW4mlMJB2RQLd1+ymw/nWOVb8vM=',
-  bh: 'EigiTm90LUEuQnJhbmQiO3Y9Ijk5IiwgIkNocm9taXVtIjt2PSIxMjQiKgI/MToJIkFuZHJvaWQiYJDYsLUGah7cyqXsBs+fnO8Liv/v6wP8ua//B9/978cM5bXNhwg=',
-  yandexuid: '2832850201715994330',
-  yashr: '326716401715994330',
-  amcuid: '3768111411721627144',
-  user_display: 696
+  is_gdpr_b: 'CO26fhDP/QEoAg==',
+  i: 'paRCMOlTxFXWBHQAXTGkWEiSieg5KdAsvZORuPGsSJS2YQGH4j2NEnHhvrGsqt+obIMaCbOYRo4fcn33GvW6DdOb0JU=',
+  bh: 'EkEiQ2hyb21pdW0iO3Y9IjEzMCIsICJHb29nbGUgQ2hyb21lIjt2PSIxMzAiLCAiTm90P0FfQnJhbmQiO3Y9Ijk5IioCPzA6CSJXaW5kb3dzImCI0+i5Bmoe3Mrh/wiS2KGxA5/P4eoD+/rw5w3r//32D6fIzIcI',
+  yandexuid: '3287112741663001154',
+  yashr: '6879724121729042210',
+  amcuid: '8207217321716070866',
+  user_display: 1920
 }
 const headers = {
   'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 OPR/104.0.0.0',
