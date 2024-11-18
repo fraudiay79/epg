@@ -16,11 +16,11 @@ module.exports = {
     const items = parseItems(content, channel)
     items.forEach(item => {
       if (!item.metaInfo) return
-      const start = dayjs(item.scheduleInfo.start)
-      const stop = start.add(item.scheduleInfo.duration, 'm')
+      const start = dayjs(item.programs.scheduleInfo.start)
+      const stop = start.add(item.programs.scheduleInfo.duration, 'm')
       programs.push({
-        title: item.metaInfo.title,
-        description: item.metaInfo.description,
+        title: item.programs.metaInfo.title,
+        description: item.programs.metaInfo.description,
         start,
         stop
       })
@@ -38,8 +38,8 @@ module.exports = {
     return data.channels.map(item => {
       return {
         lang: 'kk',
-        site_id: item.id,
-        name: item.info.metaInfo.title
+        site_id: item.channels.id,
+        name: item.channels.info.metaInfo.title
       }
     })
   }
