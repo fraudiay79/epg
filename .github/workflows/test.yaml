@@ -24,7 +24,7 @@ jobs:
     - name: npm grab epg
       run: |
           npm install
-          npm run grab -- --site=tv.yandex.ru --maxConnections=20 --output=guides/tv.yandex.ru.xml --days=2 --timeout=90000
+          npm run grab -- --site=tv.yandex.ru --maxConnections=20 --gzip --output=guides/tv.yandex.ru.xml --days=2 --timeout=90000
    
     - name: Commit changes
       run: |
