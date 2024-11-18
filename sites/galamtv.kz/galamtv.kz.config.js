@@ -37,7 +37,7 @@ module.exports = {
 
     return data.channels.map(item => {
       return {
-        lang: 'ru',
+        lang: 'kk',
         site_id: item.id,
         name: item.metaInfo.title
       }
