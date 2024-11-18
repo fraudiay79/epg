@@ -11,7 +11,7 @@ module.exports = {
   url({ channel }) {
     return `https://api.stod2.is/dagskra/api/${channel.site_id}`
   },
-  parser({ content }) {
+  parser({ content, channel }) {
     let programs = []
     const items = parseItems(content, channel)
     items.forEach(item => {
@@ -44,7 +44,7 @@ module.exports = {
   }
 }
   
-function parseItems(content) {
+function parseItems(content, channel) {
   const data = JSON.parse(content)
   if (!Array.isArray(data)) return []
 
