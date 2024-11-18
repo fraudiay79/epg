@@ -45,7 +45,7 @@ module.exports = {
 }
   
 function parseItems(content, channel) {
-  const data = JSON.parse(content)
+  const data = JSON.parse(content, channel)
 
   return data
 }
