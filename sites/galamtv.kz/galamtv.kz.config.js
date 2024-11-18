@@ -11,18 +11,15 @@ module.exports = {
   url({ channel }) {
     return `https://galam.server-api.lfstrm.tv/channels/${channel.site_id}/programs?app.version=3.3.7`
   },
-  parser({ content, channel }) {
+  parser: function ({ content }) {
     let programs = []
-    const items = parseItems(content, channel)
+    const items = parseItems(content)
     items.forEach(item => {
-      if (!item.metaInfo) return
-      const start = dayjs(item.programs.scheduleInfo.start)
-      const stop = start.add(item.programs.scheduleInfo.duration, 'm')
       programs.push({
-        title: item.programs.metaInfo.title,
-        description: item.programs.metaInfo.description,
-        start,
-        stop
+        title: item.title,
+        description: item.description,
+        start: parseStart(item),
+        stop: parseStop(item)
       })
     })
 
