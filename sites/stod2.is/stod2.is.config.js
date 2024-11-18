@@ -46,7 +46,6 @@ module.exports = {
   
 function parseItems(content, channel) {
   const data = JSON.parse(content)
-  if (!Array.isArray(data)) return []
 
   return data
 }
