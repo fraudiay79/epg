@@ -11,7 +11,7 @@ module.exports = {
   url({ channel }) {
     return `https://api.stod2.is/dagskra/api/${channel.site_id}`
   },
-  parser({ content, channel }) {
+  parser({ content }) {
     let programs = []
     const items = parseItems(content, channel)
     items.forEach(item => {
@@ -29,26 +29,52 @@ module.exports = {
 
     return programs
   },
-  async channels() {
-    const axios = require('axios')
+  async channels({ channel }) {
+    const paths = {
+      ad: 'beint',
+      bf: 'besta01',
+      bi: 'besta02',
+      bj: 'besta03',
+      bl: 'bio',
+      cd: 'esport',
+      sp5: 'golfstodin',
+      cg: 'pepsimax',
+      sp1: 'sport',
+      sp2: 'sport2',
+      sp3: 'sport3',
+      sp4: 'sport4',
+      sp6: 'sport6',
+      st2: 'stod2',
+      st3: 'stod3',
+      vsp: 'vodasport'
+    }
+
+    let channels = []
+    const path = paths[channel]
+    const url = `https://api.stod2.is/dagskra/api/${path}`
     const data = await axios
-      .get(`https://api.stod2.is/dagskra/api`)
+      .get(url)
       .then(r => r.data)
       .catch(console.log)
 
-    return data.channels.map(item => {
-      return {
+    data.channels.forEach(channel => {
+      const site_id = channel === 'st2' ? `#${channel.id}` : `${channel}#${channel.id}`
+
+      if (channel.name === '.') return
+
+      channels.push({
         lang: 'is',
-        site_id: item.id
-      }
+        site_id,
+        name: channel.name
+      })
     })
+
+    return channels
   }
-}
 
-function parseItems(content, channel) {
+function parseItems(content) {
   const data = JSON.parse(content)
-  if (!data || !Array.isArray(data.channels)) return []
-  const channelData = data.channels.find(i => i.id === channel.site_id)
+  if (!Array.isArray(data)) return []
 
-  return channelData && Array.isArray(channelData.events) ? channelData.events : []
+  return data
 }
