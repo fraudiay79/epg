@@ -39,7 +39,7 @@ module.exports = {
       return {
         lang: 'kk',
         site_id: item.id,
-        name: item.metaInfo.title
+        name: item.info.metaInfo.title
       }
     })
   }
