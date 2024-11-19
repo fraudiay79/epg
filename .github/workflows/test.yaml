@@ -24,13 +24,13 @@ jobs:
     - name: npm grab epg
       run: |
           npm install
-          npm run channels:parse -- --config=./sites/tv.magenta.mk/tv.magenta.mk.config.js --output=./sites/tv.magenta.mk/tv.magenta.mk.channels.xml
-          #npm run grab -- --site=yes.co.il --maxConnections=20 --gzip --output=guides/yes.co.il.xml --days=2 --timeout=90000
+          #npm run channels:parse -- --config=./sites/tv.magenta.mk/tv.magenta.mk.config.js --output=./sites/tv.magenta.mk/tv.magenta.mk.channels.xml
+          npm run grab -- --site=tv.magenta.mk --maxConnections=20 --gzip --output=guides/tv.magenta.mk.xml --days=2 --timeout=90000
    
     - name: Commit changes
       run: |
         git config --local user.email "your-email@example.com"
         git config --local user.name "Your Name"
-        git add -f guides/tv.magenta.mk.channels.xml
+        git add -f guides/tv.magenta.mk.gz
         git commit -m "Update xml"
         git push
