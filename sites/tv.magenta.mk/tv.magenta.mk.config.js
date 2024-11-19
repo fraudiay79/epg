@@ -24,7 +24,7 @@ module.exports = {
   url: function ({ channel, date }) {
     return `${API_ENDPOINT}/epg/channel/schedules/v2?station_ids=${
       channel.site_id
-    }&date=${date.format('YYYY-MM-DD')}&hour_offset=${date.format('H')}&hour_range=3&natco_code=at`
+    }&date=${date.format('YYYY-MM-DD')}&hour_offset=${date.format('H')}&hour_range=3&natco_code=mk`
   },
   async parser({ content, channel, date }) {
     let programs = []
@@ -37,7 +37,7 @@ module.exports = {
       axios.get(
         `${API_ENDPOINT}/epg/channel/schedules/v2?station_ids=${channel.site_id}&date=${date.format(
           'YYYY-MM-DD'
-        )}&hour_offset=${i}&hour_range=3&natco_code=at`,
+        )}&hour_offset=${i}&hour_range=3&natco_code=mk`,
         { headers }
       )
     )
@@ -76,7 +76,7 @@ module.exports = {
   },
   async channels() {
     const data = await axios
-      .get(`${API_ENDPOINT}/epg/channel?natco_code=at`, { headers })
+      .get(`${API_ENDPOINT}/epg/channel?natco_code=mk`, { headers })
       .then(r => r.data)
       .catch(console.log)
 
@@ -92,7 +92,7 @@ module.exports = {
 
 async function loadProgramDetails(item) {
   if (!item.program_id) return {}
-  const url = `${API_ENDPOINT}/details/series/${item.program_id}?natco_code=at`
+  const url = `${API_ENDPOINT}/details/series/${item.program_id}?natco_code=mk`
   const data = await axios
     .get(url, { headers })
     .then(r => r.data)
