@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <channels>
-  <channel site="tv.magenta.mk" lang="mk" xmltv_id="" site_id="206964776235">ProSieben HD</channel>
-  <channel site="tv.magenta.mk" lang="mk" xmltv_id="" site_id="206965800213">Kabel Eins HD</channel>
-  <channel site="tv.magenta.mk" lang="mk" xmltv_id="" site_id="206966312315">Laola1.TV HD</channel>
-  <channel site="tv.magenta.mk" lang="mk" xmltv_id="" site_id="206966823998">SWR HD</channel>
-  <channel site="tv.magenta.mk" lang="mk" xmltv_id="" site_id="206966824037">SR HD</channel>
-  <channel site="tv.magenta.mk" lang="mk" xmltv_id="" site_id="206966824059">Nickelodeon HD</channel>
-  <channel site="tv.magenta.mk" lang="mk" xmltv_id="" site_id="206967847966">QVC 2 HD</channel>
-  <channel site="tv.magenta.mk" lang="mk" xmltv_id="" site_id="206967848295">Hitradio OE3 HD</channel>
+  <channel site="tv.magenta.mk" lang="mk" xmltv_id="" site_id="19122">МРТ 1</channel>
+  <channel site="tv.magenta.mk" lang="mk" xmltv_id="" site_id="19308">СИТЕЛ</channel>
+  <channel site="tv.magenta.mk" lang="mk" xmltv_id="" site_id="19287">Канал 5</channel>
+  <channel site="tv.magenta.mk" lang="mk" xmltv_id="" site_id="19146">АЛФА</channel>
+  <channel site="tv.magenta.mk" lang="mk" xmltv_id="" site_id="19342">ТЕЛМА</channel>
+  <channel site="tv.magenta.mk" lang="mk" xmltv_id="" site_id="19114">Инфо Канал</channel>
+  <channel site="tv.magenta.mk" lang="mk" xmltv_id="" site_id="19218">ТВ 24</channel>
+  <channel site="tv.magenta.mk" lang="mk" xmltv_id="" site_id="19334">НАША</channel>
 </channels>
