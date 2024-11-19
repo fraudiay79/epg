@@ -8,9 +8,6 @@ module.exports = {
       'User-Agent':
         'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'
     }
-    cache: {
-      ttl: 60 * 60 * 1000 // 1 hour
-    }
   },
   url({ date }) {
     return `https://www.yes.co.il/o/yes/servletlinearsched/getscheduale?startdate=${date.format('YYYYMMDD')}&p_auth=bHTQLx7d`
