@@ -10,7 +10,7 @@ module.exports = {
     }
   },
   url({ date }) {
-    return `https://www.yes.co.il/o/yes/servletlinearsched/getscheduale?startdate=${date.format('YYYYMMDD')}&p_auth=bHTQLx7d`
+    return `https://www.yes.co.il/o/yes/servletlinearsched/getscheduale?startdate=${date.format('YYYYMMDD')}&p_auth=up5a3CxI`
   },
   parser({ content, channel }) {
     let programs = []
@@ -32,7 +32,7 @@ module.exports = {
   async channels() {
     const axios = require('axios')
     const data = await axios
-      .get(`https://www.yes.co.il/o/yes/servletlinearsched/getchannels?p_auth=bHTQLx7d`)
+      .get(`https://www.yes.co.il/o/yes/servletlinearsched/getchannels?p_auth=up5a3CxI`)
       .then(r => r.data)
       .catch(console.log)
 
