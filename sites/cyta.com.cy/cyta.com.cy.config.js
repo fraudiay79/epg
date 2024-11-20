@@ -18,15 +18,15 @@ module.exports = {
   url({ channel, date }) {
     return `https://epg.cyta.com.cy/api/mediacatalog/fetchEpg?startTimeEpoch=${date.unix()}&endTimeEpoch=${date.add(1, 'd').unix()}&language=0&channelIds=${channel.site_id}`
   },
-  parser: function ({ content }) {
+  parser: function ({ content, channel }) {
     let programs = []
-    const items = parseItems(content)
+    const items = parseItems(content, channel)
     if (!items.length == 0) {
       items.forEach(item => {
-        const start = dayjs.utc(item.startTime)
-        const stop = dayjs.utc(item.endTime)
+        const start = dayjs.utc(item.epgPlayables.startTime)
+        const stop = dayjs.utc(item.epgPlayables.endTime)
         programs.push({
-          title: item.name,
+          title: item.epgPlayables.name,
           start,
           stop
         })
