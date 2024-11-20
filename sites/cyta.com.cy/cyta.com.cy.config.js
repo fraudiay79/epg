@@ -19,7 +19,7 @@ module.exports = {
     return `https://epg.cyta.com.cy/api/mediacatalog/fetchEpg?startTimeEpoch=${date.unix()}&endTimeEpoch=${date.add(1, 'd').unix()}&language=0&channelIds=${channel.site_id}`
   },
   parser: function ({ content, channel }) {
-    let programs = []
+    const programs = []
     const items = parseItems(content, channel)
     items.forEach(item => {
       programs.push({
