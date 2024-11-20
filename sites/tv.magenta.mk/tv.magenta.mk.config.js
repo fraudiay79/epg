@@ -22,9 +22,7 @@ module.exports = {
     }
   },
   url: function ({ channel, date }) {
-    return `${API_ENDPOINT}/epg/channel/schedules/v2?station_ids=${
-      channel.site_id
-    }&date=${date.format('YYYY-MM-DD')}&hour_offset=${date.format('H')}&hour_range=3&natco_code=mk`
+    return `${API_ENDPOINT}/epg/channel/schedules/v2?date=${date.format('YYYY-MM-DD')}&hour_offset=${date.format('H')}&hour_range=3&filler=true&station_ids=${channel.site_id}&app_language=mk&natco_code=mk`
   },
   async parser({ content, channel, date }) {
     let programs = []
@@ -62,9 +60,6 @@ module.exports = {
         date: parseDate(item),
         category: parseCategory(item),
         image: detail.poster_image_url,
-        actors: parseRoles(detail, 'Schauspieler'),
-        directors: parseRoles(detail, 'Regisseur'),
-        producers: parseRoles(detail, 'Produzent'),
         season: parseSeason(item),
         episode: parseEpisode(item),
         start: parseStart(item),
@@ -82,7 +77,7 @@ module.exports = {
 
     return data.channels.map(item => {
       return {
-        lang: 'de',
+        lang: 'mk',
         site_id: item.station_id,
         name: item.title
       }
@@ -126,13 +121,13 @@ function parseCategory(item) {
 }
 
 function parseSeason(item) {
-  if (item.season_display_number === 'Folgen') return null
+  if (item.season_display_number === '.') return null
   return item.season_number
 }
 
 function parseEpisode(item) {
   if (item.episode_number) return parseInt(item.episode_number)
-  if (item.season_display_number === 'Folgen') return item.season_number
+  if (item.season_display_number === '.') return item.season_number
   return null
 }
 
