@@ -18,9 +18,9 @@ module.exports = {
   url({ channel, date }) {
     return `https://epg.cyta.com.cy/api/mediacatalog/fetchEpg?startTimeEpoch=${date.unix()}&endTimeEpoch=${date.add(1, 'd').unix()}&language=0&channelIds=${channel.site_id}`
   },
-  parser({ content, channel }) {
+  parser: function ({ content }) {
     let programs = []
-    const items = parseItems(content, channel)
+    const items = parseItems(content)
     if (!items.length == 0) {
       items.forEach(item => {
         const start = dayjs.utc(item.startTime)
@@ -29,9 +29,9 @@ module.exports = {
           title: item.name,
           start,
           stop
+        })
       })
-    })
-
+    }
     return programs
   },
   async channels() {
