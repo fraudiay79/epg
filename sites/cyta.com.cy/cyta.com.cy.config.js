@@ -21,17 +21,13 @@ module.exports = {
   parser: function ({ content, channel }) {
     let programs = []
     const items = parseItems(content, channel)
-    if (!items.length == 0) {
-      items.forEach(item => {
-        const start = dayjs.utc(item.channelEpgs.epgPlayables.startTime)
-        const stop = dayjs.utc(item.channelEpgs.epgPlayables.endTime)
-        programs.push({
-          title: item.channelEpgs.epgPlayables.name,
-          start,
-          stop
-        })
+    items.forEach(item => {
+      programs.push({
+        title: item.channelEpgs.epgPlayables.name,
+        start: dayjs.unix(item.channelEpgs.epgPlayables.startTime),
+        stop: dayjs.unix(item.channelEpgs.epgPlayables.endTime)
       })
-    }
+    })
     return programs
   },
   async channels() {
