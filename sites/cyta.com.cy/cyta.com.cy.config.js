@@ -19,18 +19,22 @@ module.exports = {
     return `https://epg.cyta.com.cy/api/mediacatalog/fetchEpg?startTimeEpoch=${date.unix()}&endTimeEpoch=${date.add(1, 'd').unix()}&language=0&channelIds=${channel.site_id}`
   },
   parser: function ({ content, channel }) {
-    const programs = []
+    let programs = []
     const items = parseItems(content, channel)
-    items.forEach(item => {
-      programs.push({
+    if (!items.length == 0) {
+      items.forEach(item => {
+        const start = dayjs.unix(item.channelEpgs.epgPlayables.startTime)
+        const stop = dayjs.unix(item.channelEpgs.epgPlayables.endTime)
+        programs.push({
         title: item.channelEpgs.epgPlayables.name,
-	description: item.playbillDetail.introduce
+	    description: item.playbillDetail.introduce
             ? `https://epg.cyta.com.cy/api//mediacatalog/fetchEpgDetails?language=0&id=${item.channelEpgs.epgPlayables.id}`
             : null,
-        start: dayjs.unix(item.channelEpgs.epgPlayables.startTime),
-        stop: dayjs.unix(item.channelEpgs.epgPlayables.endTime)
+          start,
+          stop
+        })
       })
-    })
+    }
     return programs
   },
   async channels() {
