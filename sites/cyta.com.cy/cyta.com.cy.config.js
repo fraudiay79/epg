@@ -1,4 +1,11 @@
 const dayjs = require('dayjs')
+const utc = require('dayjs/plugin/utc')
+const timezone = require('dayjs/plugin/timezone')
+const customParseFormat = require('dayjs/plugin/customParseFormat')
+
+dayjs.extend(utc)
+dayjs.extend(timezone)
+dayjs.extend(customParseFormat)
 
 module.exports = {
   site: 'cyta.com.cy',
@@ -14,14 +21,14 @@ module.exports = {
   parser({ content, channel }) {
     let programs = []
     const items = parseItems(content, channel)
-    items.forEach(item => {
-      if (!item) return
-      const start = dayjs(item.startTime)
-      const stop = dayjs(item.endTime)
-      programs.push({
-        title: item.name,
-        start,
-        stop
+    if (!items.length == 0) {
+      items.forEach(item => {
+        const start = dayjs.utc(item.startTime)
+        const stop = dayjs.utc(item.endTime)
+        programs.push({
+          title: item.name,
+          start,
+          stop
       })
     })
 
