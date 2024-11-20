@@ -21,20 +21,20 @@ module.exports = {
   parser: function ({ content, channel }) {
     let programs = []
     const items = parseItems(content, channel)
-    if (!items.length == 0) {
+    if (!items.length) return programs
       items.forEach(item => {
         const start = dayjs.unix(item.channelEpgs.epgPlayables.startTime)
         const stop = dayjs.unix(item.channelEpgs.epgPlayables.endTime)
         programs.push({
         title: item.channelEpgs.epgPlayables.name,
-	    description: item.playbillDetail.introduce
-            ? `https://epg.cyta.com.cy/api//mediacatalog/fetchEpgDetails?language=0&id=${item.channelEpgs.epgPlayables.id}`
-            : null,
-          start,
-          stop
+	description: item.playbillDetail.introduce
+        ? `https://epg.cyta.com.cy/api//mediacatalog/fetchEpgDetails?language=0&id=${item.channelEpgs.epgPlayables.id}`
+        : null,
+        start,
+        stop
         })
       })
-    }
+    
     return programs
   },
   async channels() {
