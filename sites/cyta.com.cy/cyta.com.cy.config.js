@@ -24,6 +24,9 @@ module.exports = {
     items.forEach(item => {
       programs.push({
         title: item.channelEpgs.epgPlayables.name,
+	description: item.playbillDetail.introduce
+            ? `https://epg.cyta.com.cy/api//mediacatalog/fetchEpgDetails?language=0&id=${item.channelEpgs.epgPlayables.id}`
+            : null,
         start: dayjs.unix(item.channelEpgs.epgPlayables.startTime),
         stop: dayjs.unix(item.channelEpgs.epgPlayables.endTime)
       })
