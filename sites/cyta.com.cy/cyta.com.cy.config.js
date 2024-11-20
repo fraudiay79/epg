@@ -16,10 +16,10 @@ module.exports = {
     const items = parseItems(content, channel)
     items.forEach(item => {
       if (!item) return
-      const start = dayjs(item.epgPlayables.startTime)
-      const stop = dayjs(item.epgPlayables.endTime)
+      const start = dayjs(item.startTime)
+      const stop = dayjs(item.endTime)
       programs.push({
-        title: item.epgPlayables.name,
+        title: item.name,
         start,
         stop
       })
