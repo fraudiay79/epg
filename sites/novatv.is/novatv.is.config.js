@@ -18,13 +18,13 @@ module.exports = {
   url({ channel, date }) {
     return `https://exposure.api.redbee.live/v2/customer/Nova/businessunit/novatvprod/epg/${channel.site_id}/date/${date.format('YYYY-MM-DD')}`
   },
-  parser({ content, channel }) {
+  parser({ content }) {
     let programs = []
     const items = parseItems(content)
     items.forEach(item => {
       if (!item) return
-      const start = dayjs(item.startTime)
-      const stop = dayjs(item.endTime)
+      const start = dayjs(item.programs.startTime)
+      const stop = dayjs(item.programs.endTime)
       programs.push({
         title: item.programs.title,
         description: item.programs.localized.description,
@@ -50,7 +50,7 @@ module.exports = {
   }
 }
 
-function parseItems(channel, content) {
+function parseItems(content) {
   const data = JSON.parse(content)
 
   return data
