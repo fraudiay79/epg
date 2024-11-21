@@ -37,7 +37,7 @@ module.exports = {
     return data.items.map(item => {
       return {
         lang: 'is',
-        name: item.localized.title,
+        name: item.title,
         site_id: item.assetId
       }
     })
