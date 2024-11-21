@@ -38,7 +38,7 @@ module.exports = {
     return data.channels.map(item => {
       return {
         lang: 'is',
-		    name: item.localized.title,
+	name: item.title,
         site_id: item.assetId
       }
     })
