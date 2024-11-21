@@ -1,4 +1,11 @@
 const dayjs = require('dayjs')
+const utc = require('dayjs/plugin/utc')
+const timezone = require('dayjs/plugin/timezone')
+const customParseFormat = require('dayjs/plugin/customParseFormat')
+
+dayjs.extend(utc)
+dayjs.extend(timezone)
+dayjs.extend(customParseFormat)
 
 module.exports = {
   site: 'novatv.is',
@@ -18,7 +25,6 @@ module.exports = {
       programs.push({
         title: item.programs.title,
         description: item.programs.description,
-        image: parseImage(item),
         start: parseTime(item.startTime),
         stop: parseTime(item.endTime)
       })
@@ -39,12 +45,6 @@ module.exports = {
       }
     })
   }
-}
-
-function parseImage(item) {
-  const last = item.images.pop()
-  if (!last) return null
-  return last.url
 }
 
 function parseTime(time) {
