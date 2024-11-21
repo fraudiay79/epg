@@ -9,7 +9,7 @@ module.exports = {
     }
   },
   url({ date }) {
-    return `https://exposure.api.redbee.live/v2/customer/Nova/businessunit/novatvprod/epg/date/${date.format('YYYY-MM-DD')}?pageSize=5000`
+    return `https://exposure.api.redbee.live/v2/customer/Nova/businessunit/novatvprod/epg/date/${date.format('YYYY-MM-DD')}`
   },
   parser({ content, channel }) {
     let programs = []
@@ -19,8 +19,8 @@ module.exports = {
       const start = dayjs(item.programs.startTime)
       const stop = dayjs(item.programs.endTime)
       programs.push({
-        title: item.programs.asset.title,
-        description: item.programs.asset.description,
+        title: item.programs.title,
+        description: item.programs.description,
         start,
         stop
       })
