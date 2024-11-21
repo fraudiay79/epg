@@ -34,9 +34,10 @@ module.exports = {
       .get(`https://exposure.api.redbee.live/v1/customer/Nova/businessunit/novatvprod/content/asset?assetType=TV_CHANNEL&pageSize=12`)
       .then(r => r.data)
       .catch(console.log)
-    return data.channels.map(item => {
+    return data.items.map(item => {
       return {
         lang: 'is',
+        name: item.title,
         site_id: item.assetId
       }
     })
