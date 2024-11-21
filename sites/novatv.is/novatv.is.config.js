@@ -26,10 +26,8 @@ module.exports = {
         const start = dayjs(item.programs.startTime)
         const stop = dayjs(item.programs.endTime)
         programs.push({
-          title: item.programs.title,
-          description: item.programs.description,
-          season: item.programs.season,
-          episode: item.programs.episode,
+          title: item.programs.localized.title,
+          description: item.programs.localized.description,
           start,
           stop
         })
@@ -53,10 +51,6 @@ module.exports = {
   }
 }
 
-function parseTime(time) {
-  return dayjs.tz(time, 'YYYY-MM-DD HH:mm', 'Africa/Abidjan')
-}
-  
 function parseItems(channel, content) {
   const data = JSON.parse(channel, content)
 
