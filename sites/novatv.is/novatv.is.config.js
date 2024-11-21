@@ -31,7 +31,7 @@ module.exports = {
   async channels() {
     const axios = require('axios')
     const data = await axios
-      .get(`https://exposure.api.redbee.live/v1/customer/Nova/businessunit/novatvprod/content/asset?assetType=TV_CHANNEL&pageSize=12`)
+      .get(`https://exposure.api.redbee.live/v1/customer/Nova/businessunit/novatvprod/content/asset?assetType=TV_CHANNEL`)
       .then(r => r.data)
       .catch(console.log)
     return data.items.map(item => {
