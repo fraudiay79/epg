@@ -24,12 +24,12 @@ module.exports = {
       const items = JSON.parse(channel, content)
       items.forEach(item => {
         programs.push({
-          title: item.program.title,
-          description: item.program.description,
-          season: item.program.season,
-          episode: item.program.episode,
-          start: dayjs.utc(item.program.startTime),
-          stop: dayjs.utc(item.program.endTime)
+          title: item.programs.title,
+          description: item.programs.description,
+          season: item.programs.season,
+          episode: item.programs.episode,
+          start: dayjs.utc(item.programs.startTime),
+          stop: dayjs.utc(item.programs.endTime)
         })
       })
     }
