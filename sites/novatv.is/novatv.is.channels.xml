@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <channels>
-  <channel site="novatv.is" lang="is" xmltv_id="" site_id="ddb92ca7_2F3486c">Stöð 2</channel>
-  <channel site="novatv.is" lang="is" xmltv_id="" site_id="20ca7c07_2F3486c">Sjónvarp Símans</channel>
-  <channel site="novatv.is" lang="is" xmltv_id="" site_id="bb5a5095_2F3486c">Alþingi</channel>
-  <channel site="novatv.is" lang="is" xmltv_id="" site_id="f492c60f_2F3486c">RÚV</channel>
-  <channel site="novatv.is" lang="is" xmltv_id="" site_id="64a1209e_2F3486c">RÚV 2</channel>
-  <channel site="novatv.is" lang="is" xmltv_id="" site_id="79b05e97_2F3486c">Stöð 2 Sport</channel>
-  <channel site="novatv.is" lang="is" xmltv_id="" site_id="f6a17354_2F3486c">Stöð 2 Sport 2</channel>
-  <channel site="novatv.is" lang="is" xmltv_id="" site_id="e64c1e3d_2F3486c">Stöð 2 Sport 5</channel>
-  <channel site="novatv.is" lang="is" xmltv_id="" site_id="060968a6_2F3486c">Stöð 2 Sport 6</channel>
-  <channel site="novatv.is" lang="is" xmltv_id="" site_id="3f2f9bd1_2F3486c">Besta deildin 2</channel>
-  <channel site="novatv.is" lang="is" xmltv_id="" site_id="2a1a980c_2F3486c">Besta deildin 3</channel>
+  <channel site="novatv.is" lang="is" xmltv_id="" site_id="2a1a980c_2F3486c"></channel>
+  <channel site="novatv.is" lang="is" xmltv_id="" site_id="3f2f9bd1_2F3486c"></channel>
+  <channel site="novatv.is" lang="is" xmltv_id="" site_id="20ca7c07_2F3486c"></channel>
+  <channel site="novatv.is" lang="is" xmltv_id="" site_id="64a1209e_2F3486c"></channel>
+  <channel site="novatv.is" lang="is" xmltv_id="" site_id="79b05e97_2F3486c"></channel>
+  <channel site="novatv.is" lang="is" xmltv_id="" site_id="060968a6_2F3486c"></channel>
+  <channel site="novatv.is" lang="is" xmltv_id="" site_id="258057fa_2F3486c"></channel>
+  <channel site="novatv.is" lang="is" xmltv_id="" site_id="bb5a5095_2F3486c"></channel>
+  <channel site="novatv.is" lang="is" xmltv_id="" site_id="ddb92ca7_2F3486c"></channel>
+  <channel site="novatv.is" lang="is" xmltv_id="" site_id="e64c1e3d_2F3486c"></channel>
+  <channel site="novatv.is" lang="is" xmltv_id="" site_id="f6a17354_2F3486c"></channel>
+  <channel site="novatv.is" lang="is" xmltv_id="" site_id="f492c60f_2F3486c"></channel>
 </channels>
