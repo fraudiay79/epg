@@ -23,11 +23,11 @@ module.exports = {
     if (content) {
       const items = Array.isArray(content) ? content : JSON.parse(content)
       items.forEach(item => {
-        const start = dayjs(item.programs.startTime)
-        const stop = dayjs(item.programs.endTime)
+        const start = dayjs(item.startTime)
+        const stop = dayjs(item.endTime)
         programs.push({
-          title: item.programs.asset.title,
-          description: item.programs.asset.localized.description,
+          title: item.title,
+          description: item.description,
           start,
           stop
         })
