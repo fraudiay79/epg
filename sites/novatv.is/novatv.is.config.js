@@ -38,8 +38,8 @@ module.exports = {
     return data.channels.map(item => {
       return {
         lang: 'is',
-	name: item.title,
-        site_id: item.assetId
+	name: item.items.localized.title,
+        site_id: item.items.assetId
       }
     })
   }
