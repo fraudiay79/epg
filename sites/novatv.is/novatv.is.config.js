@@ -22,11 +22,14 @@ module.exports = {
     let programs = []
     const items = parseItems(content, channel)
     items.forEach(item => {
+      if (!item) return
+      const start = dayjs(item.startTime)
+      const stop = dayjs(item.endTime)
       programs.push({
         title: item.programs.title,
-        description: item.programs.shortDescription,
-        start: parseTime(item.startTime),
-        stop: parseTime(item.endTime)
+        description: item.description,
+        start,
+        stop
       })
     })
 
