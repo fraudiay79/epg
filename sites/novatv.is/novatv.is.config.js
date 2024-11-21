@@ -20,8 +20,7 @@ module.exports = {
       const stop = dayjs(item.endTime)
       programs.push({
         title: item.title,
-        sub_title: item.undirtitill,
-        description: item.localized.description,
+        description: item.description,
         start,
         stop
       })
