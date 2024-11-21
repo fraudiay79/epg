@@ -15,16 +15,16 @@ module.exports = {
       ttl: 60 * 60 * 1000 // 1 hour
     }
   },
-  url({ date }) {
-    return `https://exposure.api.redbee.live/v2/customer/Nova/businessunit/novatvprod/epg/date/${date.format('YYYY-MM-DD')}`
+  url({ channel, date }) {
+    return `https://exposure.api.redbee.live/v2/customer/Nova/businessunit/novatvprod/epg/${channel.site_id}/date/${date.format('YYYY-MM-DD')}`
   },
-  parser({ content }) {
+  parser({ content, channel }) {
     let programs = []
-    const items = parseItems(content)
+    const items = parseItems(content, channel)
     items.forEach(item => {
       programs.push({
         title: item.programs.title,
-        description: item.programs.description,
+        description: item.programs.shortDescription,
         start: parseTime(item.startTime),
         stop: parseTime(item.endTime)
       })
@@ -51,7 +51,7 @@ function parseTime(time) {
   return dayjs.tz(time, 'YYYY-MM-DD HH:mm', 'Africa/Abidjan')
 }
   
-function parseItems(content) {
+function parseItems(content, channel) {
   const data = JSON.parse(content)
 
   return data
