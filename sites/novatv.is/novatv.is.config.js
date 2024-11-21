@@ -21,7 +21,7 @@ module.exports = {
   parser({ channel, content }) {
     const programs = []
     if (content) {
-      const items = JSON.parse(channel, content)
+      const items = JSON.parse(content)
       items.forEach(item => {
         const start = dayjs(item.programs.startTime)
         const stop = dayjs(item.programs.endTime)
@@ -52,7 +52,7 @@ module.exports = {
 }
 
 function parseItems(channel, content) {
-  const data = JSON.parse(channel, content)
+  const data = JSON.parse(content)
 
   return data
 }
