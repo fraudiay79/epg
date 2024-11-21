@@ -23,11 +23,11 @@ module.exports = {
     const items = parseItems(content, channel)
     items.forEach(item => {
       if (!item) return
-      const start = dayjs(item.startTime)
-      const stop = dayjs(item.endTime)
+      const start = dayjs(item.programs.startTime)
+      const stop = dayjs(item.programs.endTime)
       programs.push({
         title: item.programs.title,
-        description: item.description,
+        description: item.programs.description,
         start,
         stop
       })
