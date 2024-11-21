@@ -23,13 +23,15 @@ module.exports = {
     if (content) {
       const items = JSON.parse(channel, content)
       items.forEach(item => {
+        const start = dayjs(item.programs.startTime)
+        const stop = dayjs(item.programs.endTime)
         programs.push({
           title: item.programs.title,
           description: item.programs.description,
           season: item.programs.season,
           episode: item.programs.episode,
-          start: dayjs.utc(item.programs.startTime),
-          stop: dayjs.utc(item.programs.endTime)
+          start,
+          stop
         })
       })
     }
