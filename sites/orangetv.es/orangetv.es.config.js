@@ -16,10 +16,10 @@ module.exports = {
     const items = parseItems(content)
     items.forEach(item => {
       programs.push({
-        title: item.programs.name,
-        description: item.programs.description,
-        season: item.programs.seriesSeason || null,
-        episode: item.programs.episodeId || null,
+        title: item.name,
+        description: item.description,
+        season: item.seriesSeason || null,
+        episode: item.episodeId || null,
         start: parseStart(item),
         stop: parseStop(item)
       })
@@ -36,7 +36,7 @@ module.exports = {
     return data.response.map(item => {
       return {
         lang: 'es',
-	name: item.name,
+	    name: item.name,
         site_id: item.externalChannelId
       }
     })
@@ -44,16 +44,13 @@ module.exports = {
 }
 
 function parseStart(item) {
-  if (!item.programs || !item.programs.startDate) return null
-
-  return item.startDate ? dayjs.unix(item.programs.startDate) : null
+  return dayjs.unix(item.startDate)
 }
 
 function parseStop(item) {
-  if (!item.programs || !item.programs.endDate) return null
-
-  return item.endDate ? dayjs.unix(item.programs.endDate) : null
+  return dayjs.unix(item.endDate)
 }
+
 
 function parseItems(content) {
   const data = JSON.parse(content)
