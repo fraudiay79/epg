@@ -1,5 +1,6 @@
 const dayjs = require('dayjs')
 const utc = require('dayjs/plugin/utc')
+const regex = /T(\d+)\s+EP(\d+)/
 
 dayjs.extend(utc)
 
