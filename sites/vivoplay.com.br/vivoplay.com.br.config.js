@@ -1,24 +1,20 @@
-const dayjs = require('dayjs');
-const regex = /T(\d+)\s+EP(\d+)/;
-const genres = require("../data/genres.json")
-const ratings = require("../data/ratings.json")
-const persons = require("../data/persons.json")
+const dayjs = require('dayjs')
+const utc = require('dayjs/plugin/utc')
+
+dayjs.extend(utc)
 
 module.exports = {
-  lang: 'pt',
   site: 'vivoplay.com.br',
-  channels: 'sites/vivoplay.com.br/vivoplay.com.br.channels.xml',
   days: 3,
-  maxConnections: 100,
-
-  url: function ({ date, channel }) {
-    return `https://contentapi-br.cdn.telefonica.com/25/default/pt-BR/schedules?ca_deviceTypes=null%7C401&fields=Title,Description,Start,End,EpgSerieId,SeriesPid,SeasonPid,AgeRatingPid,ReleaseDate,images.videoFrame,images.banner&orderBy=START_TIME:a&filteravailability=false&starttime=${date.unix()}&endtime=${date.add(1, 'day').unix()}&livechannelpids=${channel.site_id}`;
+  request: {
+    cache: {
+      ttl: 60 * 60 * 1000 // 1 hour
+    }
   },
-  logo: function ({ channel }) {
-    const img = channel.logo
-    return img;
+  url({ date, channel }) {
+    return `https://contentapi-br.cdn.telefonica.com/25/default/pt-BR/schedules?ca_deviceTypes=null%7C401&fields=Title,Description,Start,End,EpgSerieId,SeriesPid,SeasonPid,AgeRatingPid,ReleaseDate,images.videoFrame,images.banner&orderBy=START_TIME:a&filteravailability=false&starttime=${date.unix()}&endtime=${date.add(1, 'day').unix()}&livechannelpids=${channel.site_id}`
   },
-  parser: function ({ content }) {
+ parser: function ({ content }) {
     let programs = []
     const items = parseItems(content)
 
@@ -43,8 +39,22 @@ module.exports = {
     })
     return programs;
   },
-};
-
+  async channels() {
+    const axios = require('axios')
+    const data = await axios
+      .get(`https://contentapi-br.cdn.telefonica.com/25/default/pt-BR/contents/all?contentTypes=LCH&ca_active=true&ca_requiresPin=false&fields=Pid,Name,images.icon&orderBy=contentOrder&limit=10000`)
+      .then(r => r.data)
+      .catch(console.log)
+    return data.channels.map(item => {
+      return {
+        lang: 'pt',
+        name: item.Title,
+        site_id: item.Pid
+      }
+    })
+  }
+}
+  
 function parseItems(content) {
   const data = JSON.parse(content)
   if (!data || !Array.isArray(data.Content)) return []
