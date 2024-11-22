@@ -16,8 +16,8 @@ module.exports = {
     const items = parseItems(content)
     items.forEach(item => {
       if (!item) return
-      const start = dayjs(item.programs.startDate)
-      const stop = dayjs(item.programs.endDate)
+      const start = dayjs.utc(item.programs.startDate)
+      const stop = dayjs.utc(item.programs.endDate)
       programs.push({
         title: item.programs.name,
         episode: item.programs.episodeId,
@@ -47,7 +47,16 @@ module.exports = {
 }
   
 function parseItems(content) {
-  const data = JSON.parse(content)
+  let data
+  try {
+    data = JSON.parse(content)
+  } catch (error) {
+    return []
+  }
 
-  return data
+  if (!data || !data['programs']) {
+    return []
+  }
+
+  return data.programs
 }
