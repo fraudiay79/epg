@@ -25,8 +25,9 @@ jobs:
       run: |
           npm install
           #npm run grab -- --channels=../sites/canalplus.com/canalplus.com_cm.channels.xml--maxConnections=20 --gzip --output=guides/novatv.is.xml --days=2 --timeout=90000
-          npm run channels:parse -- --config=./sites/orangetv.es/orangetv.es.config.js --output=./sites/orangetv.es/orangetv.es.channels.xml
+          #npm run channels:parse -- --config=./sites/orangetv.es/orangetv.es.config.js --output=./sites/orangetv.es/orangetv.es.channels.xml
           #npm run grab -- --site=orangetv.es --maxConnections=20 --gzip --output=guides/orangetv.es.xml --days=2 --timeout=90000
+          #npm run grab -- --site=stod2.is --maxConnections=20 --gzip --output=guides/stod2.is.xml --days=2 --timeout=90000
    
     - name: Commit changes
       run: |
@@ -34,6 +35,7 @@ jobs:
         git config --local user.name "Your Name"
         #git add -f sites/canalplus.com/canalplus.com_test.channels.xml
         #git add -f guides/orangetv.es.xml
-        git add -f sites/orangetv.es/orangetv.es.channels.xml
+        git add -f guides/stod2.is.xml
+        #git add -f sites/orangetv.es/orangetv.es.channels.xml
         git commit -m "Update xml"
         git push
