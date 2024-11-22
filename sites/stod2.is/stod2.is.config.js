@@ -11,9 +11,9 @@ module.exports = {
   url({ channel }) {
     return `https://api.stod2.is/dagskra/api/${channel.site_id}`
   },
-  parser({ content, channel }) {
+  parser({ content }) {
     let programs = []
-    const items = parseItems(content, channel)
+    const items = parseItems(content)
     items.forEach(item => {
       if (!item) return
       const start = dayjs(item.upphaf)
@@ -44,8 +44,8 @@ module.exports = {
   }
 }
   
-function parseItems(content, channel) {
-  const data = JSON.parse(content, channel)
+function parseItems(content) {
+  const data = JSON.parse(content)
 
   return data
 }
