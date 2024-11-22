@@ -22,9 +22,9 @@ module.exports = {
         description: item.description,
         start,
         stop
-        })
       })
-    }
+    })
+
     return programs
   },
   async channels() {
