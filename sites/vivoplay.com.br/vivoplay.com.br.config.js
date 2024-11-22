@@ -1,8 +1,5 @@
 const dayjs = require('dayjs');
 const regex = /T(\d+)\s+EP(\d+)/;
-const genres = require("../data/genres.json")
-const ratings = require("../data/ratings.json")
-const persons = require("../data/persons.json")
 
 module.exports = {
   site: 'vivoplay.com.br',
