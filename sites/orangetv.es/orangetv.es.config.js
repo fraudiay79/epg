@@ -11,23 +11,23 @@ module.exports = {
   url({ date }) {
     return `https://epg.orangetv.orange.es/epg/Smartphone_Android/1_PRO/${date.format('YYYYMMDD')}_8h_1.json`
   },
-  parser({ content }) {
+  parser: function ({ content }) {
     let programs = []
     const items = parseItems(content)
-    items.forEach(item => {
-      if (!item) return
-      const start = dayjs.utc(item.programs.startDate)
-      const stop = dayjs.utc(item.programs.endDate)
-      programs.push({
-        title: item.programs.name,
-        episode: item.programs.episodeId,
-	season: item.programs.seriesSeason,
-        description: item.programs.description,
-        start,
-        stop
+    if (!items.length == 0) {
+      items.forEach(item => {
+        const start = dayjs.utc(item.startDate)
+        const stop = dayjs.utc(item.endDate)
+        programs.push({
+          title: item.name,
+          description: item.description,
+          episode: item.episodeId,
+	  season: item.seriesSeason,
+          start,
+          stop
+        })
       })
-    })
-
+    }
     return programs
   },
   async channels() {
