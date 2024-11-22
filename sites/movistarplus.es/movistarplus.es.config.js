@@ -1,94 +1,123 @@
-// credit for this fix goes to davidclaeysquinones for his PR on https://github.com/iptv-org/epg/pull/2440
+const { DateTime } = require('luxon');
+const axios = require('axios');
 
-const { DateTime } = require('luxon')
-
-const API_CHANNEL_ENDPOINT = 'https://www.movistarplus.es/programacion-tv'
-const API_PROGRAM_ENDPOINT = 'https://comunicacion.movistarplus.es'
-const API_IMAGE_ENDPOINT = 'https://www.movistarplus.es/recorte/n/caratulaH/';
+const API_PROGRAM_ENDPOINT = 'https://comunicacion.movistarplus.es';
+const API_IMAGE_ENDPOINT = 'https://www.movistarplus.es/recorte/n/caratulaH/'; // Define the image endpoint
 
 module.exports = {
   site: 'movistarplus.es',
   days: 2,
   url: function ({ channel, date }) {
-    return `${API_PROGRAM_ENDPOINT}/wp-admin/admin-ajax.php`
+    const luxonDate = DateTime.fromJSDate(new Date(date)); // Ensure `date` is converted
+    return `${API_PROGRAM_ENDPOINT}/wp-admin/admin-ajax.php`;
   },
   request: {
-    method: 'POST',
+    method: 'POST', // Try GET if POST fails
     headers: {
       Origin: API_PROGRAM_ENDPOINT,
       Referer: `${API_PROGRAM_ENDPOINT}/programacion/`,
-      "Content-Type" : 'application/x-www-form-urlencoded; charset=UTF-8'
+      "Content-Type": 'application/x-www-form-urlencoded; charset=UTF-8'
     },
     data: function ({ channel, date }) {
+      const luxonDate = DateTime.fromJSDate(new Date(date)); // Ensure `date` is converted
       return {
         action: 'getProgramation',
-        day: date.format('YYYY-MM-DD'),
+        day: luxonDate.toFormat('yyyy-MM-dd'),
         "channels[]": channel.site_id
+      };
+    }
+  },
+  async fetchData({ channel, date }) {
+    const luxonDate = DateTime.fromJSDate(new Date(date)); // Ensure `date` is converted
+    const payload = {
+      action: 'getProgramation',
+      day: luxonDate.toFormat('yyyy-MM-dd'),
+      "channels[]": channel.site_id
+    };
+
+    try {
+      console.log('Request Payload:', payload);
+
+      const response = await axios({
+        method: this.request.method,
+        url: this.url({ channel, date }),
+        headers: this.request.headers,
+        data: new URLSearchParams(payload).toString() // For POST
+      });
+
+      console.log('Response Status:', response.status);
+      console.log('Response Data:', response.data);
+
+      return this.parser({ content: response.data, channel, date });
+    } catch (error) {
+      console.error('Error Status:', error.response?.status);
+      console.error('Error Data:', error.response?.data);
+
+      // If 405, retry with GET method
+      if (error.response?.status === 405 && this.request.method === 'POST') {
+        console.log('Retrying with GET...');
+        return this.retryWithGet({ channel, date });
       }
+
+      return null; // Handle the error gracefully
+    }
+  },
+  async retryWithGet({ channel, date }) {
+    const luxonDate = DateTime.fromJSDate(new Date(date));
+    const query = new URLSearchParams({
+      action: 'getProgramation',
+      day: luxonDate.toFormat('yyyy-MM-dd'),
+      "channels[]": channel.site_id
+    }).toString();
+
+    const url = `${this.url({ channel, date })}?${query}`;
+    try {
+      const response = await axios.get(url, { headers: this.request.headers });
+      console.log('GET Response Status:', response.status);
+      console.log('GET Response Data:', response.data);
+      return this.parser({ content: response.data, channel, date });
+    } catch (error) {
+      console.error('GET Error Status:', error.response?.status);
+      console.error('GET Error Data:', error.response?.data);
+      return null;
     }
   },
   parser({ content, channel, date }) {
-    let programs = []
-    let items = parseItems(content, channel)
-    if (!items.length) return programs
-    let guideDate = date
+    const json = typeof content === 'string' ? JSON.parse(content) : content;
 
-    items.forEach(item => {
-      let startTime = DateTime.fromFormat(
-        `${item.f_evento_rejilla}`,
+    // Ensure proper parsing of the data
+    if (!json || !json.channelsProgram || json.channelsProgram.length === 0) {
+      console.error('No programs found in the response.');
+      return [];
+    }
+
+    const programs = json.channelsProgram[0]; // Assuming first array contains program data
+
+    // Map over the programs and parse relevant data
+    return programs.map((item) => {
+      const startTime = DateTime.fromFormat(
+        `${date} ${item.f_evento_rejilla}`,
         'yyyy-MM-dd HH:mm:ss',
-        {
-          zone: 'Europe/Madrid'
-        }
-      ).toUTC()
-      let stopTime = DateTime.fromFormat(
-        `${item.f_fin_evento_rejilla}`,
+        { zone: 'Europe/Madrid' }
+      ).toUTC();
+
+      const stopTime = DateTime.fromFormat(
+        `${date} ${item.f_fin_evento_rejilla}`,
         'yyyy-MM-dd HH:mm:ss',
-        {
-          zone: 'Europe/Madrid'
-        }
-      ).toUTC()
-      if (stopTime < startTime) {
-        guideDate = guideDate.add(1, 'd')
-        stopTime = stopTime.plus({ days: 1 })
-      }
-      programs.push({
+        { zone: 'Europe/Madrid' }
+      ).toUTC();
+
+      return {
         title: item.des_evento_rejilla,
-        icon: parseIcon(item, channel),
+        icon: this.parseIcon(item), // Use the `parseIcon` function
         category: item.des_genero,
         start: startTime,
         stop: stopTime
-      })
-    })
-    return programs
+      };
+    });
   },
-  async channels() {
-    const axios = require('axios')
-    const dayjs = require('dayjs')
-    const data = await axios
-      .get(`${API_CHANNEL_ENDPOINT}/${dayjs().format('YYYY-MM-DD')}?v=json`)
-      .then(r => r.data)
-      .catch(console.log)
-
-    return Object.values(data.data).map(item => {
-      return {
-        lang: 'es',
-        site_id: item.DATOS_CADENA.CODIGO,
-        name: item.DATOS_CADENA.NOMBRE
-      }
-    })
+  parseIcon(item) {
+    // Construct the icon URL
+    return `${API_IMAGE_ENDPOINT}${item.cod_evento_rejilla}.jpg`; // Ensure it's referencing the correct image
   }
-}
-
-function parseIcon(item, channel) {
-  return `${API_IMAGE_ENDPOINT}/M${channel.site_id}P${item.ELEMENTO}`;
-}
-
-function parseItems(content, channel) {
-  const json = typeof content === 'string' ? JSON.parse(content) : content
-  const data = json.channelsProgram;
-
-  if(data.length != 1)
-    return []
-  return data[0];
-}
+};
