@@ -27,7 +27,7 @@ module.exports = {
         const stop = dayjs.utc(item.asset.endTime)
       programs.push({
           title: item.asset.title,
-          description: item.localized.description,
+          description: item.asset.localized.description,
           start,
           stop
       })
