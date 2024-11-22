@@ -26,10 +26,8 @@ module.exports = {
         stop: parseStop(item),
         date: parseDate(item),
         description: item.Description,
-        ratings: parseRating(item),
         season: parseSeason(item),
         episode: parseEpisode(item),
-        categories: parseCategories(item),
         icon: parseIcon(item),
         directors: parsePersons(item.DirectorPids),
         actors: parsePersons(item.ActorPids),
@@ -102,21 +100,6 @@ function parseEpisode(item) {
   return match ? match[2] : undefined
 }
 
-function parseCategories(item) {
-  if (!item.GenrePids || !Array.isArray(item.GenrePids) || item.GenrePids.length === 0) {
-    return [];
-  }
-
-  return item.GenrePids.map(Pid => {
-    const findGenre = genres.Content.List.find(genre => genre.Pid === Pid);
-    if (findGenre) {
-      return {
-        lang: 'pt',
-        value: findGenre.Title
-      };
-    }
-  })
-}
 
 function parsePersons(items) {
   if (!items || !Array.isArray(items) || items.length === 0) {
@@ -131,30 +114,6 @@ function parsePersons(items) {
       };
     }
   })
-}
-
-function parseRating(item) {
-  if (!item.AgeRatingPid) {
-    return [];
-  }
-
-  const findRating = ratings.Content.List.find(rating => rating.Pid === item.AgeRatingPid);
-
-  if (!findRating) {
-    return {};
-  }
-
-  const icon = findRating.Images.Cover && findRating.Images.Cover[0] && findRating.Images.Cover[0].Url
-    ? findRating.Images.Cover[0].Url
-    : findRating.Images.Icon && findRating.Images.Icon[0] && findRating.Images.Icon[0].Url
-      ? findRating.Images.Icon[0].Url
-      : '';
-
-  return {
-    system: '',
-    icon: icon,
-    value: findRating.Description
-  };
 }
 
 
