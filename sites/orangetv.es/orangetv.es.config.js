@@ -18,8 +18,8 @@ module.exports = {
       const start = parseStart(item)
       const stop = parseStop(item)
       programs.push({
-        title: item.name,
-        description: item.description,
+        title: item.programs.name,
+        description: item.programs.description,
         start,
         stop
       })
@@ -44,11 +44,11 @@ module.exports = {
 }
   
 function parseStart(item) {
-  return item.start_unix ? dayjs.unix(item.start_unix) : null
+  return item.start_unix ? dayjs.unix(item.programs.startDate) : null
 }
 
 function parseStop(item) {
-  return item.stop_unix ? dayjs.unix(item.stop_unix) : null
+  return item.stop_unix ? dayjs.unix(item.programs.endDate) : null
 }
 
 function parseItems(content) {
