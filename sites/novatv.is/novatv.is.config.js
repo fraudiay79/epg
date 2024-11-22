@@ -25,16 +25,14 @@ module.exports = {
     items.forEach(item => {
         const start = dayjs.utc(item.asset.startTime)
         const stop = dayjs.utc(item.asset.endTime)
-        programs.push({
+      programs.push({
           title: item.asset.title,
           description: item.localized.description,
           start,
           stop
-        })
       })
-    }
-
-    return programs
+    })
+    return programs;
   },
   
   async channels() {
