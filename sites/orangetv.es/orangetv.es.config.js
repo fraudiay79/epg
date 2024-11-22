@@ -16,15 +16,11 @@ module.exports = {
     const items = parseItems(content)
     if (!items.length == 0) {
       items.forEach(item => {
-        const start = dayjs.utc(item.startDate)
-        const stop = dayjs.utc(item.endDate)
         programs.push({
           title: item.name,
           description: item.description,
-          episode: item.episodeId,
-	  season: item.seriesSeason,
-          start,
-          stop
+          start: dayjs.utc(item.startDate),
+          stop: dayjs.utc(item.endDate)
         })
       })
     }
