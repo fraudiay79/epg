@@ -12,7 +12,7 @@
         <channel site="vivoplay.com.br" lang="pt" xmltv_id="" site_id="LCH4070">BAND</channel>
         <channel site="vivoplay.com.br" lang="pt" xmltv_id="" site_id="LCH3171">Band Bahia</channel>
         <channel site="vivoplay.com.br" lang="pt" xmltv_id="" site_id="LCH3145">Band Brasília</channel>
-        <channel site="vivoplay.com.br" lang="pt" xmltv_id="" site_id="LCH867"">Band Campinas</channel>
+        <channel site="vivoplay.com.br" lang="pt" xmltv_id="" site_id="LCH867">Band Campinas</channel>
         <channel site="vivoplay.com.br" lang="pt" xmltv_id="" site_id="LCH3808">Band Cuiabá</channel>
         <channel site="vivoplay.com.br" lang="pt" xmltv_id="" site_id="LCH3089">Band Curitiba</channel>
         <channel site="vivoplay.com.br" lang="pt" xmltv_id="" site_id="LCH3914">Band Maceió</channel>
@@ -29,4 +29,4 @@
         <channel site="vivoplay.com.br" lang="pt" xmltv_id="" site_id="LCH2795">Bandnews</channel>
         <channel site="vivoplay.com.br" lang="pt" xmltv_id="" site_id="LCH928">Bandsports</channel>
         <channel site="vivoplay.com.br" lang="pt" xmltv_id="" site_id="LCH5577">BBC World</channel>
-  </channels>
+</channels>
