@@ -23,13 +23,13 @@ module.exports = {
     const items = parseItems(content)
 
     items.forEach(item => {
-        const start = dayjs.utc(item.asset.startTime)
-        const stop = dayjs.utc(item.asset.endTime)
+        //const start = dayjs.utc(item.asset.startTime)
+        //const stop = dayjs.utc(item.asset.endTime)
       programs.push({
           title: item.asset.title,
           description: item.asset.localized.description,
-          start,
-          stop
+          start: item.asset.startTime,
+          stop: item.asset.endTime
       })
     })
     return programs;
