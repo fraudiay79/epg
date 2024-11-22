@@ -44,7 +44,7 @@ module.exports = {
       .get(`https://contentapi-br.cdn.telefonica.com/25/default/pt-BR/contents/all?contentTypes=LCH&ca_active=true&ca_requiresPin=false&fields=Pid,Name,images.icon&orderBy=contentOrder&limit=10000`)
       .then(r => r.data)
       .catch(console.log)
-    return data.Content.map(item => {
+    return data.content.map(item => {
       return {
         lang: 'pt',
 	name: item.List.Name,
