@@ -11,9 +11,9 @@ module.exports = {
   url({ date }) {
     return `https://epg.orangetv.orange.es/epg/Smartphone_Android/1_PRO/${date.format('YYYYMMDD')}_8h_1.json`
   },
-  parser({ content, channel }) {
+  parser({ content }) {
     let programs = []
-    const items = parseItems(content, channel)
+    const items = parseItems(content)
     items.forEach(item => {
       if (!item) return
       const start = dayjs(item.programs.startDate)
@@ -21,7 +21,7 @@ module.exports = {
       programs.push({
         title: item.programs.name,
         episode: item.programs.episodeId,
-		season: item.programs.seriesSeason,
+	season: item.programs.seriesSeason,
         description: item.programs.description,
         start,
         stop
@@ -46,8 +46,8 @@ module.exports = {
   }
 }
   
-function parseItems(content, channel) {
-  const data = JSON.parse(content, channel)
+function parseItems(content) {
+  const data = JSON.parse(content)
 
   return data
 }
