@@ -29,11 +29,7 @@ module.exports = {
         description: item.Description,
         season: parseSeason(item),
         episode: parseEpisode(item),
-        icon: parseIcon(item),
-        directors: parsePersons(item.DirectorPids),
-        actors: parsePersons(item.ActorPids),
-        writers: parsePersons(item.WriterPids),
-        producers: parsePersons(item.ProducerPids),
+        icon: parseIcon(item)
       })
     })
     return programs;
@@ -99,22 +95,6 @@ function parseSeason(item) {
 function parseEpisode(item) {
   const match = item.Title.match(regex)
   return match ? match[2] : undefined
-}
-
-
-function parsePersons(items) {
-  if (!items || !Array.isArray(items) || items.length === 0) {
-    return [];
-  }
-
-  return items.map(Pid => {
-    const findPerson = persons.find(person => person.Pid === Pid);
-    if (findPerson) {
-      return {
-        value: findPerson.Title
-      };
-    }
-  })
 }
 
 
