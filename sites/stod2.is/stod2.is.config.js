@@ -1,4 +1,7 @@
 const dayjs = require('dayjs')
+const utc = require('dayjs/plugin/utc')
+
+dayjs.extend(utc)
 
 module.exports = {
   site: 'stod2.is',
@@ -16,12 +19,14 @@ module.exports = {
     const items = parseItems(content)
     items.forEach(item => {
       if (!item) return
-      const start = dayjs(item.upphaf)
+      const start = dayjs.utc(item.upphaf)
       const stop = start.add(item.slott, 'm')
       programs.push({
         title: item.isltitill,
         sub_title: item.undirtitill,
         description: item.lysing,
+        actors: item.adalhlutverk,
+        directors: item.leikstjori,
         start,
         stop
       })
