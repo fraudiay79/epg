@@ -12,16 +12,16 @@ module.exports = {
     return `https://epg.orangetv.orange.es/epg/Smartphone_Android/1_PRO/${date.format('YYYYMMDD')}_8h_1.json`
   },
   parser: function ({ content }) {
-    const programs = []
+    let programs = []
     const items = parseItems(content)
     items.forEach(item => {
-      const start = parseStart(item)
-      const stop = parseStop(item)
       programs.push({
         title: item.programs.name,
         description: item.programs.description,
-        start,
-        stop
+        season: item.programs.seriesSeason || null,
+        episode: item.programs.episodeId || null,
+        start: parseStart(item),
+        stop: parseStop(item)
       })
     })
 
@@ -42,17 +42,23 @@ module.exports = {
     })
   }
 }
-  
+
 function parseStart(item) {
-  return item.start_unix ? dayjs.unix(item.programs.startDate) : null
+  if (!item.programs || !item.programs.startDate) return null
+
+  return item.startDate ? dayjs.unix(item.programs.startDate) : null
+	return dayjs(item.programs.startTime)
 }
 
 function parseStop(item) {
-  return item.stop_unix ? dayjs.unix(item.programs.endDate) : null
+  if (!item.programs || !item.programs.endDate) return null
+
+  return item.endDate ? dayjs.unix(item.programs.endDate) : null
 }
 
 function parseItems(content) {
   const data = JSON.parse(content)
+  if (!data || !data.programs) return []
 
-  return data.programs || []
+  return data.programs
 }
