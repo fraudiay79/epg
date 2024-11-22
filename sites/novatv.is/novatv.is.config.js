@@ -53,7 +53,7 @@ module.exports = {
 
 function parseItems(content) {
   const data = JSON.parse(content)
-  if (!data || !Array.isArray(data.programs)) return []
+  //if (!data || !Array.isArray(data.programs)) return []
 
-  return data.programs
+  return data
 }
