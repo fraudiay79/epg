@@ -4,11 +4,11 @@ const axios = require('axios')
 module.exports = {
   site: 'tv.mail.ru',
   days: 2,
-  delay: 1000,
+  delay: 3000,
   url({ channel, date }) {
     return `https://tv.mail.ru/ajax/channel/?region_id=70&channel_id=${
       channel.site_id
-    }&date=${date.format('YYYY-MM-DD')}`
+    }&date=${date.format('YYYY-MM-DD')}.json`
   },
   parser({ content, date }) {
     const programs = []
