@@ -47,9 +47,9 @@ function parseStart($item, date) {
   const timeString = $item('div > div:nth-child(1),a > div:nth-child(1)').text().trim()
   const [, HH, mm] = timeString.match(/^(\d{2}):(\d{2})/) || [null, null, null]
   if (!HH || !mm) return null
-  const dateString = `${date.format('MM/DD/YYYY')} ${timeString}`
+  const dateString = $item('.data-date')`${timeString}`
 
-  return DateTime.fromFormat(dateString, 'MM/dd/yyyy HH.mm', { zone: 'Africa/Casablanca' }).toUTC()
+  return DateTime.fromFormat(dateString, 'yyyy/MM/dd HH.mm', { zone: 'Africa/Casablanca' }).toUTC()
 }
 
 
