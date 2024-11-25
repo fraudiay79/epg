@@ -44,7 +44,9 @@ module.exports = {
 }
 
 function parseStart($item, date) {
-  const timeString = $item('.col-4 col-lg-2 grille-time pt-lg-2').text().trim()
+  const timeString = $item('div > div:nth-child(1),a > div:nth-child(1)').text().trim()
+  const [, HH, mm] = timeString.match(/^(\d{2}):(\d{2})/) || [null, null, null]
+  if (!HH || !mm) return null
   const dateString = `${date.format('MM/DD/YYYY')} ${timeString}`
 
   return DateTime.fromFormat(dateString, 'MM/dd/yyyy HH.mm', { zone: 'Africa/Casablanca' }).toUTC()
