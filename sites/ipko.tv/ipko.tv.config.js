@@ -15,6 +15,7 @@ module.exports = {
       'Cookie': '_ga=GA1.1.1594658574.1730067846; STARGATE_PROD_SERVER_USED=f60cf9b6677f11d2; _ga_BMVP97ZTBD=GS1.1.1730222132.2.0.1730222140.0.0.0; _ga_JH31200EE9=GS1.1.1731039510.3.1.1731039812.0.0.0',
       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',
 	  'Origin': 'https://ipko.tv'
+    }
     },
   url() {
     return `https://stargate.ipko.tv/api/titan.tv.WebEpg/EpgFilter`
