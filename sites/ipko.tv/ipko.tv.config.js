@@ -14,9 +14,9 @@ module.exports = {
   url() {
     return `https://stargate.ipko.tv/api/titan.tv.WebEpg/EpgFilter`
   },
-  parser({ content, channel }) {
+  parser: function({ content }) {
     let programs = []
-    const items = parseItems(content, channel)
+    const items = parseItems(content)
     items.forEach(item => {
       if (!item) return
       programs.push({
