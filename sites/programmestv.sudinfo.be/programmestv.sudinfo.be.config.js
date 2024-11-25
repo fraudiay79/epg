@@ -23,10 +23,10 @@ module.exports = {
     const items = parseItems(content)
 
     items.forEach(item => {
-        const start = dayjs.utc(item.filteredContent.airingStartDateTime)
-        const stop = dayjs.utc(item.filteredContent.airingEndDateTime)
+        const start = dayjs.utc(item.pageProps.filteredContent.airingStartDateTime)
+        const stop = dayjs.utc(item.pageProps.filteredContent.airingEndDateTime)
       programs.push({
-          title: item.filteredContent.title,
+          title: item.pageProps.filteredContent.title,
           start,
           stop
       })
@@ -53,7 +53,7 @@ module.exports = {
 
 function parseItems(content) {
   const data = JSON.parse(content)
-  if (!data || !Array.isArray(data.filteredContent)) return []
+  if (!data || !Array.isArray(data.pageProps)) return []
 
-  return data.filteredContent
+  return data.pageProps
 }
