@@ -46,9 +46,9 @@ module.exports = {
   }
 }
   
-function parseItems(content, channel) {
+function parseItems(content) {
   const data = JSON.parse(content)
-  if (!data) return []
+  if (!data || !Array.isArray(data.channels)) return []
 
-  return data[channel.site_id] || []
+  return data.channels
 }
