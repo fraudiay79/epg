@@ -22,8 +22,7 @@ module.exports = {
     headers: function () {
       return setHeaders()
     },
-  }
-    },
+  },
   url() {
     return `https://stargate.ipko.tv/api/titan.tv.WebEpg/EpgFilter`
   },
