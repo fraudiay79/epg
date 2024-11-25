@@ -1,6 +1,11 @@
 const dayjs = require('dayjs')
-const axios = require('axios')
-const cheerio = require('cheerio')
+const utc = require('dayjs/plugin/utc')
+const timezone = require('dayjs/plugin/timezone')
+const customParseFormat = require('dayjs/plugin/customParseFormat')
+
+dayjs.extend(utc)
+dayjs.extend(timezone)
+dayjs.extend(customParseFormat)
 
 module.exports = {
   site: 'ipko.tv',
@@ -14,11 +19,13 @@ module.exports = {
   url() {
     return `https://stargate.ipko.tv/api/titan.tv.WebEpg/EpgFilter`
   },
-  parser: function({ content }) {
+  parser: function ({ content }) {
     let programs = []
     const items = parseItems(content)
+
     items.forEach(item => {
-      if (!item) return
+        //const start = dayjs.utc(item.asset.startTime)
+        //const stop = dayjs.utc(item.asset.endTime)
       programs.push({
         title: item.shows.title,
         image: item.shows.thumbnail,
@@ -26,8 +33,7 @@ module.exports = {
         stop: dayjs.unix(item.shows.show_end)
       })
     })
-
-    return programs
+    return programs;
   },
   
   async channels() {
@@ -39,13 +45,14 @@ module.exports = {
     return data.channels.map(item => {
       return {
         lang: 'sq',
-	name: item.channel_name,
+        name: item.channel_name,
         site_id: item.channel_id
       }
     })
   }
 }
-  
+
+
 function parseItems(content) {
   const data = JSON.parse(content)
   if (!data || !Array.isArray(data.channels)) return []
