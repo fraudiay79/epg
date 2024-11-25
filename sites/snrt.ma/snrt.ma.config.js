@@ -1,12 +1,12 @@
 const cheerio = require('cheerio')
 const { DateTime } = require('luxon')
 
-const channel = { site_id: '4069', xmltv_id: 'Laayoune.ma', lang: 'fr' },
+const channel = [{ site_id: '4069', xmltv_id: 'Laayoune.ma', lang: 'fr' },
                 { site_id: '4070', xmltv_id: 'Arryadia.ma', lang: 'fr' },
                 { site_id: '4071', xmltv_id: 'Athaqafia.ma', lang: 'fr' },
                 { site_id: '4072', xmltv_id: 'AlMaghribia.ma', lang: 'fr' },
                 { site_id: '4073', xmltv_id: 'Assadissa.ma', lang: 'fr' },
-                { site_id: '4075', xmltv_id: 'Tamazight.ma', lang: 'fr' }
+                { site_id: '4075', xmltv_id: 'Tamazight.ma', lang: 'fr' }]
 
 
 module.exports = {
