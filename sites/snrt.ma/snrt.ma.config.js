@@ -25,13 +25,13 @@ module.exports = {
       const $item = cheerio.load(item)
       let start = parseStart($item, date)
       if (prev) {
-        if (start.isBefore(prev.start)) {
-          start = start.add(1, 'd')
+        if (start < prev.start) {
+          start = start.plus({ days: 1 })
           date = date.add(1, 'd')
         }
         prev.stop = start
       }
-      const stop = start.add(30, 'm')
+      const stop = start.plus({ hours: 1 })
       programs.push({
         title: parseTitle($item),
         start,
@@ -44,12 +44,11 @@ module.exports = {
 }
 
 function parseStart($item, date) {
-  const timeString = $item('div > div:nth-child(1),a > div:nth-child(1)').text().trim()
-  const [, HH, mm] = timeString.match(/^(\d{2}):(\d{2})/) || [null, null, null]
-  if (!HH || !mm) return null
-  const dateString = $item('.data-date')`${timeString}`
+  const timeString = $item('.col-4 col-lg-2 grille-time pt-lg-2').text().trim()
+  const dateSt = $item('.data-date').text().trim()
+  const dateString = `${dateSt} ${timeString}`
 
-  return DateTime.fromFormat(dateString, 'yyyy/MM/dd HH.mm', { zone: 'Africa/Casablanca' }).toUTC()
+  return DateTime.fromFormat(dateString, 'MM/dd/yyyy HH.mm', { zone: 'Africa/Casablanca' }).toUTC()
 }
 
 
