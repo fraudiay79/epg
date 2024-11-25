@@ -44,7 +44,7 @@ module.exports = {
 }
 
 function parseStart($item, date) {
-  const timeString = $item('div.col-4 col-lg-2 grille-time pt-lg-2').text().trim()
+  const timeString = $item('.col-4 col-lg-2 grille-time pt-lg-2').text().trim()
   if (!timeString) return null
   const dateString = `${date.format('MM/DD/YYYY')} ${timeString}`
 
