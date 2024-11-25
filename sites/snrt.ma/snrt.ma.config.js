@@ -16,9 +16,9 @@ module.exports = {
   url: function ({ channel }) {
     return `https://www.snrt.ma/fr/node/${channel.site_id}`
   },
-  parser: function ({ buffer, date }) {
+  parser: function ({ content, date }) {
     const programs = []
-    const items = parseItems(buffer)
+    const items = parseItems(content)
     items.forEach(item => {
       const prev = programs[programs.length - 1]
       const $item = cheerio.load(item)
@@ -44,7 +44,7 @@ module.exports = {
 
 function parseStart($item, date) {
   const timeString = $item('.grille-time').text().trim()
-  const dateString = `${date.format('MM/DD/YYYY')} ${timeString}`
+  const dateString = `${date.format('MMDDYYYY')} ${timeString}`
 
   return DateTime.fromFormat(dateString, 'MM/dd/yyyy HH.mm', { zone: 'Africa/Casablanca' }).toUTC()
 }
@@ -52,4 +52,10 @@ function parseStart($item, date) {
 
 function parseTitle($item) {
   return $item('.program-title-sm').text().trim()
+}
+
+function parseItems(content) {
+  const $ = cheerio.load(content)
+
+  return $('.grille-line').toArray()
 }
