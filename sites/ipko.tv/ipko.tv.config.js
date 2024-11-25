@@ -2,6 +2,13 @@ const dayjs = require('dayjs')
 const utc = require('dayjs/plugin/utc')
 const timezone = require('dayjs/plugin/timezone')
 const customParseFormat = require('dayjs/plugin/customParseFormat')
+const fetch = require('node-fetch')
+const { upperCase } = require('lodash')
+
+let X_CSRFTOKEN
+let COOKIE
+const cookiesToExtract = ['JSESSIONID', 'CSESSIONID', 'CSRFSESSION']
+const extractedCookies = {}
 
 dayjs.extend(utc)
 dayjs.extend(timezone)
@@ -11,11 +18,11 @@ module.exports = {
   site: 'ipko.tv',
   days: 5,
   request: {
-    headers: {
-      'Cookie': '_ga=GA1.1.1594658574.1730067846; STARGATE_PROD_SERVER_USED=f60cf9b6677f11d2; _ga_BMVP97ZTBD=GS1.1.1730222132.2.0.1730222140.0.0.0; _ga_JH31200EE9=GS1.1.1731039510.3.1.1731039812.0.0.0',
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',
-	  'Origin': 'https://ipko.tv'
-    }
+    method: 'POST',
+    headers: function () {
+      return setHeaders()
+    },
+  }
     },
   url() {
     return `https://stargate.ipko.tv/api/titan.tv.WebEpg/EpgFilter`
@@ -59,4 +66,68 @@ function parseItems(content) {
   if (!data || !Array.isArray(data.channels)) return []
 
   return data.channels
+}
+
+// Function to try to fetch COOKIE and X_CSRFTOKEN
+function fetchCookieAndToken() {
+  return fetch(
+    'https://stargate.ipko.tv/api/titan.tv.WebEpg/EpgFilter',
+    {
+      headers: {
+        accept: 'application/json, text/plain, */*',
+        'content-type': 'application/json',
+        'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-site': 'same-site',
+        'x-requested-with': 'XMLHttpRequest',
+        Origin: 'https://ipko.tv',
+        'Referrer-Policy': 'strict-origin-when-cross-origin'
+      },
+      body: '{"terminalid":"00:00:00:00:00:00","mac":"00:00:00:00:00:00","terminaltype":"WEBTV","utcEnable":1,"timezone":"Etc/GMT0","userType":3,"terminalvendor":"Unknown"}',
+      method: 'POST'
+    }
+  )
+    .then(response => {
+      // Check if the response status is OK (2xx)
+      if (!response.ok) {
+        throw new Error('HTTP request failed')
+      }
+
+      // Extract the set-cookie header
+      const setCookieHeader = response.headers.raw()['set-cookie']
+
+      // Extract the cookies specified in cookiesToExtract
+      cookiesToExtract.forEach(cookieName => {
+        const regex = new RegExp(`${cookieName}=(.+?)(;|$)`)
+        const match = setCookieHeader.find(header => regex.test(header))
+
+        if (match) {
+          const cookieValue = regex.exec(match)[1]
+          extractedCookies[cookieName] = cookieValue
+        }
+      })
+
+      return response.json()
+    })
+    .then(data => {
+      if (data.csrfToken) {
+        X_CSRFTOKEN = data.csrfToken
+        COOKIE = `JSESSIONID=${extractedCookies.JSESSIONID}; CSESSIONID=${extractedCookies.CSESSIONID}; CSRFSESSION=${extractedCookies.CSRFSESSION}; JSESSIONID=${extractedCookies.JSESSIONID};`
+      } else {
+        console.log('csrfToken not found in the response.')
+      }
+    })
+    .catch(error => {
+      console.error(error)
+    })
+}
+
+function setHeaders() {
+  return fetchCookieAndToken().then(() => {
+    return {
+      X_CSRFTOKEN: X_CSRFTOKEN,
+      'Content-Type': 'application/json',
+      Cookie: COOKIE
+    }
+  })
 }
