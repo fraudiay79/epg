@@ -25,13 +25,13 @@ module.exports = {
       const $item = cheerio.load(item)
       let start = parseStart($item, date)
       if (prev) {
-        if (start < prev.start) {
-          start = start.plus({ days: 1 })
+        if (start.isBefore(prev.start)) {
+          start = start.add(1, 'd')
           date = date.add(1, 'd')
         }
         prev.stop = start
       }
-      const stop = start.plus({ hours: 1 })
+      const stop = start.add(30, 'm')
       programs.push({
         title: parseTitle($item),
         start,
