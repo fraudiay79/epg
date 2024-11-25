@@ -34,6 +34,7 @@ module.exports = {
       const stop = start.plus({ hours: 1 })
       programs.push({
         title: parseTitle($item),
+        category: parseCategory($item),
         start,
         stop
       })
@@ -48,12 +49,16 @@ function parseStart($item, date) {
   const dateSt = $item('.data-date').text().trim()
   const dateString = `${dateSt} ${timeString}`
 
-  return DateTime.fromFormat(dateString, 'MM/dd/yyyy HH.mm', { zone: 'Africa/Casablanca' }).toUTC()
+  return DateTime.fromFormat(dateString, 'YYYYMMD HH.mm', { zone: 'Africa/Casablanca' }).toUTC()
 }
 
 
 function parseTitle($item) {
   return $item('.program-title-sm').text().trim()
+}
+
+function parseCategory($item) {
+  return $item('.genre-first').text().trim()
 }
 
 function parseItems(content) {
