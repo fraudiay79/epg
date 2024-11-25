@@ -25,9 +25,9 @@ jobs:
       run: |
           npm install
           #npm run grab -- --channels=../sites/canalplus.com/canalplus.com_cm.channels.xml--maxConnections=20 --gzip --output=guides/novatv.is.xml --days=2 --timeout=90000
-          #npm run channels:parse -- --config=./sites/ipko.tv/ipko.tv.config.js --output=./sites/ipko.tv/ipko.tv.channels.xml
+          npm run channels:parse -- --config=./sites/programmestv.sudinfo.be/programmestv.sudinfo.be.config.js --output=./sites/programmestv.sudinfo.be/programmestv.sudinfo.be.channels.xml
           #npm run grab -- --site=tv.magenta.mk --maxConnections=20 --gzip --output=guides/tv.magenta.mk.xml --days=2 --timeout=90000
-          npm run grab -- --site=snrt.ma --maxConnections=20 --gzip --output=guides/snrt.ma.xml --days=2 --timeout=90000
+          #npm run grab -- --site=snrt.ma --maxConnections=20 --gzip --output=guides/snrt.ma.xml --days=2 --timeout=90000
           #npm run grab -- --site=vivoplay.com.br --maxConnections=20 --gzip --output=guides/vivoplay.com.br.xml --days=2 --timeout=90000
    
     - name: Commit changes
@@ -36,8 +36,8 @@ jobs:
         git config --local user.name "Your Name"
         #git add -f sites/canalplus.com/canalplus.com_test.channels.xml
         #git add -f guides/tv.magenta.mk.xml
-        git add -f guides/snrt.ma.xml
+        #git add -f guides/snrt.ma.xml
         #git add -f guides/vivoplay.com.br.xml
-        #git add -f sites/ipko.tv/ipko.tv.channels.xml
+        git add -f sites/programmestv.sudinfo.be/programmestv.sudinfo.be.channels.xml
         git commit -m "Update xml"
         git push
