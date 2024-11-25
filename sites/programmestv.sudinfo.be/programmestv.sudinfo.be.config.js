@@ -23,10 +23,10 @@ module.exports = {
     const items = parseItems(content)
 
     items.forEach(item => {
-        const start = dayjs.utc(item.pageProps.filteredContent.airingStartDateTime)
-        const stop = dayjs.utc(item.pageProps.filteredContent.airingEndDateTime)
+        const start = dayjs.utc(item.filteredContent.airingStartDateTime)
+        const stop = dayjs.utc(item.filteredContent.airingEndDateTime)
       programs.push({
-          title: item.pageProps.filteredContent.title,
+          title: item.filteredContent.title,
           start,
           stop
       })
