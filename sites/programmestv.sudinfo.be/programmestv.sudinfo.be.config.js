@@ -40,7 +40,7 @@ module.exports = {
       .get(`https://programmestv.sudinfo.be/_next/data/DwIAfQHy0e8mtvHHkDwzJ/programme-tv/ce-soir.json`)
       .then(r => r.data)
       .catch(console.log)
-    return data.filteredChannels.map(item => {
+    return data.pageProps.filteredChannels.map(item => {
       return {
         lang: 'fr',
         name: item.name,
