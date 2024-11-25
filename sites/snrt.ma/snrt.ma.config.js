@@ -15,7 +15,7 @@ module.exports = {
   channels: 'snrt.ma.channels.xml',
   days: 2,
   url: function ({ channel }) {
-    return `https://www.snrt.ma/fr/node/${channel.site_id}`
+    return `https://www.snrt.ma/ar/node/${channel.site_id}`
   },
   parser: function ({ content, date }) {
     const programs = []
@@ -45,7 +45,7 @@ module.exports = {
 
 function parseStart($item, date) {
   const timeString = $item('.grille-time').text().trim()
-  const dateString = `${date.format('MMDDYYYY')} ${timeString}`
+  const dateString = `${date.format('MM/DD/YYYY')} ${timeString}`
 
   return DateTime.fromFormat(dateString, 'MM/dd/yyyy HH.mm', { zone: 'Africa/Casablanca' }).toUTC()
 }
