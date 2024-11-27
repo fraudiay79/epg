@@ -26,10 +26,10 @@ module.exports = {
 
     items.forEach(item => {
       programs.push({
-        title: item.programs.title,
-        description: item.programs.localized.description,
-        start: item.programs.startTime,
-        end: item.programs.endTime
+        title: item.asset.localized.title,
+        description: item.asset.localized.description,
+        start: item.asset.startTime,
+        end: item.asset.endTime
       });
     });
   } catch (error) {
