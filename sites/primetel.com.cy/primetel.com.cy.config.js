@@ -14,8 +14,8 @@ const paths= {
 module.exports = {
   site: 'primetel.com.cy',
   days: 5,
-  url: function ({ date }) {
-    return `https://primetel.com.cy/tv_guide_json/tv${path}.json`
+  url: function ({ paths }) {
+    return `https://primetel.com.cy/tv_guide_json/tv${paths}.json`
   },
   request: {
     headers: {
