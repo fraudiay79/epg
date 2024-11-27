@@ -37,7 +37,7 @@ module.exports = {
       .get(`https://cablenet.com.cy/wp-content/plugins/tv-guide-plugin/data/epg2024-11-27.json`)
       .then(r => r.data)
       .catch(console.log)
-    return data.channel.map(item => {
+    return Object.values(channels).map(item => {
       return {
         lang: 'el',
 	name: item.ch,
