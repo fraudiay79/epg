@@ -31,22 +31,19 @@ module.exports = {
       ttl: 60 * 60 * 1000 // 1 hour
     }
   },
-  parser({ content, channel }) {
+ parser: function ({ content }) {
     let programs = []
-    const items = parseItems(content, channel)
+    const items = parseItems(content)
+
     items.forEach(item => {
-      if (!item) return
-      const start = dayjs.utc(item.pr.starting)
-      const stop = dayjs.utc(item.pr.ending)
       programs.push({
         title: item.pr.title,
         description: item.pr.description,
-        start,
-        stop
+        start: dayjs.utc(item.pr.starting),
+        stop: dayjs.utc(item.pr.ending)
       })
     })
-
-    return programs
+    return programs;
   },
   async channels() {
     const axios = require('axios')
@@ -64,11 +61,9 @@ module.exports = {
   }
 }
   
-function parseItems(content, channel) {
-  try {
-    const data = JSON.parse(content)
-    return data && data[channel.site_id] ? data[channel.site_id] : []
-  } catch (err) {
-    return []
-  }
+function parseItems(content) {
+  const data = JSON.parse(content)
+  if (!data || !Array.isArray(data.pr)) return []
+
+  return data.pr
 }
