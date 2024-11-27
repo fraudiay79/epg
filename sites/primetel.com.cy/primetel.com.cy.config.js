@@ -3,11 +3,19 @@ const utc = require('dayjs/plugin/utc')
 
 dayjs.extend(utc)
 
+const paths= {
+      1: '1',
+      2: '2',
+      3: '3',
+      4: '4',
+      5: '5'
+}
+
 module.exports = {
   site: 'primetel.com.cy',
-  days: 1,
+  days: 5,
   url: function ({ date }) {
-    return `https://primetel.com.cy/tv_guide_json/tv1.json`
+    return `https://primetel.com.cy/tv_guide_json/tv${path}.json`
   },
   request: {
     headers: {
@@ -22,9 +30,9 @@ module.exports = {
       ttl: 60 * 60 * 1000 // 1 hour
     }
   },
-  parser({ content, channel }) {
+  parser({ content }) {
     let programs = []
-    const items = parseItems(content, channel)
+    const items = parseItems(content)
     items.forEach(item => {
       if (!item) return
       const start = dayjs.utc(item.starting)
@@ -56,8 +64,8 @@ module.exports = {
   }
 }
   
-function parseItems(content, channel) {
-  const data = JSON.parse(content, channel)
+function parseItems(content) {
+  const data = JSON.parse(content)
 
   return data
 }
