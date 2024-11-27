@@ -49,7 +49,12 @@ module.exports = {
 }
 
 function parseItems(content) {
-  const data = JSON.parse(content)
+  const data = JSON.parse(content);
 
-  return data
+  return data.map(item => ({
+    title: item.scheduleItemName,
+    description: item.scheduleItemSynopsis,
+    start: item.startTime,
+    stop: start.plus({ minutes: item.broadcastItemDuration * 60 })
+  }));
 }
