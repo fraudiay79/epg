@@ -57,8 +57,11 @@ module.exports = {
 
 
 function parseItems(content) {
-  const data = JSON.parse(content)
-  if (!data || !Array.isArray(data.programs)) return []
-
-  return data.programs
+  try {
+    const data = JSON.parse(content);
+    return data;
+  } catch (error) {
+    console.error("Error parsing JSON content:", error);
+    return [];
+  }
 }
