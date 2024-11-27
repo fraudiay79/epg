@@ -45,11 +45,11 @@ module.exports = {
 }
 
 function parseStart($item, date) {
-  const timeString = $item('.col-4 col-lg-2 grille-time pt-lg-2').text().trim()
+  const timeString = $item('.grille-time').text().trim()
   const dateSt = $item('.data-date').text().trim()
   const dateString = `${dateSt} ${timeString}`
 
-  return DateTime.fromFormat(dateString, 'YYYYMMD HH.mm', { zone: 'Africa/Casablanca' }).toUTC()
+  return DateTime.fromFormat(dateString, 'YYYYMMDD HH.mm', { zone: 'Africa/Casablanca' }).toUTC()
 }
 
 
