@@ -46,10 +46,10 @@ module.exports = {
       .get(`https://primetel.com.cy/tv_guide_json/tv1.json`)
       .then(r => r.data)
       .catch(console.log)
-    return data.channels.map(item => {
+    return data.map(item => {
       return {
         lang: 'el',
-		name: item.ch,
+	name: item.ch,
         site_id: item.id
       }
     })
