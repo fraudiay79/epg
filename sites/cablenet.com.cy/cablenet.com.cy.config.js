@@ -49,7 +49,28 @@ function parseProgramData(jsonData) {
 }
   
 function parseItems(content) {
-  const data = JSON.parse(content)
+  const data = JSON.parse(content);
 
-  return data
+  const programs = [];
+
+  // Iterate over each channel and its programs
+  for (const channelId in data) {
+    if (data.hasOwnProperty(channelId)) {
+      const channelPrograms = data[channelId].pr;
+      channelPrograms.forEach(program => {
+        programs.push({
+          channelId,
+          title: program.ti,
+          description: program.ld,
+          start: program.df,
+          stop: new Date(new Date(program.df).getTime() + program.du * 1000).toISOString()
+          // Add other properties as needed, e.g.,
+          // isLive: program.lv,
+          // category: program.ma // Assuming 'ma' represents a category
+        });
+      });
+    }
+  }
+
+  return programs;
 }
