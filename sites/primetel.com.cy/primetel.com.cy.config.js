@@ -30,7 +30,7 @@ module.exports = {
       ttl: 60 * 60 * 1000 // 1 hour
     }
   },
-  parser({ content }) {
+  parser({ content, paths }) {
     let programs = []
     const items = parseItems(content)
     items.forEach(item => {
@@ -39,7 +39,6 @@ module.exports = {
       const stop = dayjs.utc(item.ending)
       programs.push({
         title: item.title,
-	channel: item.name,
         description: item.description,
         start,
         stop
