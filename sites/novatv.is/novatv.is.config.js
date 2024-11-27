@@ -19,21 +19,25 @@ module.exports = {
     return `https://exposure.api.redbee.live/v2/customer/Nova/businessunit/novatvprod/epg/${channel.site_id}/date/${date.format('YYYY-MM-DD')}`
   },
   parser: function ({ content }) {
-    let programs = []
-    const items = parseItems(content)
+  let programs = [];
+
+  try {
+    const items = parseItems(content);
 
     items.forEach(item => {
-        //const start = dayjs.utc(item.asset.startTime)
-        //const stop = dayjs.utc(item.asset.endTime)
       programs.push({
-          title: item.asset.title,
-          description: item.asset.localized.description,
-          start: item.asset.startTime,
-          stop: item.asset.endTime
-      })
-    })
-    return programs;
-  },
+        title: item.asset.title,
+        description: item.asset.localized.description,
+        start: item.asset.startTime,
+        end: item.asset.endTime
+      });
+    });
+  } catch (error) {
+    console.error("Error parsing content:", error);
+  }
+
+  return programs;
+},
   
   async channels() {
     const axios = require('axios')
