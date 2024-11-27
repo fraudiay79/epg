@@ -55,15 +55,18 @@ function parseStop(item) {
 function parseItems(content) {
   const data = JSON.parse(content);
 
-  // Assuming the data is an array of objects
-  return data.map(program => ({
-    site_id: program.channelExternalId,
+  if (!data || !Array.isArray(data.programs)) {
+    return [];
+  }
+
+  return data.programs.map(program => ({
     title: program.name,
     description: program.description,
+    season: program.seriesSeason || null,
+    episode: program.episodeId || null,
     start: dayjs.unix(program.startDate),
     stop: dayjs.unix(program.endDate),
     genres: program.genres.map(genre => genre.name),
-    series: program.seriesName,
-    episode: program.episodeId,
+    //image: program.attachments.find(attachment => attachment.name === 'COVER')?.value,
   }));
 }
