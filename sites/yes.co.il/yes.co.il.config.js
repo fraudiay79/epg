@@ -12,7 +12,7 @@ module.exports = {
   url({ date }) {
     return `https://www.yes.co.il/o/yes/servletlinearsched/getscheduale?startdate=${date.format('YYYYMMDD')}&p_auth=b1IRvxWi`
   },
-  function parser({ content, date }) {
+  parser: function ({ content, date }) {
   const programs = [];
   const items = parseItems(content);
 
