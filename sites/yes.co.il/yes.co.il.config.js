@@ -12,12 +12,12 @@ module.exports = {
   url({ date }) {
     return `https://www.yes.co.il/o/yes/servletlinearsched/getscheduale?startdate=${date.format('YYYYMMDD')}&p_auth=b1IRvxWi`
   },
-  parser({ content, channel }) {
+  parser({ content, date }) {
     let programs = []
-    const items = parseItems(content, channel)
+    const items = parseItems(content)
     items.forEach(item => {
       if (!item.details) return
-      const start = dayjs(item.startTime)
+      const start = item.startTime
       const stop = start.add(item.broadcastItemDuration, 'm')
       programs.push({
         title: item.scheduleItemName,
