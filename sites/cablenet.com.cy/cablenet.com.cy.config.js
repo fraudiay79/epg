@@ -33,25 +33,18 @@ module.exports = {
     return programs
   },
   async channels() {
-    const promises = [...Array(17).keys()].map(i =>
-      axios.get(`https://cablenet.com.cy/wp-content/plugins/tv-guide-plugin/data/epg2024-11-27.json`)
-    )
+    const result = await axios
+      .get(`https://cablenet.com.cy/wp-content/plugins/tv-guide-plugin/data/epg2024-11-27.json`)
+      .then(r => r.data)
+      .catch(console.error)
 
-    const channels = []
-    await Promise.all(promises).then(values => {
-      values.forEach(r => {
-        let items = r.data.result.data
-        items.forEach(item => {
-          channels.push({
-            lang: 'el',
-            name: item.ch,
-            site_id: item.id
-          })
-        })
-      })
+    return result.map(item => {
+      return {
+        lang: 'el',
+        site_id: item.id,
+        name: item.ch
+      }
     })
-
-    return channels
   }
 }
   
