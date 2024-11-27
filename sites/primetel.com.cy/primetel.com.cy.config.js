@@ -36,11 +36,11 @@ module.exports = {
     const items = parseItems(content, channel)
     items.forEach(item => {
       if (!item) return
-      const start = dayjs.utc(item.starting)
-      const stop = dayjs.utc(item.ending)
+      const start = dayjs.utc(item.pr.starting)
+      const stop = dayjs.utc(item.pr.ending)
       programs.push({
-        title: item.title,
-        description: item.description,
+        title: item.pr.title,
+        description: item.pr.description,
         start,
         stop
       })
