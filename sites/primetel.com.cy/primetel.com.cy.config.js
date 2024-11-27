@@ -1,5 +1,6 @@
 const dayjs = require('dayjs')
 const utc = require('dayjs/plugin/utc')
+const cheerio = require('cheerio')
 
 dayjs.extend(utc)
 
@@ -30,9 +31,9 @@ module.exports = {
       ttl: 60 * 60 * 1000 // 1 hour
     }
   },
-  parser({ content, paths }) {
+  parser({ content, channel }) {
     let programs = []
-    const items = parseItems(content)
+    const items = parseItems(content, channel)
     items.forEach(item => {
       if (!item) return
       const start = dayjs.utc(item.starting)
@@ -63,8 +64,11 @@ module.exports = {
   }
 }
   
-function parseItems(content) {
-  const data = JSON.parse(content)
-
-  return data
+function parseItems(content, channel) {
+  try {
+    const data = JSON.parse(content)
+    return data && data[channel.site_id] ? data[channel.site_id] : []
+  } catch (err) {
+    return []
+  }
 }
