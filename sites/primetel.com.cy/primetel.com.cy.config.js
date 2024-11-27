@@ -32,19 +32,15 @@ module.exports = {
     }
   },
  parser: function ({ content }) {
-    let programs = []
-    const items = parseItems(content)
-
-    items.forEach(item => {
-      programs.push({
-        title: item.pr.title,
-        description: item.pr.description,
-        start: dayjs.utc(item.pr.starting),
-        stop: dayjs.utc(item.pr.ending)
-      })
-    })
-    return programs;
-  },
+  const data = JSON.parse(content)
+  if (!data || !Array.isArray(data.pr)) return []
+  return data.pr.map(item => ({
+    title: item.pr.title,
+    description: item.pr.description,
+    start: dayjs.utc(item.pr.starting),
+    stop: dayjs.utc(item.pr.ending)
+  }))
+},
   async channels() {
     const axios = require('axios')
     const data = await axios
@@ -59,11 +55,4 @@ module.exports = {
       }
     })
   }
-}
-  
-function parseItems(content) {
-  const data = JSON.parse(content)
-  if (!data || !Array.isArray(data.pr)) return []
-
-  return data.pr
 }
