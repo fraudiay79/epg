@@ -26,10 +26,10 @@ module.exports = {
 
     items.forEach(item => {
       programs.push({
-        title: item.asset.title,
-        description: item.asset.localized.description,
-        start: item.asset.startTime,
-        end: item.asset.endTime
+        title: item.programs.asset.title,
+        description: item.programs.asset.localized.description,
+        start: item.programs.asset.startTime,
+        end: item.programs.asset.endTime
       });
     });
   } catch (error) {
@@ -57,11 +57,8 @@ module.exports = {
 
 
 function parseItems(content) {
-  try {
-    const data = JSON.parse(content);
-    return data;
-  } catch (error) {
-    console.error("Error parsing JSON content:", error);
-    return [];
-  }
+  const data = JSON.parse(content)
+  if (!data || !Array.isArray(data.programs)) return []
+
+  return data.programs
 }
