@@ -32,19 +32,25 @@ module.exports = {
     return programs
   },
   async channels() {
-    const axios = require('axios')
-    const data = await axios
-      .get(`https://cablenet.com.cy/wp-content/plugins/tv-guide-plugin/data/epg2024-11-27.json`)
-      .then(r => r.data)
-      .catch(console.log)
-    const channels = parseItems(content)
-    return Object.values(channels).map(item => {
-      return {
-        lang: 'el',
-	name: item.ch,
-        site_id: item.id
-      }
+    const promises = [...Array(17).keys()].map(i =>
+      axios.get(`https://cablenet.com.cy/wp-content/plugins/tv-guide-plugin/data/epg2024-11-27.json`)
+    )
+
+    const channels = []
+    await Promise.all(promises).then(values => {
+      values.forEach(r => {
+        let items = r.data.result.data
+        items.forEach(item => {
+          channels.push({
+            lang: 'el',
+            name: item.ch,
+            site_id: item.id
+          })
+        })
+      })
     })
+
+    return channels
   }
 }
   
