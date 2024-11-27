@@ -12,7 +12,7 @@ module.exports = {
     }
   },
   url({ date }) {
-    return `https://cablenet.com.cy/wp-content/plugins/tv-guide-plugin/data/epg2024-11-27.json`
+    return `https://cablenet.com.cy/wp-content/plugins/tv-guide-plugin/data/epg${date.format('YYYY-MM-DD')}.json`
   },
   parser({ content, date }) {
     let programs = []
@@ -34,13 +34,13 @@ module.exports = {
   async channels({ date }) {
     const axios = require('axios')
     const data = await axios
-      .get(`https://cablenet.com.cy/wp-content/plugins/tv-guide-plugin/data/epg${date.format('YYYY-MM-DD')}.json`)
+      .get(`https://cablenet.com.cy/wp-content/plugins/tv-guide-plugin/data/epg2024-11-27.json`)
       .then(r => r.data)
       .catch(console.log)
     return data.channels.map(item => {
       return {
         lang: 'el',
-		name: item.ch,
+	name: item.ch,
         site_id: item.id
       }
     })
