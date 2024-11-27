@@ -1,4 +1,5 @@
 const dayjs = require('dayjs')
+const _ = require('lodash')
 const utc = require('dayjs/plugin/utc')
 
 dayjs.extend(utc)
@@ -14,23 +15,23 @@ module.exports = {
   url({ date }) {
     return `https://cablenet.com.cy/wp-content/plugins/tv-guide-plugin/data/epg${date.format('YYYY-MM-DD')}.json`
   },
-  parser({ content, date }) {
-    let programs = []
-    const items = parseItems(content)
-    items.forEach(item => {
-      if (!item) return
-      const start = dayjs.utc(item.pr.df)
-      const stop = dayjs.utc(item.pr.dt)
-      programs.push({
-        title: item.pr.ti,
-        description: item.pr.sd,
-        start,
-        stop
-      })
-    })
+function parseProgramData(jsonData) {
+  const parsedData = [];
 
-    return programs
-  },
+  _.forEach(jsonData, (channelData) => {
+    _.forEach(channelData.pr, (program) => {
+      const parsedProgram = {
+        title: program.ti,
+        start: program.df,
+        stop: new Date(new Date(program.df).getTime() + program.du * 1000).toISOString(),
+        description: program.ld,
+      };
+      parsedData.push(parsedProgram);
+    });
+  });
+
+  return parsedData;
+},
   async channels() {
     const axios = require('axios')
     const data = await axios
@@ -50,5 +51,5 @@ module.exports = {
 function parseItems(content) {
   const data = JSON.parse(content)
 
-  return data.pr
+  return data
 }
