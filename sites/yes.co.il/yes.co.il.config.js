@@ -29,21 +29,30 @@ module.exports = {
 
     return programs
   },
-  async channels() {
-    const axios = require('axios')
-    const data = await axios
-      .get(`https://www.yes.co.il/o/yes/servletlinearsched/getchannels?p_auth=b1IRvxWi`)
-      .then(r => r.data)
-      .catch(console.log)
+  async function getChannels() {
+  try {
+    const response = await axios.get(`https://www.yes.co.il/o/yes/servletlinearsched/getchannels?p_auth=b1IRvxWi`);
+    const data = response.data;
 
-    return data.channels.map(item => {
-      return {
-        lang: 'he',
-        site_id: item.channelId,
-        name: item.channelName
-      }
-    })
+    // Check if data.channels exists before processing
+    if (!data.channels) {
+      throw new Error("Missing channels in response data");
+    }
+
+    // Extract channel data
+    const channelData = data.channels.map(item => ({
+      lang: 'he',
+      site_id: item.channelId,
+      name: item.channelName
+    }));
+
+    return channelData;
+  } catch (error) {
+    console.error("Error fetching channel data:", error);
+    // You can also throw the error to be handled elsewhere
+    // throw error;
   }
+}
 }
 
 function parseItems(content, channel) {
