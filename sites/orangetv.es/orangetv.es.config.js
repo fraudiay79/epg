@@ -36,7 +36,7 @@ module.exports = {
     return data.response.map(item => {
       return {
         lang: 'es',
-	    name: item.name,
+	name: item.name,
         site_id: item.externalChannelId
       }
     })
@@ -53,8 +53,17 @@ function parseStop(item) {
 
 
 function parseItems(content) {
-  const data = JSON.parse(content)
-  if (!data || !Array.isArray(data.programs)) return []
+  const data = JSON.parse(content);
 
-  return data.programs
+  // Assuming the data is an array of objects
+  return data.map(program => ({
+    site_id: program.channelExternalId,
+    title: program.name,
+    description: program.description,
+    start: dayjs.unix(program.startDate),
+    stop: dayjs.unix(program.endDate),
+    genres: program.genres.map(genre => genre.name),
+    series: program.seriesName,
+    episode: program.episodeId,
+  }));
 }
