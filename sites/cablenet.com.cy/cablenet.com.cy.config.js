@@ -15,23 +15,23 @@ module.exports = {
   url({ date }) {
     return `https://cablenet.com.cy/wp-content/plugins/tv-guide-plugin/data/epg${date.format('YYYY-MM-DD')}.json`
   },
-function parseProgramData(jsonData) {
-  const parsedData = [];
+function parseData(jsonData) {
+    const programs = [];
 
-  _.forEach(jsonData, (channelData) => {
-    _.forEach(channelData.pr, (program) => {
-      const parsedProgram = {
-        title: program.ti,
-        start: program.df,
-        stop: new Date(new Date(program.df).getTime() + program.du * 1000).toISOString(),
-        description: program.ld,
-      };
-      parsedData.push(parsedProgram);
+    _.forEach(jsonData, (channelData) => {
+      _.forEach(channelData.pr, (program) => {
+        programs.push({
+          title: program.ti,
+          description: program.ld,
+          start: program.df,
+          stop: new Date(new Date(program.df).getTime() + program.du * 1000).toISOString(),
+          // Add other properties as needed
+        });
+      });
     });
-  });
 
-  return parsedData;
-},
+    return programs;
+  },
   async channels() {
     const axios = require('axios')
     const data = await axios
@@ -46,31 +46,4 @@ function parseProgramData(jsonData) {
 
     return channelData;
   }
-}
-  
-function parseItems(content) {
-  const data = JSON.parse(content);
-
-  const programs = [];
-
-  // Iterate over each channel and its programs
-  for (const channelId in data) {
-    if (data.hasOwnProperty(channelId)) {
-      const channelPrograms = data[channelId].pr;
-      channelPrograms.forEach(program => {
-        programs.push({
-          channelId,
-          title: program.ti,
-          description: program.ld,
-          start: program.df,
-          stop: new Date(new Date(program.df).getTime() + program.du * 1000).toISOString()
-          // Add other properties as needed, e.g.,
-          // isLive: program.lv,
-          // category: program.ma // Assuming 'ma' represents a category
-        });
-      });
-    }
-  }
-
-  return programs;
 }
