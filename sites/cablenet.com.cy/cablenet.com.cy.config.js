@@ -31,7 +31,7 @@ module.exports = {
 
     return programs
   },
-  async channels({ date }) {
+  async channels() {
     const axios = require('axios')
     const data = await axios
       .get(`https://cablenet.com.cy/wp-content/plugins/tv-guide-plugin/data/epg2024-11-27.json`)
