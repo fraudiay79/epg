@@ -31,7 +31,7 @@ module.exports = {
       const stop = dayjs.utc(item.ending)
       programs.push({
         title: item.title,
-		channel: item.name,
+	channel: item.name,
         description: item.description,
         start,
         stop
@@ -46,7 +46,7 @@ module.exports = {
       .get(`https://primetel.com.cy/tv_guide_json/tv1.json`)
       .then(r => r.data)
       .catch(console.log)
-    return data.Channel44.map(item => {
+    return data.map(item => {
       return {
         lang: 'el',
 	name: item.ch,
