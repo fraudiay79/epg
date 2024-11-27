@@ -12,7 +12,7 @@ module.exports = {
     }
   },
   url({ date }) {
-    return `https://cablenet.com.cy/wp-content/plugins/tv-guide-plugin/data/epg${date.format('YYYY-MM-DD')}.json`
+    return `https://cablenet.com.cy/wp-content/plugins/tv-guide-plugin/data/epg2024-11-27.json`
   },
   parser({ content, date }) {
     let programs = []
