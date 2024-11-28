@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <channels>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="0x0-fireplace-hd">Горящий камин • Ланет HOME • Lanet Home</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="1-2">1+2 • 1+2 HD</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="1auto">Перший автомобільний • Первый автомобильный • 1 автомобильный • 1 авто</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="1hd">1HD Music • 1HD Music Television</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="1Plus2.lv" site_id="1-2">1+2 • 1+2 HD</channel>
+  <channel site="iptvx.one" lang="uk" xmltv_id="Pershyiavtomobilnyi.ua" site_id="1auto">Перший автомобільний • Первый автомобильный • 1 автомобильный • 1 авто</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="1HDMusicTelevision.ru" site_id="1hd">1HD Music • 1HD Music Television</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="1obl-blagoveschensk">Первый областной Благовещенск • Амурское областное телевидение</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="1plus1">1+1 • 1+1 HD • 1+1 Марафон • 1+1 Марафон HD</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="1plus1-int">1+1 International • 1+1 Int • 1+1 International HD • 1+1 Международный • 1+1 Международный HD</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="1plus1-ukraina">1+1 Україна • 1+1 Україна HD</channel>
+  <channel site="iptvx.one" lang="uk" xmltv_id="1Plus1.ua" site_id="1plus1">1+1 • 1+1 HD • 1+1 Марафон • 1+1 Марафон HD</channel>
+  <channel site="iptvx.one" lang="uk" xmltv_id="1Plus1International.ua" site_id="1plus1-int">1+1 International • 1+1 Int • 1+1 International HD • 1+1 Международный • 1+1 Международный HD</channel>
+  <channel site="iptvx.one" lang="uk" xmltv_id="1Plus1Marafon.ua" site_id="1plus1-ukraina">1+1 Україна • 1+1 Україна HD</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="2-kanal-mogilev">ТВ2 Могилёв • ТВ2 Могилев • 2 канал Могилев • 2 канал Могилёв</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="2na2">2x2 • 2x2 HD</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="2x2.ru" site_id="2na2">2x2 • 2x2 HD</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="2na2-pl2">2x2 (+2) • 2x2 HD (+2)</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="2na2-pl4">2x2 (+4) • 2x2 HD (+4)</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="2na2-pl7">2x2 (+7) • 2x2 HD (+7)</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="2plus2">2+2 • 2+2 HD</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="3-plus-ee">3+ Эстония • 3+ EE</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="3-plus-latvia">3+ Латвия • 3+ LV</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="4ever-cinema">4ever Cinema • 4ever Cinema HD</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="4ever-drama">4ever Drama • 4ever Drama HD</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="4ever-music">4ever Music • 4ever Music HD</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="4ever-theater">4ever Theater • 4ever Theater HD</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="4fun">4fun • 4fun.TV • 4fun.TV HD</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="4fun-dance">4fun Dance • 4fun Fit&amp;Dance</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="4fun-gold">4fun Kids • 4fun Gold • 4fun Gold Hits • 4fun Hits</channel>
+  <channel site="iptvx.one" lang="uk" xmltv_id="2Plus2.ua" site_id="2plus2">2+2 • 2+2 HD</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="TV3Plus.ee" site_id="3-plus-ee">3+ Эстония • 3+ EE • TV3+</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="TV3Plus.lv" site_id="3-plus-latvia">3+ Латвия • 3+ LV • TV3+</channel>
+  <channel site="iptvx.one" lang="uk" xmltv_id="4everCinema.ua" site_id="4ever-cinema">4ever Cinema • 4ever Cinema HD</channel>
+  <channel site="iptvx.one" lang="uk" xmltv_id="4everDrama.ua" site_id="4ever-drama">4ever Drama • 4ever Drama HD</channel>
+  <channel site="iptvx.one" lang="uk" xmltv_id="4everMusic.ua" site_id="4ever-music">4ever Music • 4ever Music HD</channel>
+  <channel site="iptvx.one" lang="uk" xmltv_id="4everTheater.ua" site_id="4ever-theater">4ever Theater • 4ever Theater HD</channel>
+  <channel site="iptvx.one" lang="pl" xmltv_id="4FunTV.pl" site_id="4fun">4fun • 4fun.TV • 4fun.TV HD</channel>
+  <channel site="iptvx.one" lang="pl" xmltv_id="4FunDance.pl" site_id="4fun-dance">4fun Dance • 4fun Fit&amp;Dance</channel>
+  <channel site="iptvx.one" lang="pl" xmltv_id="4FunKids.pl" site_id="4fun-gold">4fun Kids • 4fun Gold • 4fun Gold Hits • 4fun Hits</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="4k-ruskino">4K Русское кино • 4К Русское кино</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="4kanal-piatnica">4 канал Екатеринбург • 4 канал + Пятница</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="5-am">5 TV (Армения)</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="5kanal-karaganda">5 канал Караганда • 5 канал KZ</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="5kanal-ru">Пятый канал • 5 канал Россия</channel>
+  <channel site="iptvx.one" lang="hy" xmltv_id="5TV.am" site_id="5-am">5 TV (Армения) • 5TV</channel>
+  <channel site="iptvx.one" lang="kk" xmltv_id="5Kanal.kz" site_id="5kanal-karaganda">5 канал Караганда • 5 канал KZ</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="Channel5.ru" site_id="5kanal-ru">Пятый канал • 5 канал Россия</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="5kanal-ru-pl2">Пятый канал +2 • 5 канал Россия +2</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="5kanal-ru-pl4">Пятый канал +4 • 5 канал Россия +4</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="5kanal-ru-pl7">Пятый канал +7 • 5 канал Россия +7</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="5kanal-ua">5 канал Україна • 5 канал Украина • 5 канал • 5 канал Украина HD • 5 канал Україна HD • 5 канал HD</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="5sport-gold-il">5Sport Gold • 5Sport Gold HD</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="5sport-live-il">5Sport Live • 5Sport Live HD</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="5sport-plus-il">5Sport Plus • 5Sport Plus HD</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="5sport-stars-il">5Sport Stars • 5Sport Stars HD</channel>
+  <channel site="iptvx.one" lang="uk" xmltv_id="Channel5.ua" site_id="5kanal-ua">5 канал Україна • 5 канал Украина • 5 канал • 5 канал Украина HD • 5 канал Україна HD • 5 канал HD</channel>
+  <channel site="iptvx.one" lang="he" xmltv_id="5SportGold.il" site_id="5sport-gold-il">5Sport Gold • 5Sport Gold HD</channel>
+  <channel site="iptvx.one" lang="he" xmltv_id="5SportLive.il" site_id="5sport-live-il">5Sport Live • 5Sport Live HD</channel>
+  <channel site="iptvx.one" lang="he" xmltv_id="5SportPlus.il" site_id="5sport-plus-il">5Sport Plus • 5Sport Plus HD</channel>
+  <channel site="iptvx.one" lang="he" xmltv_id="5SportStars.il" site_id="5sport-stars-il">5Sport Stars • 5Sport Stars HD</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="6kanal-vlad">6 канал Владимир</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="6sotok">6 соток • 6 соток HD</channel>
+  <channel site="iptvx.one" lang="uk" xmltv_id="6sotok.ua" site_id="6sotok">6 соток • 6 соток HD</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="6tv">6 ТВ • 6ТВ</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="7d7">Just TV • 7D7</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="7D7.ee" site_id="7d7">Just TV • 7D7</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="7kanal-krasnoyarsk">7 канал Красноярск</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="7kanal-kz">7 канал KZ • 7 канал Казахстан</channel>
+  <channel site="iptvx.one" lang="kk" xmltv_id="Channel7.kz" site_id="7kanal-kz">7 канал KZ • 7 канал Казахстан</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="7tv">7ТВ • 7 ТВ</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="8kanal-by">8 канал Беларусь • 8 канал HD Беларусь • ВосьМой • ВосьМой HD</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="8kanal-eu">8 канал International • 8 канал Международный • 8 канал Int • 8 канал Европа</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="8kanal-krasnoyarsk">8 канал Красноярский край</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="8kanal-novosibirsk">8 канал Новосибирск</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="8kanal-ru">8 канал • 8 канал Триколор • 8 канал Россия</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="Channel8.by" site_id="8kanal-by">8 канал Беларусь • 8 канал HD Беларусь • ВосьМой • ВосьМой HD</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="Channel8International.ru" site_id="8kanal-eu">8 канал International • 8 канал Международный • 8 канал Int • 8 канал Европа</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="Channel8Krasnoyarsk.ru" site_id="8kanal-krasnoyarsk">8 канал Красноярский край</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="Channel8Novosibirsk.ru" site_id="8kanal-novosibirsk">8 канал Новосибирск</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="Channel8.ru" site_id="8kanal-ru">8 канал • 8 канал Триколор • 8 канал Россия</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="8tv-lv">8TV (Латвия) • 8TV LV</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="8vladik">8 канал Владивосток</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="9kanal-dnepr">9 канал Днепр • 9 Канал Дніпро</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="9kanal-israel">9 канал Израиль</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="Channel9.il" site_id="9kanal-israel">9 канал Израиль • 9 канал</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="10-rentv">10 канал / РенТВ Саранск</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="10kanal-novokuzneck">10 канал Новокузнецк • Десятка</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="11kanal">11 канал Днепр • 11 канал (Днепр)</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="12-omsk">12 канал Омск • 12 канал (Омск)</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="13-strt">13th Street • 13th Street HD</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="13ulica-pl">13 Ulica PL</channel>
+  <channel site="iptvx.one" lang="de" xmltv_id="13thStreet.de" site_id="13-strt">13th Street • 13th Street HD</channel>
+  <channel site="iptvx.one" lang="pl" xmltv_id="13Ulica.pl" site_id="13ulica-pl">13 Ulica PL</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="21-kanal-uzhgorod">21 канал Ужгород • 21 канал (Ужгород)</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="24news-ua">24 Украина • Телеканал новостей 24 • 24 Украина HD • 24 новости • 24 новини • 24 новости HD • 24 новини HD</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="26-region">26 регион</channel>
@@ -71,21 +71,21 @@
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="77tv-kz">77TV</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="78kanal">78 • LifeNews 78 • Канал 78</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="86-surgut">86 Сургут • Сургут 86 • Телеканал 86 • Телеканал 86 Сургут</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="312-kino">312 Кино • 312 Кино HD</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="312-music">312 Музыка • 312 Музыка HD</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="312-serial">312 Сериал • 312 Сериал HD</channel>
+  <channel site="iptvx.one" lang="ky" xmltv_id="312Kino.kg" site_id="312-kino">312 Кино • 312 Кино HD</channel>
+  <channel site="iptvx.one" lang="ky" xmltv_id="312Muzyka.kg" site_id="312-music">312 Музыка • 312 Музыка HD</channel>
+  <channel site="iptvx.one" lang="ky" xmltv_id="312TV.kg" site_id="312-serial">312 Сериал • 312 Сериал HD</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="360-int">360° International • 360° Международный</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="360-lv">360TV Латвия • 360 Латвия • 360 LV • 360TVLV</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="360-news">360° Новости • 360 Новости</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="360-podmoskovie">360° Подмосковье • 360° Подмосковье HD • 360 Подмосковье • 360 Подмосковье HD • Подмосковье • 360 • 360 HD</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="360-tunebox">360TuneBox • 360 TuneBox</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="365-dnej">365 дней ТВ • 365 дней • 365 дней HD • 365 дней ТВ HD</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="a2-tr">A2 HD TR • A2 TR</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="a-haber-tr">A Haber HD • A Haber</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="a-news-tr">A News HD • A News</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="a-para-tr">A Para HD • A Para</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="a-spor-tr">A Spor HD • A Spor</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="abaitv">Abai TV</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="360TV.lv" site_id="360-lv">360TV Латвия • 360 Латвия • 360 LV • 360TVLV</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="360News.ru" site_id="360-news">360° Новости • 360 Новости</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="360.ru" site_id="360-podmoskovie">360° Подмосковье • 360° Подмосковье HD • 360 Подмосковье • 360 Подмосковье HD • Подмосковье • 360 • 360 HD</channel>
+  <channel site="iptvx.one" lang="en" xmltv_id="360TuneBox.nl" site_id="360-tunebox">360TuneBox • 360 TuneBox</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="365Days.ru" site_id="365-dnej">365 дней ТВ • 365 дней • 365 дней HD • 365 дней ТВ HD</channel>
+  <channel site="iptvx.one" lang="tr" xmltv_id="A2.tr" site_id="a2-tr">A2 HD TR • A2 TR</channel>
+  <channel site="iptvx.one" lang="tr" xmltv_id="AHaber.tr" site_id="a-haber-tr">A Haber HD • A Haber</channel>
+  <channel site="iptvx.one" lang="tr" xmltv_id="ANews.tr" site_id="a-news-tr">A News HD • A News</channel>
+  <channel site="iptvx.one" lang="tr" xmltv_id="APara.tr" site_id="a-para-tr">A Para HD • A Para</channel>
+  <channel site="iptvx.one" lang="tr" xmltv_id="ASpor.tr" site_id="a-spor-tr">A Spor HD • A Spor</channel>
+  <channel site="iptvx.one" lang="kk" xmltv_id="AbaiTV.kz" site_id="abaitv">Abai TV</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="abakan24">Абакан 24</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="acb-tv">9 волна • ACB TV</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="achinskoetv">Ачинское телевидение</channel>
@@ -93,40 +93,40 @@
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="adult-channel">Adult Channel • The Adult Channel</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="adventure-in-90-c">Adventure in 90&apos;s</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="afontovo-kr">Афонтово Красноярск</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="agro-tv-md">Agro TV Moldova</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="aifak-kz">Айғак • Айғақ</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="aist">Аист</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="aiva">AIVA • AIVA HD</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="AgroTV.md" site_id="agro-tv-md">Agro TV Moldova</channel>
+  <channel site="iptvx.one" lang="kk" xmltv_id="AigakTV.kz" site_id="aifak-kz">Айғак • Айғақ</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="AIST.ru" site_id="aist">Аист</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="AIVA.ru" site_id="aiva">AIVA • AIVA HD</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="ajara-tv">Ajara TV</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="aktis">Актис</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="akwatv">Аква ТВ</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="al-jazeera-int">Al Jazeera International</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="alautv">Алау • Алау ТВ</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="ale-kino-plus">Ale Kino+ HD • Ale Kino+</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="almaty">Алматы • Almaty TV</channel>
+  <channel site="iptvx.one" lang="kk" xmltv_id="AlmatyTV.kz" site_id="almaty">Алматы • Almaty TV</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="almazny-kray">Алмазный край</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="altai-kz">Altai</channel>
+  <channel site="iptvx.one" lang="kk" xmltv_id="Altai.kz" site_id="altai-kz">Altai</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="amc">AMC</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="amedia1">А1 • A1 • А1 HD • A1 HD • Amedia 1 HD • Amedia 1 • A First International</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="amedia2">А2 • A2 • А2 HD • A2 HD • Amedia 2 HD • Amedia 2</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="amedia-hit">A HOME OF HBO 1 • Amedia Hit • Amedia Hit HD • A HOME OF HBO 1 HD • A Classic</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="amedia-premium">A HOME OF HBO 2 • Amedia Premium • Amedia Premium HD • A HOME OF HBO 2 HD • A Premier</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="anekdottv">Анекдот ТВ</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="A1.ru" site_id="amedia1">А1 • A1 • А1 HD • A1 HD • Amedia 1 HD • Amedia 1 • A First International</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="A2.ru" site_id="amedia2">А2 • A2 • А2 HD • A2 HD • Amedia 2 HD • Amedia 2</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="AmediaHit.ru" site_id="amedia-hit">A HOME OF HBO 1 • Amedia Hit • Amedia Hit HD • A HOME OF HBO 1 HD • A Classic</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="AmediaPremium.ru" site_id="amedia-premium">A HOME OF HBO 2 • Amedia Premium • Amedia Premium HD • A HOME OF HBO 2 HD • A Premier</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="AnekdotTV.ru" site_id="anekdottv">Анекдот ТВ</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="angel-tv">Angel TV</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="ani">Ani</channel>
+  <channel site="iptvx.one" lang="ru" xmltv_id="Ani.ru" site_id="ani">Ani</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="animal-planet-eu">Animal Planet HD • Animal Planet • Animal Planet Europe</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="animal-planet-pl">Animal Planet PL • Animal Planet HD PL</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="animaux">Animaux</channel>
+  <channel site="iptvx.one" lang="pl" xmltv_id="AnimalPlanet.pl" site_id="animal-planet-pl">Animal Planet PL • Animal Planet HD PL</channel>
+  <channel site="iptvx.one" lang="fr" xmltv_id="Animaux.fr" site_id="animaux">Animaux</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="animekids">Anime KIDS</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="animetv">Anime TV</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="antena1hd-ro">Antena 1 RO • Antena 1 HD RO</channel>
+  <channel site="iptvx.one" lang="ro" xmltv_id="Antena1.ro" site_id="antena1hd-ro">Antena 1 RO • Antena 1 HD RO</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="anzherskoetv">Анжерское ТВ</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="apostrof">Апостроф • Апостроф TV</channel>
+  <channel site="iptvx.one" lang="uk" xmltv_id="ApostropheTV.ua" site_id="apostrof">Апостроф • Апостроф TV</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="appetitny">Аппетитный</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="aqjaiyq">AQJAIYQ</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="aqtobe">AQTOBE</channel>
+  <channel site="iptvx.one" lang="kk" xmltv_id="Aqjaiyq.kz" site_id="aqjaiyq">Aqjaiyq</channel>
+  <channel site="iptvx.one" lang="kk" xmltv_id="Aqtobe.kz" site_id="aqtobe">Aqtobe • Aqtóbe</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="aquaruim4k">Aquarium 4K • Aquarium UHD • Aquarium UltraHD</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="arena4-hu">Arena4 HU</channel>
+  <channel site="iptvx.one" lang="hu" xmltv_id="Arena4.hu" site_id="arena4-hu">Arena4 HU</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="arena-fight">Arena Fight HD • Arena Fight</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="arena-premium-1">Arena Premium 1 • Arena Premium 1 HD</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="arena-premium-2">Arena Premium 2 • Arena Premium 2 HD</channel>
@@ -152,7 +152,7 @@
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="arena-sport-9-rs">Arena Sport 9</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="arena-sport-10-rs">Arena Sport 10</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="arig-us-24">Ариг Ус 24 • Ариг Ус 24 HD</channel>
-  <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="arirang">Arirang</channel>
+  <channel site="iptvx.one" lang="en" xmltv_id="Arirang.kr" site_id="arirang">Arirang</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="aris24">Арис 24</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="arktik-tv">Арктик-TV</channel>
   <channel site="iptvx.one" lang="ru" xmltv_id="" site_id="armenia-tv">Армения ТВ</channel>
