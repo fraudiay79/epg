@@ -19,7 +19,7 @@ module.exports = {
     const items = parseItems(content)
     items.forEach(item => {
       if (!item) return
-      const start = dayjs.utc(item.start)
+      let start = dayjs.utc(item.ch_programme.start)
       if (prev) {
         if (start < prev.start) {
           start = start.plus({ days: 1 })
@@ -29,9 +29,9 @@ module.exports = {
       }
       const stop = start.plus({ hours: 1 })
       programs.push({
-        title: item.title,
-        description: item.description,
-        category: item.category,
+        title: item.ch_programme.title,
+        description: item.ch_programme.description,
+        category: item.ch_programme.category,
         start,
         stop
       })
