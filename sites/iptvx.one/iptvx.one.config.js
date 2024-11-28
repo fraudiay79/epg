@@ -20,7 +20,14 @@ module.exports = {
     items.forEach(item => {
       if (!item) return
       const start = dayjs.utc(item.start)
-      const stop = start.add(item.slott, 'm')
+      if (prev) {
+        if (start < prev.start) {
+          start = start.plus({ days: 1 })
+          date = date.add(1, 'd')
+        }
+        prev.stop = start
+      }
+      const stop = start.plus({ hours: 1 })
       programs.push({
         title: item.title,
         description: item.description,
