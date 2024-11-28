@@ -18,17 +18,12 @@ module.exports = {
     // Assuming parseItems is specific to iptvx.one format
     const items = parseItems(content)
     let programs = []
-    let prev = null
+    let prevStop = null
     items.forEach(item => {
-      if (!item) return
-      let start = item.ch_programme.start
-      if (prev) {
-        if (start < prev.start) {
-          start = start.plus({ days: 1 })
-        }
-        prev.stop = start
-      }
-      const stop = start.plus({ hours: 1 })
+      if (!item || !item.ch_programme) return
+      const start = dayjs.utc(item.ch_programme.start, 'DD-MM-YYYY HH:mm')
+      const stop = start.add(1, 'hour')
+
       programs.push({
         title: item.ch_programme.title,
         description: item.ch_programme.description,
@@ -36,7 +31,7 @@ module.exports = {
         start,
         stop
       })
-      prev = programs[programs.length - 1]
+      prevStop = stop
     })
 
     return programs
@@ -60,8 +55,12 @@ module.exports = {
 }
 
 function parseItems(content) {
-  const data = JSON.parse(content)
-  if (!data || !Array.isArray(data.ch_programme)) return []
-
-  return data.ch_programme
+  try {
+    const data = JSON.parse(content)
+    if (!data || !Array.isArray(data.ch_programme)) return []
+    return data.ch_programme
+  } catch (error) {
+    console.error('Error parsing JSON:', error)
+    return []
+  }
 }
