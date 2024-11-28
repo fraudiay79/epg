@@ -54,9 +54,24 @@ module.exports = {
     })
   }
 }
-  
-function parseItems(content) {
-  const data = JSON.parse(content)
+function parseEPGData(jsonData) {
+  // Создаем объект для хранения результатов парсинга
+  const parsedData = {
+    channelId: jsonData.ch_id,
+    channelIcon: jsonData.ch_icon,
+    channelNames: jsonData.ch_name,
+    programs: [],
+  };
 
-  return data
+  // Парсим информацию о программах
+  jsonData.ch_programme.forEach((program) => {
+    parsedData.programs.push({
+      start: new Date(program.start),
+      title: program.title,
+      description: program.description,
+      category: program.category,
+    });
+  });
+
+  return parsedData;
 }
