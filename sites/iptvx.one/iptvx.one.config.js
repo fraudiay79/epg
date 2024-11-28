@@ -12,23 +12,26 @@ module.exports = {
     }
   },
   url({ channel }) {
-    return `https://epg.drm-play.com/iptvx.one%2Fepg%2F${channel.site_id}.json`
+    return `https://epg.iptvx.one/api/id/${channel.site_id}.json`
   },
   parser({ content }) {
+    // Assuming parseItems is specific to iptvx.one format
     const items = parseItems(content)
     let programs = []
+    let prevStop = null
     items.forEach(item => {
-      if (!item || !item.epg_data) return
-      const start = dayjs.unix(item.time)
-      const stop = dayjs.unix(item.time_to)
+      if (!item || !item.ch_programme) return
+      const start = dayjs.utc(item.ch_programme.start, 'DD-MM-YYYY HH:mm')
+      const stop = start.add(1, 'hour')
 
       programs.push({
-        title: item.epg_data.name,
-        description: item.epg_data.descr,
+        title: item.ch_programme.title,
+        description: item.ch_programme.description,
+        category: item.ch_programme.category,
         start,
         stop
       })
-      
+      prevStop = stop
     })
 
     return programs
@@ -54,8 +57,8 @@ module.exports = {
 function parseItems(content) {
   try {
     const data = JSON.parse(content)
-    if (!data || !Array.isArray(data.epg_data)) return []
-    return data.epg_data
+    if (!data || !Array.isArray(data.ch_programme)) return []
+    return data.ch_programme
   } catch (error) {
     console.error('Error parsing JSON:', error)
     return []
