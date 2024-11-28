@@ -16,7 +16,7 @@ module.exports = {
   },
   parser({ content, channel, date }) {
     // Assuming parseItems is specific to iptvx.one format
-    const items = parseItems(content)
+    const items = parseItems(content, channel, date)
     let programs = []
     let prevStop = null
     items.forEach(item => {
