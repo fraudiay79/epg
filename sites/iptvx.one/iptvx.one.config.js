@@ -14,7 +14,7 @@ module.exports = {
   url({ channel }) {
     return `https://epg.iptvx.one/api/id/${channel.site_id}.json`
   },
-  parser({ content, channel }) {
+  parser({ content, channel, date }) {
     // Assuming parseItems is specific to iptvx.one format
     const items = parseItems(content)
     let programs = []
