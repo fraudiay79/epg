@@ -21,7 +21,7 @@ module.exports = {
     let prev = null
     items.forEach(item => {
       if (!item) return
-      let start = dayjs.utc(item.ch_programme.start)
+      let start = item.ch_programme.start
       if (prev) {
         if (start < prev.start) {
           start = start.plus({ days: 1 })
