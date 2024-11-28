@@ -1,7 +1,7 @@
-const dayjs = require('dayjs')
-const utc = require('dayjs/plugin/utc')
+const dayjs = require('dayjs');
+const utc = require('dayjs/plugin/utc');
 
-dayjs.extend(utc)
+dayjs.extend(utc);
 
 module.exports = {
   site: 'iptvx.one',
@@ -12,55 +12,52 @@ module.exports = {
     }
   },
   url({ channel }) {
-    return `https://epg.iptvx.one/api/id/${channel.site_id}.json`
+    return `https://epg.iptvx.one/api/id/${channel.site_id}.json`;
   },
   parser({ content }) {
-    // Assuming parseItems is specific to iptvx.one format
-    const items = parseItems(content)
-    let programs = []
-    let prevStop = null
-    items.forEach(item => {
-      if (!item || !item.ch_programme) return
-      const start = dayjs.utc(item.ch_programme.start, 'DD-MM-YYYY HH:mm')
-      const stop = start.add(1, 'hour')
+    const programs = JSON.parse(content).ch_programme || [];
+    let prevStop = null;
 
-      programs.push({
-        title: item.ch_programme.title,
-        description: item.ch_programme.description,
-        category: item.ch_programme.category,
-        start,
-        stop
-      })
-      prevStop = stop
-    })
+    return programs.map(program => {
+      if (!program) return null;
+      const start = dayjs.utc(program.start, 'DD-MM-YYYY HH:mm');
+      const stop = program.stop ? dayjs.utc(program.stop, 'DD-MM-YYYY HH:mm') : start.add(1, 'hour');
 
-    return programs
+      return {
+        title: program.title,
+        description: program.description,
+        category: program.category,
+        start: start.toISOString(),
+        stop: stop.toISOString()
+      };
+    }).filter(program => program !== null);
   },
   async channels() {
-    const axios = require('axios')
+    const axios = require('axios');
     try {
-      const data = await axios.get(`https://epg.iptvx.one/api/channels.json`)
-      return data.channels.map(item => {
+      const response = await axios.get(`https://epg.iptvx.one/api/channels.json`);
+      return response.data.channels.map(channel => {
         return {
           lang: 'ru',
-          name: item.chan_names,
-          site_id: item.chan_id
-        }
-      })
+          name: channel.chan_names,
+          site_id: channel.chan_id
+        };
+      });
     } catch (error) {
-      console.error('Error fetching channels:', error)
+      console.error('Error fetching channels:', error);
       // Consider returning a default value or throwing an error
+      return [];
     }
   }
-}
+};
 
 function parseItems(content) {
   try {
-    const data = JSON.parse(content)
-    if (!data || !Array.isArray(data.ch_programme)) return []
-    return data.ch_programme
+    const data = JSON.parse(content);
+    if (!data || !Array.isArray(data.ch_programme)) return [];
+    return data.ch_programme;
   } catch (error) {
-    console.error('Error parsing JSON:', error)
-    return []
+    console.error('Error parsing JSON:', error);
+    return [];
   }
 }
