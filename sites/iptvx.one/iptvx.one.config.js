@@ -21,13 +21,13 @@ module.exports = {
     let prevStop = null
     items.forEach(item => {
       if (!item || !item.ch_programme) return
-      const start = dayjs.utc(item.ch_programme.start, 'DD-MM-YYYY HH:mm')
+      const start = dayjs.utc(item.start, 'DD-MM-YYYY HH:mm')
       const stop = start.add(1, 'hour')
 
       programs.push({
-        title: item.ch_programme.title,
-        description: item.ch_programme.description,
-        category: item.ch_programme.category,
+        title: item.title,
+        description: item.description,
+        category: item.category,
         start,
         stop
       })
