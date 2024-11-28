@@ -58,3 +58,10 @@ module.exports = {
     }
   }
 }
+
+function parseItems(content) {
+  const data = JSON.parse(content)
+  if (!data || !Array.isArray(data.ch_programme)) return []
+
+  return data.ch_programme
+}
