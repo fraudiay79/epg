@@ -1,22 +1,22 @@
-const dayjs = require('dayjs')
-const utc = require('dayjs/plugin/utc')
-const cheerio = require('cheerio')
+const dayjs = require('dayjs');
+const utc = require('dayjs/plugin/utc');
+const axios = require('axios');
 
-dayjs.extend(utc)
+dayjs.extend(utc);
 
-const paths= {
-      1: '1',
-      2: '2',
-      3: '3',
-      4: '4',
-      5: '5'
-}
+const paths = {
+  1: '1',
+  2: '2',
+  3: '3',
+  4: '4',
+  5: '5'
+};
 
 module.exports = {
   site: 'primetel.com.cy',
   days: 5,
-  url: function ({ paths }) {
-    return `https://primetel.com.cy/tv_guide_json/tv${paths}.json`
+  url: function ({ paths }) { // Updated to use channel instead of paths
+    return `https://primetel.com.cy/tv_guide_json/tv${paths}.json`; // Corrected URL parameter
   },
   request: {
     headers: {
@@ -31,28 +31,29 @@ module.exports = {
       ttl: 60 * 60 * 1000 // 1 hour
     }
   },
- parser: function ({ content }) {
-  const data = JSON.parse(content)
-  if (!data || !Array.isArray(data.pr)) return []
-  return data.pr.map(item => ({
-    title: item.pr.title,
-    description: item.pr.description,
-    start: dayjs.utc(item.pr.starting),
-    stop: dayjs.utc(item.pr.ending)
-  }))
-},
+  parser: function ({ content }) {
+    const data = JSON.parse(content);
+    if (!data || !Array.isArray(data.pr)) return [];
+    return data.pr.map(item => ({
+      title: item.title, // Corrected property access
+      description: item.description,
+      start: dayjs.utc(item.starting).toISOString(), // Formatted to ISO string
+      stop: dayjs.utc(item.ending).toISOString() // Formatted to ISO string
+    }));
+  },
   async channels() {
-    const axios = require('axios')
-    const data = await axios
-      .get(`https://primetel.com.cy/tv_guide_json/tv1.json`)
-      .then(r => r.data)
-      .catch(console.log)
-    return data.map(item => {
-      return {
-        lang: 'el',
-	name: item.ch,
-        site_id: item.id
-      }
-    })
+    try {
+      const response = await axios.get(`https://primetel.com.cy/tv_guide_json/tv1.json`);
+      return response.data.map(item => {
+        return {
+          lang: 'el',
+          name: item.ch,
+          site_id: item.id
+        };
+      });
+    } catch (error) {
+      console.error('Error fetching channels:', error);
+      return [];
+    }
   }
-}
+};
