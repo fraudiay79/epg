@@ -30,12 +30,12 @@ module.exports = {
     });
   },
   async channels() {
-    // Modify this part based on how you fetch channels information
     const axios = require('axios');
     try {
       const response = await axios.get('https://live-data-store-cdn.api.pldt.firstlight.ai/content/epg/channels');
       return response.data.channels.map(channel => {
         return {
+          lang: 'en',
           name: channel.name,
           site_id: channel.id
         };
