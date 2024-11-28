@@ -29,7 +29,7 @@ jobs:
           #npm run grab -- --site=tv.magenta.mk --maxConnections=20 --gzip --output=guides/tv.magenta.mk.xml --days=2 --timeout=90000
           #npm run grab -- --site=cablenet.com.cy --maxConnections=20 --gzip --output=guides/cablenet.com.cy.xml --days=2 --timeout=90000
           #npm run grab -- --site=yes.co.il --maxConnections=20 --gzip --output=guides/yes.co.il.xml --days=2 --timeout=90000
-          npm run grab -- --site=novatv.is --maxConnections=20 --gzip --output=guides/novatv.is.xml --days=2 --timeout=90000
+          npm run grab -- --site=novatv.is --maxConnections=20 --output=guides/novatv.is.xml --days=2 --timeout=90000
    
     - name: Commit changes
       run: |
