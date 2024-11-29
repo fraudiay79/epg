@@ -21,7 +21,7 @@ module.exports = {
       const prev = programs[programs.length - 1]
       let start = parseStart(item)
       if (prev) {
-        if (start < prev.start) {
+        if (start < prev.ch_programme.start) {
           start = start.plus({ days: 1 })
           date = date.add(1, 'd')
         }
