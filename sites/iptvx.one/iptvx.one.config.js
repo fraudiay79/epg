@@ -55,5 +55,5 @@ module.exports = {
 }
 
 function parseStart(item) {
-  return dayjs(item.ch_programme.start).format('DD-MM-YYYY HH:mm')
+  return dayjs(item.ch_programme.start)
 }
