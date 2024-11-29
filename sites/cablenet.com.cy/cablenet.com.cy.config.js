@@ -1,8 +1,8 @@
-const dayjs = require('dayjs')
-const _ = require('lodash')
-const utc = require('dayjs/plugin/utc')
+const dayjs = require('dayjs');
+const _ = require('lodash');
+const utc = require('dayjs/plugin/utc');
 
-dayjs.extend(utc)
+dayjs.extend(utc);
 
 module.exports = {
   site: 'cablenet.com.cy',
@@ -13,31 +13,32 @@ module.exports = {
     }
   },
   url({ date }) {
-    return `https://cablenet.com.cy/wp-content/plugins/tv-guide-plugin/data/epg${date.format('YYYY-MM-DD')}.json`
+    return `https://cablenet.com.cy/wp-content/plugins/tv-guide-plugin/data/epg${date.format('YYYY-MM-DD')}.json`;
   },
-parser: function ({ content, date }) {
-const programs = [];
-
+  parser: function ({ content, date }) {
+    const programs = [];
     _.forEach(content, (channelData) => {
       _.forEach(channelData.pr, (program) => {
         programs.push({
           title: program.ti,
+          startDate: program.sd,
+          definition: program.df,
+          duration: program.dt,
           description: program.ld,
           start: program.df,
-          stop: new Date(new Date(program.df).getTime() + program.du * 1000).toISOString(),
-          // Add other properties as needed
+          stop: program.dt
         });
       });
     });
-
     return programs;
   },
   async channels() {
-    const axios = require('axios')
+    const axios = require('axios');
     const data = await axios
       .get(`https://cablenet.com.cy/wp-content/plugins/tv-guide-plugin/data/epg2024-11-27.json`)
       .then(r => r.data)
-      .catch(console.log)
+      .catch(console.log);
+
     const channelData = Object.keys(data).map(channelId => ({
       lang: 'el',
       name: data[channelId].ch,
@@ -46,7 +47,7 @@ const programs = [];
 
     return channelData;
   }
-}
+};
 
 function parseItems(content) {
   const data = JSON.parse(content);
