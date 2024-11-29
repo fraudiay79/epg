@@ -54,7 +54,7 @@ module.exports = {
   }
 }
 
-function parseItems(content) {
+function parseItems(content, channel, date) {
   const data = JSON.parse(content); 
   const programs = data.ch_programme || []; 
   return programs.map(program => { 
@@ -63,7 +63,7 @@ function parseItems(content) {
       description: program.description, 
       category: program.category, 
       start: dayjs.utc(program.start, 'DD-MM-YYYY HH:mm'), 
-      stop: program.stop ? dayjs.utc(program.stop, 'DD-MM-YYYY HH:mm') : null 
+      stop: start.add(1, 'hour') : null 
     }; 
   }); 
 }
