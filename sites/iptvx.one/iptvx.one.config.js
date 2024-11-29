@@ -55,12 +55,15 @@ module.exports = {
 }
 
 function parseItems(content) {
-  try {
-    const data = JSON.parse(content)
-    if (!data || !Array.isArray(data.ch_programme)) return []
-    return data.ch_programme
-  } catch (error) {
-    console.error('Error parsing JSON:', error)
-    return []
-  }
+  const data = JSON.parse(content); 
+  const programs = data.ch_programme || []; 
+  return programs.map(program => { 
+    return { 
+      title: program.title, 
+      description: program.description, 
+      category: program.category, 
+      start: dayjs.utc(program.start, 'DD-MM-YYYY HH:mm').toISOString(), 
+      stop: program.stop ? dayjs.utc(program.stop, 'DD-MM-YYYY HH:mm').toISOString() : null 
+    }; 
+  }); 
 }
