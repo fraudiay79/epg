@@ -14,20 +14,20 @@ module.exports = {
   url({ channel }) {
     return `https://epg.iptvx.one/api/id/${channel.site_id}.json`
   },
-  parser({ content }) {
+  parser({ content, channel, date }) {
     // Assuming parseItems is specific to iptvx.one format
-    const items = parseItems(content)
+    const items = parseItems(content, channel, date)
     let programs = []
     let prevStop = null
     items.forEach(item => {
       if (!item || !item.ch_programme) return
-      const start = dayjs.utc(item.ch_programme.start, 'DD-MM-YYYY HH:mm')
+      const start = dayjs.utc(item.start, 'DD-MM-YYYY HH:mm')
       const stop = start.add(1, 'hour')
 
       programs.push({
-        title: item.ch_programme.title,
-        description: item.ch_programme.description,
-        category: item.ch_programme.category,
+        title: item.title,
+        description: item.description,
+        category: item.category,
         start,
         stop
       })
@@ -54,13 +54,16 @@ module.exports = {
   }
 }
 
-function parseItems(content) {
-  try {
-    const data = JSON.parse(content)
-    if (!data || !Array.isArray(data.ch_programme)) return []
-    return data.ch_programme
-  } catch (error) {
-    console.error('Error parsing JSON:', error)
-    return []
-  }
+function parseItems(content, channel, date) {
+  const data = JSON.parse(content); 
+  const programs = data.ch_programme || []; 
+  return programs.map(program => { 
+    return { 
+      title: program.title, 
+      description: program.description, 
+      category: program.category, 
+      start: dayjs.utc(program.start, 'DD-MM-YYYY HH:mm'), 
+      stop: program.stop ? dayjs.utc(program.stop, 'DD-MM-YYYY HH:mm') : null
+    }; 
+  }); 
 }
