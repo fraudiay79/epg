@@ -1,5 +1,11 @@
 const cheerio = require('cheerio')
 const { DateTime } = require('luxon')
+const dayjs = require('dayjs')
+const utc = require('dayjs/plugin/utc')
+const timezone = require('dayjs/plugin/timezone')
+
+dayjs.extend(utc)
+dayjs.extend(timezone)
 
 const channel = [{ site_id: '1208', xmltv_id: 'AlAoula.ma', lang: 'ar' },
                  { site_id: '4069', xmltv_id: 'Laayoune.ma', lang: 'ar' },
