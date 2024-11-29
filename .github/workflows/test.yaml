@@ -27,7 +27,7 @@ jobs:
           #npm run grab -- --channels=../sites/canalplus.com/canalplus.com_cm.channels.xml--maxConnections=20 --gzip --output=guides/novatv.is.xml --days=2 --timeout=90000
           #npm run channels:parse -- --config=./sites/cignalplay.com/cignalplay.com.config.js --output=./sites/cignalplay.com/cignalplay.com.channels.xml
           #npm run grab -- --site=tv.magenta.mk --maxConnections=20 --gzip --output=guides/tv.magenta.mk.xml --days=2 --timeout=90000
-          npm run grab -- --site=cablenet.com.cy --maxConnections=20 --gzip --output=guides/cablenet.com.cy.xml --days=2 --timeout=90000
+          npm run grab -- --site=iptvx.one --maxConnections=20 --gzip --output=guides/iptx.one.xml --days=2 --timeout=90000
           #npm run grab -- --site=yes.co.il --maxConnections=20 --gzip --output=guides/yes.co.il.xml --days=2 --timeout=90000
           #npm run grab -- --site=primetel.com.cy --maxConnections=20 --output=guides/primetel.com.cy.xml --days=1 --timeout=90000
    
@@ -37,7 +37,7 @@ jobs:
         git config --local user.name "Your Name"
         #git add -f sites/canalplus.com/canalplus.com_test.channels.xml
         #git add -f guides/tv.magenta.mk.xml
-        git add -f guides/cablenet.com.cy.xml
+        git add -f guides/iptx.one.xml
         #git add -f guides/primetel.com.cy.xml
         #git add -f sites/cignalplay.com/cignalplay.com.channels.xml
         git commit -m "Update xml"
