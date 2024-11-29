@@ -1,7 +1,11 @@
-const dayjs = require('dayjs')
-const utc = require('dayjs/plugin/utc')
+const dayjs = require('dayjs');
+const utc = require('dayjs/plugin/utc');
+const timezone = require('dayjs/plugin/timezone');
+const customParseFormat = require('dayjs/plugin/customParseFormat');
 
-dayjs.extend(utc)
+dayjs.extend(utc);
+dayjs.extend(timezone);
+dayjs.extend(customParseFormat);
 
 module.exports = {
   site: 'iptvx.one',
@@ -12,29 +16,26 @@ module.exports = {
     }
   },
   url({ channel }) {
-    return `https://epg.iptvx.one/api/id/${channel.site_id}.json`
+    return `https://epg.drm-play.com/iptvx.one%2Fepg%2F${channel.site_id}.json`;
   },
-  parser({ content, channel, date }) {
-    // Assuming parseItems is specific to iptvx.one format
-    const items = parseItems(content, channel, date)
-    let programs = []
-    let prevStop = null
-    items.forEach(item => {
-      if (!item || !item.ch_programme) return
-      const start = dayjs.utc(item.start, 'DD-MM-YYYY HH:mm')
-      const stop = start.add(1, 'hour')
+  parser({ content }) {
+    let programs = [];
 
-      programs.push({
-        title: item.title,
-        description: item.description,
-        category: item.category,
-        start,
-        stop
-      })
-      prevStop = stop
-    })
+    try {
+      const items = parseItems(content);
+      items.forEach(item => {
+        programs.push({
+          title: item.epg_data.name,
+          description: item.epg_data.descr,
+          start: dayjs.unix(item.epg_data.time),
+          stop: dayjs.unix(item.epg_data.time_to)
+        });
+      });
+    } catch (error) {
+      console.error("Error parsing content:", error);
+    }
 
-    return programs
+    return programs;
   },
   async channels() {
     const axios = require('axios')
@@ -54,16 +55,8 @@ module.exports = {
   }
 }
 
-function parseItems(content, channel, date) {
-  const data = JSON.parse(content); 
-  const programs = data.ch_programme || []; 
-  return programs.map(program => { 
-    return { 
-      title: program.title, 
-      description: program.description, 
-      category: program.category, 
-      start: dayjs.utc(program.start, 'DD-MM-YYYY HH:mm'), 
-      stop: program.stop ? dayjs.utc(program.stop, 'DD-MM-YYYY HH:mm') : null
-    }; 
-  }); 
+function parseItems(content) {
+  const data = JSON.parse(content);
+  if (!data || !Array.isArray(data.epg_data)) return [];
+  return data.epg_data;
 }
