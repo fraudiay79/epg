@@ -21,8 +21,8 @@ module.exports = {
 
     data.ch_programme.forEach(item => {
       if (!item.title || !item.start) return
-      const start = parseStart(item)
-      const stop = start.plus({ minutes: 30 })
+      const start = dayjs.utc(item.start, 'DD-MM-YYYY HH:mm')
+      const stop = start.add(1, 'hour')
 
       programs.push({
         title: item.title,
@@ -52,8 +52,4 @@ module.exports = {
       // Consider returning a default value or throwing an error
     }
   }
-}
-
-function parseStart(item) {
-  return dayjs(item.ch_programme.start)
 }
