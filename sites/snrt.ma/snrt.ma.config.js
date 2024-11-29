@@ -14,8 +14,10 @@ module.exports = {
   site: 'snrt.ma',
   channels: 'snrt.ma.channels.xml',
   days: 2,
-  url: function ({ channel }) {
-    return `https://www.snrt.ma/ar/node/${channel.site_id}`
+  url: function ({ channel, date }) {
+    return `https://www.snrt.ma/ar/node/${channel.site_id}#${date.format(
+      'YYYYMMDD'
+    )}`
   },
   parser: function ({ content, date }) {
     const programs = []
@@ -25,15 +27,16 @@ module.exports = {
       const $item = cheerio.load(item)
       let start = parseStart($item, date)
       if (prev) {
-        if (start < prev.start) {
-          start = start.plus({ days: 1 })
+        if (start.isBefore(prev.start)) {
+          start = start.add(1, 'd')
           date = date.add(1, 'd')
         }
         prev.stop = start
       }
-      const stop = start.plus({ hours: 1 })
+      const stop = start.add(30, 'm')
       programs.push({
         title: parseTitle($item),
+        description: parseDescription($item),
         category: parseCategory($item),
         start,
         stop
@@ -45,16 +48,18 @@ module.exports = {
 }
 
 function parseStart($item, date) {
-  const timeString = $item('.grille-time').text().trim()
-  const dateSt = $item('.data-date').text().trim()
-  const dateString = `${dateSt} ${timeString}`
+  const time = $item('.grille-time').text().trim()
 
-  return DateTime.fromFormat(dateString, 'YYYYMMDD HH.mm', { zone: 'Africa/Casablanca' }).toUTC()
+  return dayjs.utc(`${date.format('YYYY-MM-DD')} ${time}`, 'YYYY-MM-DD HH:mm')
 }
 
 
 function parseTitle($item) {
   return $item('.program-title-sm').text().trim()
+}
+
+function parseDescription($item) {
+  return $item('.program-description-sm').text().trim()
 }
 
 function parseCategory($item) {
