@@ -1,11 +1,7 @@
-const dayjs = require('dayjs');
-const utc = require('dayjs/plugin/utc');
-const timezone = require('dayjs/plugin/timezone');
-const customParseFormat = require('dayjs/plugin/customParseFormat');
+const dayjs = require('dayjs')
+const utc = require('dayjs/plugin/utc')
 
-dayjs.extend(utc);
-dayjs.extend(timezone);
-dayjs.extend(customParseFormat);
+dayjs.extend(utc)
 
 module.exports = {
   site: 'iptvx.one',
@@ -16,27 +12,33 @@ module.exports = {
     }
   },
   url({ channel }) {
-    return `https://epg.drm-play.com/iptvx.one%2Fepg%2F${channel.site_id}.json`;
+    return `https://epg.iptvx.one/api/id/${channel.site_id}.json`
   },
-  parser({ content }) {
-    let programs = [];
+  parser: function ({ content, channel }) {
+    let programs = []
+    const items = parseItems(content)
+    items.forEach(item => {
+      const prev = programs[programs.length - 1]
+      let start = parseStart(item)
+      if (prev) {
+        if (start < prev.start) {
+          start = start.plus({ days: 1 })
+          date = date.add(1, 'd')
+        }
+        prev.stop = start
+      }
+      const stop = start.plus({ minutes: 30 })
+      programs.push({
+        title: item.ch_programme.title,
+        description: item.ch_programme.description,
+        category: item.ch_programme.category,
+        start,
+        stop
+      })
+    })
 
-    try {
-      const items = parseItems(content);
-      items.forEach(item => {
-        programs.push({
-          title: item.epg_data.name,
-          description: item.epg_data.descr,
-          start: dayjs.unix(item.epg_data.time),
-          stop: dayjs.unix(item.epg_data.time_to)
-        });
-      });
-    } catch (error) {
-      console.error("Error parsing content:", error);
-    }
-
-    return programs;
-  },
+    return programs
+},
   async channels() {
     const axios = require('axios')
     try {
@@ -55,8 +57,20 @@ module.exports = {
   }
 }
 
+function parseStart(item) {
+  return dayjs(item.ch_programme.start).format('DD-MM-YYYY HH:mm')
+}
+
 function parseItems(content) {
-  const data = JSON.parse(content);
-  if (!data || !Array.isArray(data.epg_data)) return [];
-  return data.epg_data;
+  const data = JSON.parse(content); 
+  const programs = data.ch_programme || []; 
+  return programs.map(program => { 
+    return { 
+      title: program.title, 
+      description: program.description, 
+      category: program.category, 
+      start: dayjs.utc(program.start, 'DD-MM-YYYY HH:mm'), 
+      stop: program.stop ? dayjs.utc(program.stop, 'DD-MM-YYYY HH:mm') : null
+    }; 
+  }); 
 }
