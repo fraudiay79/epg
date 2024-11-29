@@ -15,29 +15,26 @@ module.exports = {
     return `https://epg.iptvx.one/api/id/${channel.site_id}.json`
   },
   parser: function ({ content, channel }) {
-    let programs = []
-    const items = parseItems(content)
-    items.forEach(item => {
-      const prev = programs[programs.length - 1]
-      let start = parseStart(item)
-      if (prev) {
-        if (start < prev.ch_programme.start) {
-          start = start.plus({ days: 1 })
-          date = date.add(1, 'd')
-        }
-        prev.stop = start
-      }
+    const programs = []
+    const data = JSON.parse(content)
+    if (!data.ch_programme) return programs
+
+    data.ch_programme.forEach(item => {
+      if (!item.title || !item.start) return
+      const start = parseStart(item)
       const stop = start.plus({ minutes: 30 })
+
       programs.push({
-        title: item.ch_programme.title,
-        description: item.ch_programme.description,
-        category: item.ch_programme.category,
+        title: item.title,
+        description: item.description,
+        category: item.category,
         start,
-        stop
+        stop,
       })
     })
 
     return programs
+
 },
   async channels() {
     const axios = require('axios')
@@ -59,18 +56,4 @@ module.exports = {
 
 function parseStart(item) {
   return dayjs(item.ch_programme.start).format('DD-MM-YYYY HH:mm')
-}
-
-function parseItems(content) {
-  const data = JSON.parse(content); 
-  const programs = data.ch_programme || []; 
-  return programs.map(program => { 
-    return { 
-      title: program.title, 
-      description: program.description, 
-      category: program.category, 
-      start: dayjs.utc(program.start, 'DD-MM-YYYY HH:mm'), 
-      stop: program.stop ? dayjs.utc(program.stop, 'DD-MM-YYYY HH:mm') : null
-    }; 
-  }); 
 }
