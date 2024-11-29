@@ -47,3 +47,9 @@ const programs = [];
     return channelData;
   }
 }
+
+function parseItems(content) {
+  const data = JSON.parse(content);
+  if (!data || !Array.isArray(data.pr)) return [];
+  return data.pr;
+}
