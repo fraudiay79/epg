@@ -62,8 +62,8 @@ function parseItems(content) {
       title: program.title, 
       description: program.description, 
       category: program.category, 
-      start: dayjs.utc(program.start, 'DD-MM-YYYY HH:mm').toISOString(), 
-      stop: program.stop ? dayjs.utc(program.stop, 'DD-MM-YYYY HH:mm').toISOString() : null 
+      start: dayjs.utc(program.start, 'DD-MM-YYYY HH:mm'), 
+      stop: program.stop ? dayjs.utc(program.stop, 'DD-MM-YYYY HH:mm') : null 
     }; 
   }); 
 }
