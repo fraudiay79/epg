@@ -63,7 +63,7 @@ function parseItems(content, channel, date) {
       description: program.description, 
       category: program.category, 
       start: dayjs.utc(program.start, 'DD-MM-YYYY HH:mm'), 
-      stop: start.add(1, 'hour') : null 
+      stop: program.stop ? dayjs.utc(program.stop, 'DD-MM-YYYY HH:mm') : null
     }; 
   }); 
 }
