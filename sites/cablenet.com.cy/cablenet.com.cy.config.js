@@ -21,10 +21,8 @@ module.exports = {
       _.forEach(channelData.pr, (program) => {
         programs.push({
           title: program.ti,
-          startDate: program.sd,
-          definition: program.df,
-          duration: program.dt,
           description: program.ld,
+          duration: program.du,
           start: program.df,
           stop: program.dt
         });
@@ -51,6 +49,13 @@ module.exports = {
 
 function parseItems(content) {
   const data = JSON.parse(content);
+  
   if (!data || !Array.isArray(data.pr)) return [];
-  return data.pr;
+  
+  return data.pr.map(item => ({
+    title: item.ti,
+    description: item.ld,
+    start: item.df,
+    stop: item.dt
+  }));
 }
