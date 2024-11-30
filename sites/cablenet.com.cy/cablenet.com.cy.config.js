@@ -15,7 +15,7 @@ module.exports = {
   url({ date }) {
     return `https://cablenet.com.cy/wp-content/plugins/tv-guide-plugin/data/epg${date.format('YYYY-MM-DD')}.json`;
   },
-  parser: function ({ content, date }) {
+  parser: function ({ content, channel, date }) {
   const parsedData = JSON.parse(content);
   const programs = [];
 
