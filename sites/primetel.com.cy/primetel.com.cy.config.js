@@ -32,15 +32,23 @@ module.exports = {
     }
   },
   parser: function ({ content }) {
-    const data = JSON.parse(content);
-    if (!data || !Array.isArray(data.pr)) return [];
-    return data.pr.map(item => ({
-      title: item.title, // Corrected property access
-      description: item.description,
-      start: dayjs.utc(item.starting).toISOString(), // Formatted to ISO string
-      stop: dayjs.utc(item.ending).toISOString() // Formatted to ISO string
-    }));
-  },
+    const parsedData = JSON.parse(content);
+    const programs = [];
+
+  Object.keys(parsedData).forEach(ch => {
+    const channel = parsedData[ch]
+    channel.pr.forEach(program => {
+      programs.push({
+        title: program.title,
+        start: program.starting,
+        stop: program.ending,
+        description: program.description || 'No description available'
+      })
+    })
+  })
+
+  return programs
+},
   async channels() {
     try {
       const response = await axios.get(`https://primetel.com.cy/tv_guide_json/tv1.json`);
