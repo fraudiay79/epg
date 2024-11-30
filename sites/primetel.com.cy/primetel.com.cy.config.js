@@ -33,21 +33,22 @@ module.exports = {
   },
   parser: function ({ content }) {
     const parsedData = JSON.parse(content);
-    const programs = [];
+  const programs = [];
 
-  Object.keys(parsedData).forEach(ch => {
-    const channel = parsedData[ch]
+  Object.keys(parsedData).forEach(channelKey => {
+    const channel = parsedData[channelKey];
     channel.pr.forEach(program => {
       programs.push({
+        channel: channel.ch,
         title: program.title,
         start: program.starting,
         stop: program.ending,
         description: program.description || 'No description available'
-      })
-    })
-  })
+      });
+    });
+  });
 
-  return programs
+  return programs;
 },
   async channels() {
     try {
