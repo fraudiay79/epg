@@ -16,26 +16,26 @@ module.exports = {
     return `https://cablenet.com.cy/wp-content/plugins/tv-guide-plugin/data/epg${date.format('YYYY-MM-DD')}.json`;
   },
   parser: function ({ content, date }) {
-    const programs = []
-    const data = JSON.parse(content)
-    if (!data.pr) return programs
+  const parsedData = JSON.parse(content);
+  const programs = [];
 
-    data.pr.forEach(item => {
-      if (!item || !item.ti) return
-      //const start = dayjs.utc(item.df)
-      //const stop = dayjs.utc(item.dt)
-
-      programs.push({
-        title: item.ti,
-        description: item.ld,
-        duration: item.du,
-        start: item.df,
-        stop: item.dt,
+  Object.keys(parsedData).forEach(channelId => {
+    const channel = parsedData[channelId];
+    if (channel.pr) {
+      channel.pr.forEach(item => {
+        const program = {
+          channel: channel.ch,
+          title: item.ti,
+          start: item.df,
+          stop: item.dt,
+          description: item.sd || item.ld
+        }
+        programs.push(program)
       })
-    })
+    }
+  })
 
-    return programs
-
+  return programs
 },
   async channels() {
     const axios = require('axios');
