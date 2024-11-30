@@ -21,16 +21,16 @@ module.exports = {
     if (!data.pr) return programs
 
     data.pr.forEach(item => {
-      if (!item.ti || !item.df) return
-      const start = dayjs.utc(item.df)
-      const stop = dayjs.utc(item.dt)
+      if (!item || !item.ti) return
+      //const start = dayjs.utc(item.df)
+      //const stop = dayjs.utc(item.dt)
 
       programs.push({
         title: item.ti,
         description: item.ld,
-        duration: program.du,
-        start,
-        stop,
+        duration: item.du,
+        start: item.df,
+        stop: item.dt,
       })
     })
 
