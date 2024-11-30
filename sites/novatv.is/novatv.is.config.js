@@ -19,27 +19,26 @@ module.exports = {
     return `https://exposure.api.redbee.live/v2/customer/Nova/businessunit/novatvprod/epg/${channel.site_id}/date/${date.format('YYYY-MM-DD')}`;
   },
   parser: function ({ content, channel, date }) {
-  const parsedData = JSON.parse(content);
-  const programs = [];
+  const parsedData = JSON.parse(content)
+  const programs = []
 
   Object.keys(parsedData).forEach(channelId => {
-    const channel = parsedData[channelId];
-    channel.programs.forEach(program => {
+    const item = parsedData[channelId]
+    item.programs.forEach(program => {
       const localizedData = program.asset.localized.find(loc => loc.locale === 'is') || program.asset.localized[0]; // default to first if 'is' locale not found
 
       const programData = {
-        channelId: channel.channelId,
         title: localizedData.title,
         start: program.asset.publications[0].fromDate,
         stop: program.asset.publications[0].toDate,
         description: localizedData.longDescription || localizedData.tinyDescription || 'No description available'
       };
 
-      programs.push(programData);
-    });
-  });
+      programs.push(programData)
+    })
+  })
 
-  return programs;
+  return programs
 },
   async channels() {
     const axios = require('axios');
