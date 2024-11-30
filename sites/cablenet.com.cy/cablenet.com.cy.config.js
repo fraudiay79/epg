@@ -16,15 +16,14 @@ module.exports = {
     return `https://cablenet.com.cy/wp-content/plugins/tv-guide-plugin/data/epg${date.format('YYYY-MM-DD')}.json`;
   },
   parser: function ({ content, channel, date }) {
-  const parsedData = JSON.parse(content);
+  const parsedData = JSON.parse(content, channel);
   const programs = [];
 
-  Object.keys(parsedData).forEach(channelId => {
-    const channel = parsedData[channelId];
+  Object.keys(parsedData).forEach(id => {
+    const channel = parsedData[id];
     if (channel.pr) {
       channel.pr.forEach(item => {
         const program = {
-          channel: channel.ch,
           title: item.ti,
           start: item.df,
           stop: item.dt,
