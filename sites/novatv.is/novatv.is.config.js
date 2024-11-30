@@ -18,25 +18,29 @@ module.exports = {
   url({ channel, date }) {
     return `https://exposure.api.redbee.live/v2/customer/Nova/businessunit/novatvprod/epg/${channel.site_id}/date/${date.format('YYYY-MM-DD')}`;
   },
-  parser({ content }) {
-    let programs = [];
+  parser: function ({ content, channel, date }) {
+  const parsedData = JSON.parse(content);
+  const programs = [];
 
-    try {
-      const items = parseItems(content);
-      items.forEach(item => {
-        programs.push({
-          title: item.asset.localized.title,
-          description: item.asset.localized.description,
-          start: dayjs.utc(item.asset.startTime).toISOString(),
-          stop: dayjs.utc(item.asset.endTime).toISOString()
-        });
-      });
-    } catch (error) {
-      console.error("Error parsing content:", error);
-    }
+  Object.keys(parsedData).forEach(channelId => {
+    const channel = parsedData[channelId];
+    channel.programs.forEach(program => {
+      const localizedData = program.asset.localized.find(loc => loc.locale === 'is') || program.asset.localized[0]; // default to first if 'is' locale not found
 
-    return programs;
-  },
+      const programData = {
+        channelId: channel.channelId,
+        title: localizedData.title,
+        start: program.asset.publications[0].fromDate,
+        stop: program.asset.publications[0].toDate,
+        description: localizedData.longDescription || localizedData.tinyDescription || 'No description available'
+      };
+
+      programs.push(programData);
+    });
+  });
+
+  return programs;
+},
   async channels() {
     const axios = require('axios');
     try {
@@ -54,9 +58,3 @@ module.exports = {
     }
   }
 };
-
-function parseItems(content) {
-  const data = JSON.parse(content);
-  if (!data || !Array.isArray(data.programs)) return [];
-  return data.programs;
-}
