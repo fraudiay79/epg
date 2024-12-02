@@ -18,26 +18,24 @@ module.exports = {
   url({ channel, date }) {
     return `https://exposure.api.redbee.live/v2/customer/Nova/businessunit/novatvprod/epg/${channel.site_id}/date/${date.format('YYYY-MM-DD')}`;
   },
-  parser({ content }) {
-    let programs = [];
+  parser: function ({ content }) {
+    const programs = [];
 
-    try {
-      const items = parseItems(content);
-      items.forEach(item => {
-        const localizedData = item.asset.localized.find(loc => loc.locale === 'is') || item.asset.localized[0]; // default to first if 'is' locale not found
+  const data = JSON.parse(content);
+  data.programs.forEach(program => {
+    const localizedData = program.asset.localized.find(loc => loc.locale === 'is') || program.asset.localized[0]; // default to first if 'is' locale not found
 
-        programs.push({
-          title: localizedData.title,
-          description: localizedData.longDescription || localizedData.extendedDescription || 'No description available',
-          start: dayjs.utc(item.startTime).toISOString(),
-          stop: dayjs.utc(item.endTime).toISOString()
-        });
-      });
-    } catch (error) {
-      console.error("Error parsing content:", error);
-    }
+    const programData = {
+      title: localizedData.title,
+      description: localizedData.longDescription || localizedData.extendedDescription || 'No description available',
+      startTime: program.startTime,
+      endTime: program.endTime
+    };
 
-    return programs;
+    programs.push(programData);
+  });
+
+  return programs;
   },
   async channels() {
     const axios = require('axios');
@@ -55,24 +53,4 @@ module.exports = {
       return [];
     }
   }
-};
-
-function parseItems(content) {
-  const programs = [];
-
-  const data = JSON.parse(content);
-  data.programs.forEach(program => {
-    const localizedData = program.asset.localized.find(loc => loc.locale === 'is') || program.asset.localized[0]; // default to first if 'is' locale not found
-
-    const programData = {
-      title: localizedData.title,
-      description: localizedData.longDescription || localizedData.extendedDescription || 'No description available',
-      startTime: program.startTime,
-      endTime: program.endTime
-    };
-
-    programs.push(programData);
-  });
-
-  return programs;
 }
