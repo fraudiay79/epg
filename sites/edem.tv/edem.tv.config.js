@@ -15,19 +15,19 @@ module.exports = {
       ttl: 60 * 60 * 1000 // 1 hour
     }
   },
-  url({ channel }) {
-    return `http://epg.drm-play.com/edem%2Fepg%2F${channel.site_id}.json`
+  url({ channel, date }) {
+    return `http://epg.propg.net/${channel.site_id}/epg2/${date.format('YYYY-MM-DD')}`
   },
   parser: function ({ content }) {
     const data = JSON.parse(content)
     const programs = []
 
-  data.epg_data.forEach(item => {
+  data.forEach(item => {
     programs.push({
-      name: item.name,
-      description: item.descr || 'No description available',
-      start: dayjs.unix(item.time),
-      stop: dayjs.unix(item.time_to)
+      name: item.epg,
+      description: item.desc || 'No description available',
+      start: dayjs.unix(item.start),
+      stop: dayjs.unix(item.stop)
     })
   })
 
