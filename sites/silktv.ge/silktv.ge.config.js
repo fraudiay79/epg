@@ -24,7 +24,7 @@ module.exports = {
     const data = JSON.parse(content)
     const programs = []
 
-  data.forEach(item => {
+  data.data.forEach(item => {
     programs.push({
       name: item.title,
       description: item.descr || 'No description available',
@@ -39,13 +39,13 @@ module.exports = {
     const axios = require('axios')
     try {
       const response = await axios.get(`https://middleware-prod01.silktv.ge/v1.5/?m=list-channels-all&sid=6F1D6919EAE061BA677D8552E07C14CE`)
-      return response.data.items.map(item => {
-        return {
-          lang: 'ka',
-          name: item.name,
-          site_id: item.id
-        }
-      })
+      const data = response.data
+      const channels = data.channel.map(channel => ({
+        lang: 'ka',
+        name: item.name,
+        site_id: item.id
+       }))
+      return channels
     } catch (error) {
       console.error('Error fetching channels:', error)
       return []
