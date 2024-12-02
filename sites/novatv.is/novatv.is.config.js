@@ -24,11 +24,13 @@ module.exports = {
     try {
       const items = parseItems(content);
       items.forEach(item => {
+        const localizedData = item.asset.localized.find(loc => loc.locale === 'is') || item.asset.localized[0]; // default to first if 'is' locale not found
+
         programs.push({
-          title: item.asset.localized.title,
-          description: item.asset.localized.description,
-          start: dayjs.utc(item.asset.startTime).toISOString(),
-          stop: dayjs.utc(item.asset.endTime).toISOString()
+          title: localizedData.title,
+          description: localizedData.longDescription || localizedData.extendedDescription || 'No description available',
+          start: dayjs.utc(item.startTime).toISOString(),
+          stop: dayjs.utc(item.endTime).toISOString()
         });
       });
     } catch (error) {
@@ -44,7 +46,7 @@ module.exports = {
       return response.data.items.map(item => {
         return {
           lang: 'is',
-          name: item.localized.title,
+          name: item.localized[0].title,
           site_id: item.assetId
         };
       });
@@ -56,7 +58,21 @@ module.exports = {
 };
 
 function parseItems(content) {
+  const programs = [];
+
   const data = JSON.parse(content);
-  if (!data || !Array.isArray(data.programs)) return [];
-  return data.programs;
+  data.programs.forEach(program => {
+    const localizedData = program.asset.localized.find(loc => loc.locale === 'is') || program.asset.localized[0]; // default to first if 'is' locale not found
+
+    const programData = {
+      title: localizedData.title,
+      description: localizedData.longDescription || localizedData.extendedDescription || 'No description available',
+      startTime: program.startTime,
+      endTime: program.endTime
+    };
+
+    programs.push(programData);
+  });
+
+  return programs;
 }
