@@ -1,5 +1,11 @@
 const dayjs = require('dayjs')
 
+const API_PROGRAM_ENDPOINT = 'https://epg.orangetv.orange.es/epg/Smartphone_Android/1_PRO'
+const API_CHANNEL_ENDPOINT = 'https://pc.orangetv.orange.es/pc/api/rtv/v1/GetChannelList?bouquet_id=1&model_external_id=PC&filter_unsupported_channels=false&client=json'
+const API_IMAGE_ENDPOINT = 'https://pc.orangetv.orange.es/pc/api/rtv/v1/images'
+
+
+
 module.exports = {
   site: 'orangetv.es',
   days: 2,
@@ -9,19 +15,20 @@ module.exports = {
     }
   },
   url({ date }) {
-    return `https://epg.orangetv.orange.es/epg/Smartphone_Android/1_PRO/${date.format('YYYYMMDD')}_8h_1.json`
+    return `${API_PROGRAM_ENDPOINT}/${date.format('YYYYMMDD')}_8h_1.json`
   },
-  parser: function ({ content }) {
+  parser: function ({ content, channel }) {
     let programs = []
-    const items = parseItems(content)
+    const items = parseItems(content, channel)
     items.forEach(item => {
       programs.push({
         title: item.name,
         description: item.description,
         season: item.seriesSeason || null,
         episode: item.episodeId || null,
-        start: parseStart(item),
-        stop: parseStop(item)
+        icon: parseIcon(item),
+        start: dayjs.utc(item.startDate) || null,
+        stop: dayjs.utc(item.endDate) || null,
       })
     })
 
@@ -30,43 +37,41 @@ module.exports = {
   async channels() {
     const axios = require('axios')
     const data = await axios
-      .get(`https://pc.orangetv.orange.es/pc/api/rtv/v1/GetChannelList?bouquet_id=1&model_external_id=PC&filter_unsupported_channels=false&client=json`)
+      .get(API_CHANNEL_ENDPOINT)
       .then(r => r.data)
       .catch(console.log)
     return data.response.map(item => {
       return {
         lang: 'es',
-	name: item.name,
+	      name: item.name,
         site_id: item.externalChannelId
       }
     })
   }
 }
 
-function parseStart(item) {
-  return dayjs.unix(item.startDate)
-}
+function parseIcon(item){
+  
+  if(item.attachments.length > 0){
+    const cover = item.attachments.find(i => i.name === "COVER" || i.name === "cover")
 
-function parseStop(item) {
-  return dayjs.unix(item.endDate)
-}
-
-
-function parseItems(content) {
-  const data = JSON.parse(content);
-
-  if (!data || !Array.isArray(data.programs)) {
-    return [];
+    if(cover)
+    {
+      return `${API_IMAGE_ENDPOINT}${cover.value}`;
+    }
   }
 
-  return data.programs.map(program => ({
-    title: program.name,
-    description: program.description,
-    season: program.seriesSeason || null,
-    episode: program.episodeId || null,
-    start: dayjs.unix(program.startDate),
-    stop: dayjs.unix(program.endDate),
-    genres: program.genres.map(genre => genre.name),
-    //image: program.attachments.find(attachment => attachment.name === 'COVER')?.value,
-  }));
+  return ''
+}
+
+function parseItems(content, channel) {
+  const json = typeof content === 'string' ? JSON.parse(content) : content
+
+  const channelData = json.find(i => i.channelExternalId == channel.site_id);
+
+  if(!channelData)
+    return [];
+
+
+  return channelData.programs;
 }
