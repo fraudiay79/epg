@@ -9,7 +9,7 @@ dayjs.extend(customParseFormat)
 
 module.exports = {
   site: 'programmestv.sudinfo.be',
-  days: 2,
+  days: 1,
   request: {
     cache: {
       ttl: 60 * 60 * 1000 // 1 hour
@@ -19,18 +19,17 @@ module.exports = {
     return `https://programmestv.sudinfo.be/_next/data/DwIAfQHy0e8mtvHHkDwzJ/programme-tv/ce-soir.json`
   },
   parser: function ({ content }) {
-    let programs = []
-    const items = parseItems(content)
-
-    items.forEach(item => {
-        const start = dayjs.utc(item.filteredContent.airingStartDateTime)
-        const stop = dayjs.utc(item.filteredContent.airingEndDateTime)
+    const programs = []
+    content.forEach(array => {
+    array.forEach(item => {
       programs.push({
-          title: item.filteredContent.title,
-          start,
-          stop
-      })
-    })
+        title: item.title,
+        description: item.subTitle || 'No description available',
+        start: dayjs.utc(item.airingStartDateTime),
+        stop: dayjs.utc(item.airingEndDateTime)
+      });
+    });
+  });
     return programs;
   },
   
@@ -48,12 +47,4 @@ module.exports = {
       }
     })
   }
-}
-
-
-function parseItems(content) {
-  const data = JSON.parse(content)
-  if (!data || !Array.isArray(data.pageProps)) return []
-
-  return data.pageProps
 }
