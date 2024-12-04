@@ -12,16 +12,20 @@ module.exports = {
   site: 'ptv.com.pk',
   channels: 'ptv.com.pk.channels.xml',
   days: 2,
-  request: {
-    cache: {
-      ttl: 60 * 60 * 1000 // 1 hour
+  url: function ({ date, channel }) {
+    const daysOfWeek = {
+      0: 'Monday',
+      1: 'Tuesday',
+      2: 'Wednesday',
+      3: 'Thursday',
+      4: 'Friday',
+      5: 'Saturday',
+      6: 'Sunday'
     }
+    const day = date.day()
+    return `https://ptv.com.pk/getShowTvGuide?channel=${channel.site_id}&nameofday=${daysOfWeek[day]}`
   },
-  url({ channel, date }) {
-    const nameOfDay = date.format('dddd');
-    return `https://ptv.com.pk/getShowTvGuide?channel=${channel.site_id}&nameofday=${nameOfDay}`;
-  },
-  parser({ content }) {
+  parser: function ({ content, date }) {
     let programs = [];
 
     try {
