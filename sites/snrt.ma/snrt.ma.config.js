@@ -3,9 +3,11 @@ const { DateTime } = require('luxon')
 const dayjs = require('dayjs')
 const utc = require('dayjs/plugin/utc')
 const timezone = require('dayjs/plugin/timezone')
+const customParseFormat = require('dayjs/plugin/customParseFormat')
 
 dayjs.extend(utc)
 dayjs.extend(timezone)
+dayjs.extend(customParseFormat)
 
 const channel = [{ site_id: '1208', xmltv_id: 'AlAoula.ma', lang: 'ar' },
                  { site_id: '4069', xmltv_id: 'Laayoune.ma', lang: 'ar' },
@@ -20,10 +22,22 @@ module.exports = {
   site: 'snrt.ma',
   channels: 'snrt.ma.channels.xml',
   days: 2,
-  url: function ({ channel, date }) {
-    return `https://www.snrt.ma/ar/node/${channel.site_id}#${date.format(
-      'YYYYMMDD'
-    )}`
+  url: function ({ channel }) {
+    return `https://www.snrt.ma/ar/node/${channel.site_id}`
+  },
+  request: {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    data: function ({ date }) {
+      const params = new URLSearchParams()
+      params.append('_method', 'POST')
+      params.append('data-date', date.format('YYYYMMDD'))
+      params.append('current_date', date.format('YYYYMMDD'))
+
+      return params
+    }
   },
   parser: function ({ content, date }) {
     const programs = []
@@ -54,9 +68,10 @@ module.exports = {
 }
 
 function parseStart($item, date) {
-  const time = $item('.grille-time').text().trim()
+  const timeString  = $item('.grille-time').text().trim()
+  const dateString = `${date.format('YYYY-MM-DD')} ${timeString}`
 
-  return dayjs.utc(`${date.format('YYYY-MM-DD')} ${time}`, 'YYYY-MM-DD HH:mm')
+  return dayjs.tz(dateString, 'YYYY-MM-DD HH:mm:ss', 'Africa/Casablanca')
 }
 
 
