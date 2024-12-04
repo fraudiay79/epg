@@ -30,7 +30,7 @@ jobs:
           #npm run grab -- --site=tv.magenta.mk --maxConnections=20 --gzip --output=guides/tv.magenta.mk.xml --days=2 --timeout=90000
           #npm run grab -- --site=propg.net --maxConnections=20 --gzip --output=guides/propg.net.xml --days=2 --timeout=90000
           #npm run grab -- --site=yes.co.il --maxConnections=20 --gzip --output=guides/yes.co.il.xml --days=2 --timeout=90000
-          npm run grab -- --site=snrt.ma --maxConnections=20 --output=guides/snrt.ma.xml --days=1 --timeout=90000
+          npm run grab -- --site=ptv.com.pk --maxConnections=20 --output=guides/ptv.com.pk.xml --days=1 --timeout=90000
    
     - name: Commit changes
       run: |
@@ -39,7 +39,7 @@ jobs:
         #git add -f sites/canalplus.com/canalplus.com_test.channels.xml
         #git add -f guides/tv.magenta.mk.xml
         #git add -f guides/propg.net.xml
-        git add -f guides/snrt.ma.xml
+        git add -f guides/ptv.com.pk.xml
         #git add -f sites/silktv.ge/silktv.ge.channels.xml
         git commit -m "Update xml"
         git push
