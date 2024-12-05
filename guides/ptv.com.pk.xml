@@ -8,175 +8,521 @@
 <channel id="PTVSports.pk"><display-name>PTV Sports</display-name><url>https://ptv.com.pk</url></channel>
 <channel id="PTVWorld.pk"><display-name>PTV World</display-name><url>https://ptv.com.pk</url></channel>
 <programme start="20241204235900 +0000" stop="20241204195900 +0000" channel="PTVAJK.pk"><title lang="en">Logo Bismillah</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204235900 +0000" stop="20241204195900 +0000" channel="PTVAJK.pk"><title lang="en">Logo Bismillah</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204235900 +0000" stop="20241204195900 +0000" channel="PTVAJK.pk"><title lang="en">Logo Bismillah</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205000000 +0000" stop="20241204200000 +0000" channel="PTVAJK.pk"><title lang="en">Quran-O-Tarjuma</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205000000 +0000" stop="20241204200000 +0000" channel="PTVAJK.pk"><title lang="en">Quran-O-Tarjuma</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205000000 +0000" stop="20241204200000 +0000" channel="PTVAJK.pk"><title lang="en">Quran-O-Tarjuma</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205000500 +0000" stop="20241204200500 +0000" channel="PTVAJK.pk"><title lang="en">Al Quran</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205000500 +0000" stop="20241204200500 +0000" channel="PTVAJK.pk"><title lang="en">Al Quran (R)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205000500 +0000" stop="20241204200500 +0000" channel="PTVAJK.pk"><title lang="en">Al Quran (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205002000 +0000" stop="20241204202000 +0000" channel="PTVAJK.pk"><title lang="en">Kashmir Report (Kashmir Cell)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205002000 +0000" stop="20241204202000 +0000" channel="PTVAJK.pk"><title lang="en">Kashmir Report (Kashmir Cell)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205002000 +0000" stop="20241204202000 +0000" channel="PTVAJK.pk"><title lang="en">Kashmir Report (Kashmir Cell)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205003500 +0000" stop="20241204203500 +0000" channel="PTVAJK.pk"><title lang="en">Gomo Phero Mazay Uro</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205003500 +0000" stop="20241204203500 +0000" channel="PTVAJK.pk"><title lang="en">Arty</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205003500 +0000" stop="20241204203500 +0000" channel="PTVAJK.pk"><title lang="en">Tary Mery Angan Ky (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVAJK.pk"><title lang="en">Local News (Ptv News)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVAJK.pk"><title lang="en">Local News (Ptv News)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVAJK.pk"><title lang="en">Local News (Ptv News)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205012000 +0000" stop="20241204212000 +0000" channel="PTVAJK.pk"><title lang="en">Kashmir Kahani</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205012000 +0000" stop="20241204212000 +0000" channel="PTVAJK.pk"><title lang="en">Maan Aur Bachy Ki Sehat</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205012000 +0000" stop="20241204212000 +0000" channel="PTVAJK.pk"><title lang="en">Soon Kasheer Kashmiri Language</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205020000 +0000" stop="20241204220000 +0000" channel="PTVAJK.pk"><title lang="en">Tazkia</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205020000 +0000" stop="20241204220000 +0000" channel="PTVAJK.pk"><title lang="en">Kashmir Magazine</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205020000 +0000" stop="20241204220000 +0000" channel="PTVAJK.pk"><title lang="en">Janjal Pura</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205023000 +0000" stop="20241204223000 +0000" channel="PTVAJK.pk"><title lang="en">Tazkia (R)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205023000 +0000" stop="20241204223000 +0000" channel="PTVAJK.pk"><title lang="en">Samaj Nama</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205023000 +0000" stop="20241204223000 +0000" channel="PTVAJK.pk"><title lang="en">Geet Rung</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205030000 +0000" stop="20241204230000 +0000" channel="PTVAJK.pk"><title lang="en">Dhawona</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205030000 +0000" stop="20241204230000 +0000" channel="PTVAJK.pk"><title lang="en">Baithak</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205030000 +0000" stop="20241204230000 +0000" channel="PTVAJK.pk"><title lang="en">Jahan Basian Dildar</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVAJK.pk"><title lang="en">Khabar Nama (Ptv News)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVAJK.pk"><title lang="en">Khabar Nama (Ptv News)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVAJK.pk"><title lang="en">Khabar Nama (Ptv News)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205050000 +0000" stop="20241205010000 +0000" channel="PTVAJK.pk"><title lang="en">Close Down</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205050000 +0000" stop="20241205010000 +0000" channel="PTVAJK.pk"><title lang="en">Close Down</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205050000 +0000" stop="20241205010000 +0000" channel="PTVAJK.pk"><title lang="en">Close Down</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204190000 +0000" stop="20241204150000 +0000" channel="PTVBolan.pk"><title lang="en">Current Affairs Time (Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204190000 +0000" stop="20241204150000 +0000" channel="PTVBolan.pk"><title lang="en">Sickan (Murad Buladi) (Balochi Programme)		 (Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204190000 +0000" stop="20241204150000 +0000" channel="PTVBolan.pk"><title lang="en">Current Affairs Time (Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204200000 +0000" stop="20241204160000 +0000" channel="PTVBolan.pk"><title lang="en">Balochi Khabrain (Live)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204200000 +0000" stop="20241204160000 +0000" channel="PTVBolan.pk"><title lang="en">Pashto Khabrain (Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204200000 +0000" stop="20241204160000 +0000" channel="PTVBolan.pk"><title lang="en">Balochi Khabrain (Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204200000 +0000" stop="20241204160000 +0000" channel="PTVBolan.pk"><title lang="en">Pashto Khabrain (Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204200000 +0000" stop="20241204160000 +0000" channel="PTVBolan.pk"><title lang="en">Balochi Khabrain (Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204200000 +0000" stop="20241204160000 +0000" channel="PTVBolan.pk"><title lang="en">Pashto Khabrain (Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204200500 +0000" stop="20241204160500 +0000" channel="PTVBolan.pk"><title lang="en">Brahvi Khabrain (Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204200500 +0000" stop="20241204160500 +0000" channel="PTVBolan.pk"><title lang="en">Gawarikh Sumbal (Barahvi Khel ) (Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204200500 +0000" stop="20241204160500 +0000" channel="PTVBolan.pk"><title lang="en">Brahvi Khabrain (Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204200500 +0000" stop="20241204160500 +0000" channel="PTVBolan.pk"><title lang="en">Bachi Wail 	 (Pashto Musical Show) 	 (Repeat Telecast</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204200500 +0000" stop="20241204160500 +0000" channel="PTVBolan.pk"><title lang="en">Brahvi Khabrain (Live)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204200500 +0000" stop="20241204160500 +0000" channel="PTVBolan.pk"><title lang="en">Na Rasid Gain Pul (Balochi Play) Ep-04 (Repeat Telecast</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204210000 +0000" stop="20241204170000 +0000" channel="PTVBolan.pk"><title lang="en">Brahvi Time. (Live Transmission- Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204210000 +0000" stop="20241204170000 +0000" channel="PTVBolan.pk"><title lang="en">Brahvi Time. (Live Transmission- Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204210500 +0000" stop="20241204170500 +0000" channel="PTVBolan.pk"><title lang="en">Sadaf (Balochi Music Programe (Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204210500 +0000" stop="20241204170500 +0000" channel="PTVBolan.pk"><title lang="en">Zeemal (Balochi Music Programme)	 (Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204210500 +0000" stop="20241204170500 +0000" channel="PTVBolan.pk"><title lang="en">Brahvi Time. (Live Transmission- Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204210500 +0000" stop="20241204170500 +0000" channel="PTVBolan.pk"><title lang="en">Zabad 	 (Brahvi Music Progrmme) (Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204220000 +0000" stop="20241204180000 +0000" channel="PTVBolan.pk"><title lang="en">Balochi Time. (Live Transmission- Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204220000 +0000" stop="20241204180000 +0000" channel="PTVBolan.pk"><title lang="en">Balochi Time. (Live Transmission- Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204220000 +0000" stop="20241204180000 +0000" channel="PTVBolan.pk"><title lang="en">Balochi Time. (Live Transmission- Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204220500 +0000" stop="20241204180500 +0000" channel="PTVBolan.pk"><title lang="en">Sandara 	 (Pashto Music Program)	 (Repeattelecast)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204220500 +0000" stop="20241204180500 +0000" channel="PTVBolan.pk"><title lang="en">Sandara (Pashto Musical Programme)	 (Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204220500 +0000" stop="20241204180500 +0000" channel="PTVBolan.pk"><title lang="en">Alakai Khel (Pashto Programme)	 Prog No 8 (Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204230000 +0000" stop="20241204190000 +0000" channel="PTVBolan.pk"><title lang="en">Pashto Time. (Live Transmission- Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204230000 +0000" stop="20241204190000 +0000" channel="PTVBolan.pk"><title lang="en">Pashto Time. (Live Transmission- Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204230000 +0000" stop="20241204190000 +0000" channel="PTVBolan.pk"><title lang="en">Pashto Time. (Live Transmission- Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205000000 +0000" stop="20241204200000 +0000" channel="PTVBolan.pk"><title lang="en">Al-Quraan(Quaida No. 67)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205000000 +0000" stop="20241204200000 +0000" channel="PTVBolan.pk"><title lang="en">Al-Quran (Quaida No.68)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205000000 +0000" stop="20241204200000 +0000" channel="PTVBolan.pk"><title lang="en">Al-Quraan(Quaida No. 65)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205000500 +0000" stop="20241204200500 +0000" channel="PTVBolan.pk"><title lang="en">Current Affairs Time (Live- Pashto).</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205000500 +0000" stop="20241204200500 +0000" channel="PTVBolan.pk"><title lang="en">Hazargi Time. (Live Transmission- Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205000500 +0000" stop="20241204200500 +0000" channel="PTVBolan.pk"><title lang="en">Current Affairs Time (Live- Pashto)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVBolan.pk"><title lang="en">Sichkan (Balochi Programme)	 (Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVBolan.pk"><title lang="en">Zeemal (Balochi Music Programme)	 (Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVBolan.pk"><title lang="en">Na Rasid Gain Pul (Balochi Play) Ep-04	 (Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVBolan.pk"><title lang="en">Sadaf	 (Balochi Music Programme)	 (Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVBolan.pk"><title lang="en">Na Rasid Gain Pul (Balochi Play) Ep-04	 (Repeat Telecast</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVBolan.pk"><title lang="en">Sadaf (Balochi Music Progrmme) 	 (Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205020000 +0000" stop="20241204220000 +0000" channel="PTVBolan.pk"><title lang="en">Live Anchor Person+Guest+Live Calls From</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205020000 +0000" stop="20241204220000 +0000" channel="PTVBolan.pk"><title lang="en">Sher Khan (Brahvi Play) Ep No 5 (Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205020000 +0000" stop="20241204220000 +0000" channel="PTVBolan.pk"><title lang="en">Zabad (Brahvi Music Programme) (Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205020000 +0000" stop="20241204220000 +0000" channel="PTVBolan.pk"><title lang="en">Sher Khan . (Brahvi Play) 	 Ep No 5 (Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205020500 +0000" stop="20241204220500 +0000" channel="PTVBolan.pk"><title lang="en">Zabad	 (Brahvi Music Programme) (Repeat Telecast )</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205030000 +0000" stop="20241204230000 +0000" channel="PTVBolan.pk"><title lang="en">Bismillah+Al-Quraan-Ul-Hakeem(Programme No.99).</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205030000 +0000" stop="20241204230000 +0000" channel="PTVBolan.pk"><title lang="en">Balochi Khabrain Live</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205030000 +0000" stop="20241204230000 +0000" channel="PTVBolan.pk"><title lang="en">Live Ancshor Person+Guest+Live Calls</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205030000 +0000" stop="20241204230000 +0000" channel="PTVBolan.pk"><title lang="en">Bismillah+Al-Quraan-Ul-Hakeem(Programme No.100).</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205030000 +0000" stop="20241204230000 +0000" channel="PTVBolan.pk"><title lang="en">Balochi Khabrain (Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205030000 +0000" stop="20241204230000 +0000" channel="PTVBolan.pk"><title lang="en">Live Anchor Person+Guest+Live Calls</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205030000 +0000" stop="20241204230000 +0000" channel="PTVBolan.pk"><title lang="en">Bismillah+Al-Quraan-Ul-Hakeem(Programme No. 98).</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205030000 +0000" stop="20241204230000 +0000" channel="PTVBolan.pk"><title lang="en">Balochi Khabrain (Live)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205030000 +0000" stop="20241204230000 +0000" channel="PTVBolan.pk"><title lang="en">Live Anchor Person+Guest+Live Calls</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205030500 +0000" stop="20241204230500 +0000" channel="PTVBolan.pk"><title lang="en">Al-Quraan(Quaida No. 67)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205030500 +0000" stop="20241204230500 +0000" channel="PTVBolan.pk"><title lang="en">Al-Quraan(Quaida No. 68)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205030500 +0000" stop="20241204230500 +0000" channel="PTVBolan.pk"><title lang="en">Al-Quraan(Quaida No. 65)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVBolan.pk"><title lang="en">Subh-E-Bolan (Brahvi) (Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVBolan.pk"><title lang="en">Brahvi Khabrain(Khabraak (Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVBolan.pk"><title lang="en">Live Ancshor Person+Guest+Live Calls</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVBolan.pk"><title lang="en">Sunday Morning Show (Brahvi- Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVBolan.pk"><title lang="en">Brahvi Khabrain (Khabraak) (Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVBolan.pk"><title lang="en">Live Anchor Person+Guest+Live Calls</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVBolan.pk"><title lang="en">Subh -E-Bolan (Brahvi Time)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVBolan.pk"><title lang="en">Brahvi Khabrain (Khabraak) (Live)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVBolan.pk"><title lang="en">Live Anchor Person+Guest+Live Calls</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205050000 +0000" stop="20241205010000 +0000" channel="PTVBolan.pk"><title lang="en">Subh-E-Bolan (Balochi) (Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205050000 +0000" stop="20241205010000 +0000" channel="PTVBolan.pk"><title lang="en">Pashto Khabrain(Khabroona (Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205050000 +0000" stop="20241205010000 +0000" channel="PTVBolan.pk"><title lang="en">Live Anchor Person+Guest+Live Calls</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205050000 +0000" stop="20241205010000 +0000" channel="PTVBolan.pk"><title lang="en">Sunday Morning Show (Balochi- Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205050000 +0000" stop="20241205010000 +0000" channel="PTVBolan.pk"><title lang="en">Pashto Khabrain (Khabroona) (Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205050000 +0000" stop="20241205010000 +0000" channel="PTVBolan.pk"><title lang="en">Live Anchor Person+Guest+Live Calls</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205050000 +0000" stop="20241205010000 +0000" channel="PTVBolan.pk"><title lang="en">Subh -E-Bolan Balochi Time)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205050000 +0000" stop="20241205010000 +0000" channel="PTVBolan.pk"><title lang="en">Pashto Khabrain (Khabroona ) (Live)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205050000 +0000" stop="20241205010000 +0000" channel="PTVBolan.pk"><title lang="en">Live Anchor Person+Guest+Live Calls</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205060000 +0000" stop="20241205020000 +0000" channel="PTVBolan.pk"><title lang="en">Subh-E-Bolan (Pashto) (Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205060000 +0000" stop="20241205020000 +0000" channel="PTVBolan.pk"><title lang="en">Bachi Wail 	 (Pashto Musical Show) 	 (Repeat Telecast</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205060000 +0000" stop="20241205020000 +0000" channel="PTVBolan.pk"><title lang="en">Sandara (Pashto Musical Programme)	 (Repeat Telecast</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205060000 +0000" stop="20241205020000 +0000" channel="PTVBolan.pk"><title lang="en">Sunday Morning Show (Pashto- Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205060000 +0000" stop="20241205020000 +0000" channel="PTVBolan.pk"><title lang="en">Ho Nahki Da Khunda (Pashto Play ) Ep No 3 (Repeattelecast)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205060000 +0000" stop="20241205020000 +0000" channel="PTVBolan.pk"><title lang="en">Sandara 	 (Pashto Musical Programme) (Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205060000 +0000" stop="20241205020000 +0000" channel="PTVBolan.pk"><title lang="en">Subh -E-Bolan (Pashto Time)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205060000 +0000" stop="20241205020000 +0000" channel="PTVBolan.pk"><title lang="en">Ho Nahki Da Khunda (Pashto Play ) Ep No 3 (Repeattelecast</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205060000 +0000" stop="20241205020000 +0000" channel="PTVBolan.pk"><title lang="en">Khundrang	 (Pashto Program)		 (Repeattelecast)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204190000 +0000" stop="20241204150000 +0000" channel="PTVHome.pk"><title lang="en">Huey Tum Ajnabi			(Ep: 08) (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204200000 +0000" stop="20241204160000 +0000" channel="PTVHome.pk"><title lang="en">Virsa Heritage Revived	 (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204220000 +0000" stop="20241204180000 +0000" channel="PTVHome.pk"><title lang="en">Planet Champ 	(Ep: 08) (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205000000 +0000" stop="20241204200000 +0000" channel="PTVHome.pk"><title lang="en">Kianaat	 (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205000000 +0000" stop="20241204200000 +0000" channel="PTVHome.pk"><title lang="en">Kianaat (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205000000 +0000" stop="20241204200000 +0000" channel="PTVHome.pk"><title lang="en">Al-Qura’An</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205000000 +0000" stop="20241204200000 +0000" channel="PTVHome.pk"><title lang="en">Planet Champ 	(Ep: 09) (Rpt)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205000000 +0000" stop="20241204200000 +0000" channel="PTVHome.pk"><title lang="en">Hawa Say Fatima	(Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVHome.pk"><title lang="en">Iqra				 (Ep: 110)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVHome.pk"><title lang="en">Iqra (Tilawat-E-Quran + Tarjuma+ Tafseer+ National Anthem) (Ep: 109)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVHome.pk"><title lang="en">Heritage In Young Hands		(Ep: 03)	(Fresh)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVHome.pk"><title lang="en">Hangama House		 	(Ep: 26) (Fresh)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVHome.pk"><title lang="en">Iqra					(Ep: 108)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205020000 +0000" stop="20241204220000 +0000" channel="PTVHome.pk"><title lang="en">Payam E Pakistan	 (Fresh)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205020000 +0000" stop="20241204220000 +0000" channel="PTVHome.pk"><title lang="en">Rising Pakistan		 		(Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205020000 +0000" stop="20241204220000 +0000" channel="PTVHome.pk"><title lang="en">Biyan By Saqib Raza Mustafai 	(Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205020000 +0000" stop="20241204220000 +0000" channel="PTVHome.pk"><title lang="en">Best Of Rising Pakistan 	(Rpt)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205020000 +0000" stop="20241204220000 +0000" channel="PTVHome.pk"><title lang="en">Islam Aur Hamara Mua’Ashra 	(Rpt)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205020000 +0000" stop="20241204220000 +0000" channel="PTVHome.pk"><title lang="en">Rising Pakistan			(Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205020500 +0000" stop="20241204220500 +0000" channel="PTVHome.pk"><title lang="en">Uraan (Unicef) 		(Ep: 19) (Fresh)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205020500 +0000" stop="20241204220500 +0000" channel="PTVHome.pk"><title lang="en">Huey Tum Ajnabi		(Ep: 09)	(Fresh)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205020500 +0000" stop="20241204220500 +0000" channel="PTVHome.pk"><title lang="en">Azm E Aalishan			(Ep: 04)		(Re-Run)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVHome.pk"><title lang="en">Padharo Maray Des 	 (Ep: 27) 	(Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVHome.pk"><title lang="en">Mian Biwi Bachon Samait (Mbbs) (Ep: 25) 	(Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVHome.pk"><title lang="en">Khabarnama 	(Headlines Only)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVHome.pk"><title lang="en">Heritage In Young Hands		(Ep: 02) (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVHome.pk"><title lang="en">Hangama House		 	(Ep: 25) (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVHome.pk"><title lang="en">Khabarnama (Headlines Only) (Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVHome.pk"><title lang="en">Raat Gaye	 (Fresh)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVHome.pk"><title lang="en">Inaam Yafta Log ( Ep: 09) (Rpt)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVHome.pk"><title lang="en">Aaway Ka Aawa			(Ep: 16) (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205040500 +0000" stop="20241205000500 +0000" channel="PTVHome.pk"><title lang="en">Padharo Maray Des 	 (Ep: 28) (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205050000 +0000" stop="20241205010000 +0000" channel="PTVHome.pk"><title lang="en">Best Of Morning @ Home:	(Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205050000 +0000" stop="20241205010000 +0000" channel="PTVHome.pk"><title lang="en">Best Of Morning @ Home:	 (Rpt)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205050000 +0000" stop="20241205010000 +0000" channel="PTVHome.pk"><title lang="en">Morning @ Home:			(Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205060000 +0000" stop="20241205020000 +0000" channel="PTVHome.pk"><title lang="en">Huey Tum Ajnabi			(Ep: 09) 	(Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205070000 +0000" stop="20241205030000 +0000" channel="PTVHome.pk"><title lang="en">Huey Tum Ajnabi			(Ep: 09)	(Rpt)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205070000 +0000" stop="20241205030000 +0000" channel="PTVHome.pk"><title lang="en">Bakht Hazari			(Ep: 28)	(Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205080000 +0000" stop="20241205040000 +0000" channel="PTVHome.pk"><title lang="en">Star &amp; Style 			(Ep: 46) (Rpt)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205080500 +0000" stop="20241205040500 +0000" channel="PTVHome.pk"><title lang="en">Ibteda (Rpt)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205090000 +0000" stop="20241205050000 +0000" channel="PTVHome.pk"><title lang="en">Azm E Aalishan			(Ep: 03) (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205090500 +0000" stop="20241205050500 +0000" channel="PTVHome.pk"><title lang="en">Jahan Burf Girt I Ha (Documentary) (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205090500 +0000" stop="20241205050500 +0000" channel="PTVHome.pk"><title lang="en">Adventure Pakistan		(Ep: 09) (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205100000 +0000" stop="20241205060000 +0000" channel="PTVHome.pk"><title lang="en">The Adventures Of Little Carp (Ep: 19)	 	(Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205100000 +0000" stop="20241205060000 +0000" channel="PTVHome.pk"><title lang="en">Weekend @ Home			 		(Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205100000 +0000" stop="20241205060000 +0000" channel="PTVHome.pk"><title lang="en">Weekend @ Home			(Live)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205100000 +0000" stop="20241205060000 +0000" channel="PTVHome.pk"><title lang="en">Creative Kids			 (Ep: 06)		(Rpt)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205100000 +0000" stop="20241205060000 +0000" channel="PTVHome.pk"><title lang="en">Mian Biwi Bachon Samait (Mbbs) (Ep: 25) 		(Rpt)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205110000 +0000" stop="20241205070000 +0000" channel="PTVHome.pk"><title lang="en">Rising Pakistan					(Rpt)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205120000 +0000" stop="20241205080000 +0000" channel="PTVHome.pk"><title lang="en">Al-Qura’An</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205120000 +0000" stop="20241205080000 +0000" channel="PTVHome.pk"><title lang="en">The Adventures Of Little Carp	 (Ep: 20)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205120000 +0000" stop="20241205080000 +0000" channel="PTVHome.pk"><title lang="en">Al-Qura’An</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205120000 +0000" stop="20241205080000 +0000" channel="PTVHome.pk"><title lang="en">Creative Kids			 (Ep: 07)	 (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205130000 +0000" stop="20241205090000 +0000" channel="PTVHome.pk"><title lang="en">Padharo Maray Des 	 (Ep: 28) (Fresh)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205130000 +0000" stop="20241205090000 +0000" channel="PTVHome.pk"><title lang="en">Mian Biwi Bachon Samait (Mbbs) (Last Ep: 26) (Fresh)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205130000 +0000" stop="20241205090000 +0000" channel="PTVHome.pk"><title lang="en">Inaam Yafta Log 	(Ep: 10) 	(Re-Run)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205130000 +0000" stop="20241205090000 +0000" channel="PTVHome.pk"><title lang="en">Aaway Ka Aawa			(Ep: 17)	 (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205140000 +0000" stop="20241205100000 +0000" channel="PTVHome.pk"><title lang="en">Living With Change (Documentary)		(Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205140500 +0000" stop="20241205100500 +0000" channel="PTVHome.pk"><title lang="en">Huey Tum Ajnabi			(Ep: 10)	(Fresh)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205140500 +0000" stop="20241205100500 +0000" channel="PTVHome.pk"><title lang="en">Bakht Hazari			(Ep: 29)		(Fresh)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205160000 +0000" stop="20241205120000 +0000" channel="PTVHome.pk"><title lang="en">Mian Biwi Bachon Samait (Mbbs) (Last Ep: 26) (Rpt)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205160000 +0000" stop="20241205120000 +0000" channel="PTVHome.pk"><title lang="en">Khabarnama 	(Headlines Only)		(Live)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205160000 +0000" stop="20241205120000 +0000" channel="PTVHome.pk"><title lang="en">Virsa Heritage Revived					(Rpt)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205180000 +0000" stop="20241205140000 +0000" channel="PTVHome.pk"><title lang="en">Bakht Hazari			(Ep: 29) (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204190000 +0000" stop="20241204150000 +0000" channel="PTVNational.pk"><title lang="en">Sindhi News (Ptv-National)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204190000 +0000" stop="20241204150000 +0000" channel="PTVNational.pk"><title lang="en">Sindhi News (Ptv-National)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204190000 +0000" stop="20241204150000 +0000" channel="PTVNational.pk"><title lang="en">Sindhi News Ptv-National</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204191500 +0000" stop="20241204151500 +0000" channel="PTVNational.pk"><title lang="en">Pakistan Time Multi Languages (Live Program)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204191500 +0000" stop="20241204151500 +0000" channel="PTVNational.pk"><title lang="en">Ptv National Golden Songs</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204191500 +0000" stop="20241204151500 +0000" channel="PTVNational.pk"><title lang="en">Brunch @ Ptv National (Live Show)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204210000 +0000" stop="20241204170000 +0000" channel="PTVNational.pk"><title lang="en">Natak Rang (Odd Play)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204210000 +0000" stop="20241204170000 +0000" channel="PTVNational.pk"><title lang="en">Aiou Magazine</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204210000 +0000" stop="20241204170000 +0000" channel="PTVNational.pk"><title lang="en">Aiou Magazine</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204220000 +0000" stop="20241204180000 +0000" channel="PTVNational.pk"><title lang="en">Lehar Lehar Sangeet (Music Program)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204220000 +0000" stop="20241204180000 +0000" channel="PTVNational.pk"><title lang="en">Soorat-E-Hall (Current Affair) Live</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204220000 +0000" stop="20241204180000 +0000" channel="PTVNational.pk"><title lang="en">Surhan Music Program</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204223000 +0000" stop="20241204183000 +0000" channel="PTVNational.pk"><title lang="en">Roshan Tara (Children Program)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204230000 +0000" stop="20241204190000 +0000" channel="PTVNational.pk"><title lang="en">Sindhi Filmi Sansaar (Filmi Program)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204230000 +0000" stop="20241204190000 +0000" channel="PTVNational.pk"><title lang="en">Sindh Time (Repeat Time 2)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204230000 +0000" stop="20241204190000 +0000" channel="PTVNational.pk"><title lang="en">Bhalikaar (Music Based Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204230000 +0000" stop="20241204190000 +0000" channel="PTVNational.pk"><title lang="en">Sindh Time (Repeat Time 2)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204230000 +0000" stop="20241204190000 +0000" channel="PTVNational.pk"><title lang="en">Tv Clinic Health Based (Live )</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204230000 +0000" stop="20241204190000 +0000" channel="PTVNational.pk"><title lang="en">Sindh Time (Repeat Time 2)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204233000 +0000" stop="20241204193000 +0000" channel="PTVNational.pk"><title lang="en">Kachahri (Folk Lor)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205000000 +0000" stop="20241204200000 +0000" channel="PTVNational.pk"><title lang="en">Natak Rang ( Odd Play )</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205000000 +0000" stop="20241204200000 +0000" channel="PTVNational.pk"><title lang="en">Bhalikaar (Music Based Live)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205000000 +0000" stop="20241204200000 +0000" channel="PTVNational.pk"><title lang="en">Natak Rang (Odd Play)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205004500 +0000" stop="20241204204500 +0000" channel="PTVNational.pk"><title lang="en">Sindhi News (Ptv-National)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205004500 +0000" stop="20241204204500 +0000" channel="PTVNational.pk"><title lang="en">Sindhi News (Ptv-National)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205004500 +0000" stop="20241204204500 +0000" channel="PTVNational.pk"><title lang="en">Sindhi News Ptv-National</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVNational.pk"><title lang="en">Saijj Natak Rang (Drama Serial)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVNational.pk"><title lang="en">Al-Quran (Ptv Home)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVNational.pk"><title lang="en">Reshmi Dore Natak Rang (Drama Serial)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVNational.pk"><title lang="en">Al-Quran (Ptv Home)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVNational.pk"><title lang="en">Kinaro Natak Rang (Drama Serial )</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVNational.pk"><title lang="en">Al-Quran (Ptv Home)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205020000 +0000" stop="20241204220000 +0000" channel="PTVNational.pk"><title lang="en">Natak Rang (Odd Play)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205020000 +0000" stop="20241204220000 +0000" channel="PTVNational.pk"><title lang="en">Natak Rang (Odd Play)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205020000 +0000" stop="20241204220000 +0000" channel="PTVNational.pk"><title lang="en">Natak Rang (Odd Play)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205030000 +0000" stop="20241204230000 +0000" channel="PTVNational.pk"><title lang="en">Sindh Time (Repeat Time 1)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205030000 +0000" stop="20241204230000 +0000" channel="PTVNational.pk"><title lang="en">Sindh Time (Repeat Time 1)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205030000 +0000" stop="20241204230000 +0000" channel="PTVNational.pk"><title lang="en">Sindh Time Repeat Time 1</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205060000 +0000" stop="20241205020000 +0000" channel="PTVNational.pk"><title lang="en">Pakistan Time Multi Languages (Repeat Program)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205060000 +0000" stop="20241205020000 +0000" channel="PTVNational.pk"><title lang="en">Sindh Time (Repeat Time)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205060000 +0000" stop="20241205020000 +0000" channel="PTVNational.pk"><title lang="en">Brunch @ Ptv National (Repeat Time)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204210000 +0000" stop="20241204170000 +0000" channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205000000 +0000" stop="20241204200000 +0000" channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205000000 +0000" stop="20241204200000 +0000" channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205000000 +0000" stop="20241204200000 +0000" channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205000500 +0000" stop="20241204200500 +0000" channel="PTVNews.pk"><title lang="en">Iqra</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205000500 +0000" stop="20241204200500 +0000" channel="PTVNews.pk"><title lang="en">Iqra</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205000500 +0000" stop="20241204200500 +0000" channel="PTVNews.pk"><title lang="en">Iqra</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVNews.pk"><title lang="en">News Bulletin</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVNews.pk"><title lang="en">News Bulletin</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVNews.pk"><title lang="en">News Bulletin</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205010500 +0000" stop="20241204210500 +0000" channel="PTVNews.pk"><title lang="en">Ca Special /Pak China Express (Alternate)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205020000 +0000" stop="20241204220000 +0000" channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205020000 +0000" stop="20241204220000 +0000" channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205020000 +0000" stop="20241204220000 +0000" channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205020500 +0000" stop="20241204220500 +0000" channel="PTVNews.pk"><title lang="en">Ibteda (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205020500 +0000" stop="20241204220500 +0000" channel="PTVNews.pk"><title lang="en">Sirat-E-Mustaqeem / Kainaat</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205020500 +0000" stop="20241204220500 +0000" channel="PTVNews.pk"><title lang="en">Sirat-E-Mustaqeem</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205030000 +0000" stop="20241204230000 +0000" channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205030000 +0000" stop="20241204230000 +0000" channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205030000 +0000" stop="20241204230000 +0000" channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205030500 +0000" stop="20241204230500 +0000" channel="PTVNews.pk"><title lang="en">Debate @ 8 (Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205030500 +0000" stop="20241204230500 +0000" channel="PTVNews.pk"><title lang="en">Debate @ 8 (Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205030500 +0000" stop="20241204230500 +0000" channel="PTVNews.pk"><title lang="en">Debate @ 8 (Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205030500 +0000" stop="20241204230500 +0000" channel="PTVNews.pk"><title lang="en">Siasi Ahwal</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVNews.pk"><title lang="en">Kashmir Magazine</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVNews.pk"><title lang="en">Kashmir Magazine</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205040500 +0000" stop="20241205000500 +0000" channel="PTVNews.pk"><title lang="en">Subha-E-Pakistan</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205040500 +0000" stop="20241205000500 +0000" channel="PTVNews.pk"><title lang="en">Real Pakistani</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205040500 +0000" stop="20241205000500 +0000" channel="PTVNews.pk"><title lang="en">Real Pakistani</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205050000 +0000" stop="20241205010000 +0000" channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205050000 +0000" stop="20241205010000 +0000" channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205050000 +0000" stop="20241205010000 +0000" channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205050500 +0000" stop="20241205010500 +0000" channel="PTVNews.pk"><title lang="en">Subha-E-Pakistan</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205050500 +0000" stop="20241205010500 +0000" channel="PTVNews.pk"><title lang="en">Meri Awaaz / Explore Kashmir</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205050500 +0000" stop="20241205010500 +0000" channel="PTVNews.pk"><title lang="en">Meri Awaaz / Explore Kashmir</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205060000 +0000" stop="20241205020000 +0000" channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205060000 +0000" stop="20241205020000 +0000" channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205060000 +0000" stop="20241205020000 +0000" channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205060500 +0000" stop="20241205020500 +0000" channel="PTVNews.pk"><title lang="en">Riasat (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205060500 +0000" stop="20241205020500 +0000" channel="PTVNews.pk"><title lang="en">Mohazib Dunya K Sang/ Sehat Sab K Liyae (Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205060500 +0000" stop="20241205020500 +0000" channel="PTVNews.pk"><title lang="en">Mohazib Dunya Kay Sang/ Sehat Sab K Liyae (Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205070000 +0000" stop="20241205030000 +0000" channel="PTVNews.pk"><title lang="en">News Bulletin</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205070000 +0000" stop="20241205030000 +0000" channel="PTVNews.pk"><title lang="en">Sara Pakistan</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205070000 +0000" stop="20241205030000 +0000" channel="PTVNews.pk"><title lang="en">News Bulletin</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205070000 +0000" stop="20241205030000 +0000" channel="PTVNews.pk"><title lang="en">Sara Pakistan</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205070000 +0000" stop="20241205030000 +0000" channel="PTVNews.pk"><title lang="en">News Bulletin</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205070000 +0000" stop="20241205030000 +0000" channel="PTVNews.pk"><title lang="en">Sara Pakistan</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205080000 +0000" stop="20241205040000 +0000" channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205080000 +0000" stop="20241205040000 +0000" channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205080000 +0000" stop="20241205040000 +0000" channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205080500 +0000" stop="20241205040500 +0000" channel="PTVNews.pk"><title lang="en">Jumma Speech + Arabic Khutba Only (Live) / Naat + Qaseeda</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205080500 +0000" stop="20241205040500 +0000" channel="PTVNews.pk"><title lang="en">Qanoon Bolta Hay</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205080500 +0000" stop="20241205040500 +0000" channel="PTVNews.pk"><title lang="en">Smart World/ Jhoot Sach</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205090000 +0000" stop="20241205050000 +0000" channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205090000 +0000" stop="20241205050000 +0000" channel="PTVNews.pk"><title lang="en">Jhoot Sach</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205090000 +0000" stop="20241205050000 +0000" channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205090500 +0000" stop="20241205050500 +0000" channel="PTVNews.pk"><title lang="en">Sach Tu Yeh Hay (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205090500 +0000" stop="20241205050500 +0000" channel="PTVNews.pk"><title lang="en">Chotha Satoon (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205090500 +0000" stop="20241205050500 +0000" channel="PTVNews.pk"><title lang="en">Sur Gayyan (Rpt)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205100000 +0000" stop="20241205060000 +0000" channel="PTVNews.pk"><title lang="en">Headlines News</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205100000 +0000" stop="20241205060000 +0000" channel="PTVNews.pk"><title lang="en">Kashmiri News + Gojri News+Sheena + Balti</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205100000 +0000" stop="20241205060000 +0000" channel="PTVNews.pk"><title lang="en">Headlines News</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205100000 +0000" stop="20241205060000 +0000" channel="PTVNews.pk"><title lang="en">Kashmiri News + Gojri + Sheena + Balti</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205100000 +0000" stop="20241205060000 +0000" channel="PTVNews.pk"><title lang="en">Headlines News</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205100000 +0000" stop="20241205060000 +0000" channel="PTVNews.pk"><title lang="en">Kashmiri News + Gojri News + Sheena News + Balti News</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205100500 +0000" stop="20241205060500 +0000" channel="PTVNews.pk"><title lang="en">Parliament News</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205100500 +0000" stop="20241205060500 +0000" channel="PTVNews.pk"><title lang="en">Parliament News</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205100500 +0000" stop="20241205060500 +0000" channel="PTVNews.pk"><title lang="en">Parliament News</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205110000 +0000" stop="20241205070000 +0000" channel="PTVNews.pk"><title lang="en">Headlines News</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205110000 +0000" stop="20241205070000 +0000" channel="PTVNews.pk"><title lang="en">Headlines News</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205110000 +0000" stop="20241205070000 +0000" channel="PTVNews.pk"><title lang="en">Headlines News</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205110500 +0000" stop="20241205070500 +0000" channel="PTVNews.pk"><title lang="en">Sochna Ho Ga</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205110500 +0000" stop="20241205070500 +0000" channel="PTVNews.pk"><title lang="en">Aaina</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205110500 +0000" stop="20241205070500 +0000" channel="PTVNews.pk"><title lang="en">Sochna Ho Ga</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205120000 +0000" stop="20241205080000 +0000" channel="PTVNews.pk"><title lang="en">Headlines News</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205120000 +0000" stop="20241205080000 +0000" channel="PTVNews.pk"><title lang="en">Headlines News</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205120000 +0000" stop="20241205080000 +0000" channel="PTVNews.pk"><title lang="en">Headlines News</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205120500 +0000" stop="20241205080500 +0000" channel="PTVNews.pk"><title lang="en">Baat Karobar Ki –Live</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205120500 +0000" stop="20241205080500 +0000" channel="PTVNews.pk"><title lang="en">Shahrah E Dastoor</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205120500 +0000" stop="20241205080500 +0000" channel="PTVNews.pk"><title lang="en">Shahrah E Dastoor</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205130000 +0000" stop="20241205090000 +0000" channel="PTVNews.pk"><title lang="en">Headline News</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205130000 +0000" stop="20241205090000 +0000" channel="PTVNews.pk"><title lang="en">News Show @ 6</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205130000 +0000" stop="20241205090000 +0000" channel="PTVNews.pk"><title lang="en">Headline News</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205130500 +0000" stop="20241205090500 +0000" channel="PTVNews.pk"><title lang="en">Bakhabar</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205130500 +0000" stop="20241205090500 +0000" channel="PTVNews.pk"><title lang="en">Arabic News</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205130500 +0000" stop="20241205090500 +0000" channel="PTVNews.pk"><title lang="en">Arabic News</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205130500 +0000" stop="20241205090500 +0000" channel="PTVNews.pk"><title lang="en">Bakhabar</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205130500 +0000" stop="20241205090500 +0000" channel="PTVNews.pk"><title lang="en">Arabic News</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205140000 +0000" stop="20241205100000 +0000" channel="PTVNews.pk"><title lang="en">Headline News</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205140000 +0000" stop="20241205100000 +0000" channel="PTVNews.pk"><title lang="en">Headline News</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205140000 +0000" stop="20241205100000 +0000" channel="PTVNews.pk"><title lang="en">Headline News</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205140500 +0000" stop="20241205100500 +0000" channel="PTVNews.pk"><title lang="en">Mein Aur Aap</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205140500 +0000" stop="20241205100500 +0000" channel="PTVNews.pk"><title lang="en">Kisi Aur Zamanay Ka Khawab /Pehchan Pakistan</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205140500 +0000" stop="20241205100500 +0000" channel="PTVNews.pk"><title lang="en">Mein Aur Aap</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205150000 +0000" stop="20241205110000 +0000" channel="PTVNews.pk"><title lang="en">Headline News</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205150000 +0000" stop="20241205110000 +0000" channel="PTVNews.pk"><title lang="en">Headline News</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205150000 +0000" stop="20241205110000 +0000" channel="PTVNews.pk"><title lang="en">Headline News</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205150500 +0000" stop="20241205110500 +0000" channel="PTVNews.pk"><title lang="en">Siasi Ahwal</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205150500 +0000" stop="20241205110500 +0000" channel="PTVNews.pk"><title lang="en">Siasi Ahwal</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205160000 +0000" stop="20241205120000 +0000" channel="PTVNews.pk"><title lang="en">News Room 9</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205160000 +0000" stop="20241205120000 +0000" channel="PTVNews.pk"><title lang="en">News Room 9</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205160000 +0000" stop="20241205120000 +0000" channel="PTVNews.pk"><title lang="en">News Room 9</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205160500 +0000" stop="20241205120500 +0000" channel="PTVNews.pk"><title lang="en">Kashmir Report</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205170000 +0000" stop="20241205130000 +0000" channel="PTVNews.pk"><title lang="en">Headline News</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205170000 +0000" stop="20241205130000 +0000" channel="PTVNews.pk"><title lang="en">Headline News</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205170000 +0000" stop="20241205130000 +0000" channel="PTVNews.pk"><title lang="en">Headline News</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205170500 +0000" stop="20241205130500 +0000" channel="PTVNews.pk"><title lang="en">Sur Giyan - Ptv H</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205170500 +0000" stop="20241205130500 +0000" channel="PTVNews.pk"><title lang="en">Sud Rang</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205170500 +0000" stop="20241205130500 +0000" channel="PTVNews.pk"><title lang="en">Sud Rang</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205180000 +0000" stop="20241205140000 +0000" channel="PTVNews.pk"><title lang="en">Headline News</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205180000 +0000" stop="20241205140000 +0000" channel="PTVNews.pk"><title lang="en">Headline News</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205180000 +0000" stop="20241205140000 +0000" channel="PTVNews.pk"><title lang="en">Headline News</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205180500 +0000" stop="20241205140500 +0000" channel="PTVNews.pk"><title lang="en">Chotha Satoon</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205180500 +0000" stop="20241205140500 +0000" channel="PTVNews.pk"><title lang="en">Chutha Satoon</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205180500 +0000" stop="20241205140500 +0000" channel="PTVNews.pk"><title lang="en">Chotha Satoon</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204190000 +0000" stop="20241204150000 +0000" channel="PTVSports.pk"><title lang="en">Epl 2024-25 Leicester City Vs Nottm Forest Live</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204190000 +0000" stop="20241204150000 +0000" channel="PTVSports.pk"><title lang="en">Fifa Womens Wc 2023 France Vs Brazil (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204193000 +0000" stop="20241204153000 +0000" channel="PTVSports.pk"><title lang="en">Icc Cricket World Cup 2023 Pakistan Vs Sri Lanka Repeat</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204203000 +0000" stop="20241204163000 +0000" channel="PTVSports.pk"><title lang="en">Wimebldon 2022 Nadal Vs Zandschulp (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204210000 +0000" stop="20241204170000 +0000" channel="PTVSports.pk"><title lang="en">2nd Commercial H/L Pak Vs Eng Test Series 2024 3rd Test Day 2 (Fresh Repeat)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204210000 +0000" stop="20241204170000 +0000" channel="PTVSports.pk"><title lang="en">Pak Vs Eng Test Series 2024 2nd Test (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204220000 +0000" stop="20241204180000 +0000" channel="PTVSports.pk"><title lang="en">1st Commercial Acc Emerging Asia Cup Match 14 2nd Semi Final Ind(A) Vs Afg (A)(Fresh Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204230000 +0000" stop="20241204190000 +0000" channel="PTVSports.pk"><title lang="en">Aew Wrestling Episode 13 &amp; 14 (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204230000 +0000" stop="20241204190000 +0000" channel="PTVSports.pk"><title lang="en">2nd Commercial Acc Emerging Asia Cup Match 13 1st Semi Final Pak(S) Vs Sri (A) (Fresh Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205000000 +0000" stop="20241204200000 +0000" channel="PTVSports.pk"><title lang="en">Fifa Womens World Cup 2023 England Vs Spain Final (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205000000 +0000" stop="20241204200000 +0000" channel="PTVSports.pk"><title lang="en">Wimbeldon 2021 Doubles Mens Final Repeat</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205000000 +0000" stop="20241204200000 +0000" channel="PTVSports.pk"><title lang="en">Winter Olympics 2022 Womens Freeski Halfpipe Final (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205013000 +0000" stop="20241204213000 +0000" channel="PTVSports.pk"><title lang="en">2nd Commercial Acc Emerging Asia Cup Match 14 2nd Semi Final Ind(A) Vs Afg (A) (Fresh Repeat)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205013000 +0000" stop="20241204213000 +0000" channel="PTVSports.pk"><title lang="en">Icc T20 World Cup 2024 Match 50 Wi Vs Sa (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205020000 +0000" stop="20241204220000 +0000" channel="PTVSports.pk"><title lang="en">Pakistan Vs Zimbabwe Odi Series 2024 2nd Odi (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205023000 +0000" stop="20241204223000 +0000" channel="PTVSports.pk"><title lang="en">H/L Pak Vs Eng Test Series 2024 3rd Test Day 2 (Repeat)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205023000 +0000" stop="20241204223000 +0000" channel="PTVSports.pk"><title lang="en">French Open 2024 Aryna Sabalenka Vs Paula Badosa (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205030000 +0000" stop="20241204230000 +0000" channel="PTVSports.pk"><title lang="en">Pakistan Vs Bangladesh Asian Games Hockey (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205033000 +0000" stop="20241204233000 +0000" channel="PTVSports.pk"><title lang="en">Pre Match Show “Game On Hai” Pak Vs Eng 3rd Test Day 3 Live</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVSports.pk"><title lang="en">Sports Glitterati 14-11-24 Fresh Repeat</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205043000 +0000" stop="20241205003000 +0000" channel="PTVSports.pk"><title lang="en">Asia Cup 2022 Super 4 Pakistan Vs Afghanistan H/L (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205043000 +0000" stop="20241205003000 +0000" channel="PTVSports.pk"><title lang="en">Pak Vs Eng Test Series 2024 3rd Test Day 3 Live</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205050000 +0000" stop="20241205010000 +0000" channel="PTVSports.pk"><title lang="en">Asian Games 2023 Bedmenton + Fillings Repeat</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205053000 +0000" stop="20241205013000 +0000" channel="PTVSports.pk"><title lang="en">Epl 2024-25 Brighton Vs Man United(Repeat)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205061500 +0000" stop="20241205021500 +0000" channel="PTVSports.pk"><title lang="en">Icc Women&apos;S T20 World Cup 2024 Match 20 Eng (W) Vs Wi (W) (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205070000 +0000" stop="20241205030000 +0000" channel="PTVSports.pk"><title lang="en">Repeat Day 2 At Lunch Break (Repeat)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205070000 +0000" stop="20241205030000 +0000" channel="PTVSports.pk"><title lang="en">Azlan Shah 2024 Mal Vs Kor Repeat</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205081500 +0000" stop="20241205041500 +0000" channel="PTVSports.pk"><title lang="en">Wimbledon 2021 Womens Final (Repeat)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205084500 +0000" stop="20241205044500 +0000" channel="PTVSports.pk"><title lang="en">Boxing Tokyo Olympics Mens Cub Vs Roc Sf2 (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205090000 +0000" stop="20241205050000 +0000" channel="PTVSports.pk"><title lang="en">Pakistan Vs Zimbabwe Odi Series 2024 3rd Odi (Repeat)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205090000 +0000" stop="20241205050000 +0000" channel="PTVSports.pk"><title lang="en">Pakistan Vs Australia 2nd Odi (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205100000 +0000" stop="20241205060000 +0000" channel="PTVSports.pk"><title lang="en">Pre Match Show “Game On Hai” (Live)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205100000 +0000" stop="20241205060000 +0000" channel="PTVSports.pk"><title lang="en">Copa America 2024 Argentina Vs Peru (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205110000 +0000" stop="20241205070000 +0000" channel="PTVSports.pk"><title lang="en">Pakistan Vs Zimbabwe T20i Series 2024 1st T20i (Live)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205120000 +0000" stop="20241205080000 +0000" channel="PTVSports.pk"><title lang="en">Icc T20 World Cup 2024 Match 15 Ban Vs Sri (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205123000 +0000" stop="20241205083000 +0000" channel="PTVSports.pk"><title lang="en">Post Match Show Pak Vs Eng 3rd Test Day 2 (Live )</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205130000 +0000" stop="20241205090000 +0000" channel="PTVSports.pk"><title lang="en">Wimebldon 2022 Parry Vs Jabeur Full Match (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205133000 +0000" stop="20241205093000 +0000" channel="PTVSports.pk"><title lang="en">Epl 2024-2025 Chelsea Vs Aston Villa (Record Only)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205133000 +0000" stop="20241205093000 +0000" channel="PTVSports.pk"><title lang="en">Epl 2024-2025 Tottenham Vs Fulham (Record Only)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205133000 +0000" stop="20241205093000 +0000" channel="PTVSports.pk"><title lang="en">Pakistan Vs Cambodia (Record Only)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205140000 +0000" stop="20241205100000 +0000" channel="PTVSports.pk"><title lang="en">Epl 2024-2025 Man City Vs Southampton (Live )</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205140000 +0000" stop="20241205100000 +0000" channel="PTVSports.pk"><title lang="en">Epl 2024-2025 Brentford Vs Ipswitch Town</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205140000 +0000" stop="20241205100000 +0000" channel="PTVSports.pk"><title lang="en">Epl 2024-2025 Brighton Vs Wolves</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205140000 +0000" stop="20241205100000 +0000" channel="PTVSports.pk"><title lang="en">Epl 2024-2025 Aston Villa Vs Bournemouth</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205144500 +0000" stop="20241205104500 +0000" channel="PTVSports.pk"><title lang="en">Post Match Show “Game On Hai” (Live)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205150000 +0000" stop="20241205110000 +0000" channel="PTVSports.pk"><title lang="en">Pakistan Vs Australia 2nd Odi Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205160000 +0000" stop="20241205120000 +0000" channel="PTVSports.pk"><title lang="en">Epl 2024-2025 Liverpool Vs Man City (Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205160000 +0000" stop="20241205120000 +0000" channel="PTVSports.pk"><title lang="en">Boxing Tokyo Olympics Mens Cub Vs Roc Sf2 (Repeat)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205160000 +0000" stop="20241205120000 +0000" channel="PTVSports.pk"><title lang="en">Kick Off ( Live)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205163000 +0000" stop="20241205123000 +0000" channel="PTVSports.pk"><title lang="en">Epl 2024-2025 Everton Vs Fulham Live</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205170000 +0000" stop="20241205130000 +0000" channel="PTVSports.pk"><title lang="en">Asian Games Boxing+Fillings (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205180000 +0000" stop="20241205140000 +0000" channel="PTVSports.pk"><title lang="en">1st Commercial H/L Pakistan Vs Zimbabwe T20i Series 2024 1st T20i</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205180000 +0000" stop="20241205140000 +0000" channel="PTVSports.pk"><title lang="en">Asia Cup 2022 Super 4 Pakistan Vs Afghanistan H/L (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205183000 +0000" stop="20241205143000 +0000" channel="PTVSports.pk"><title lang="en">1st Commercial H/L Pak Vs Eng Test Series 2024 3rd Test Day 3 (Fresh Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204190000 +0000" stop="20241204150000 +0000" channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204190000 +0000" stop="20241204150000 +0000" channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204190000 +0000" stop="20241204150000 +0000" channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204200000 +0000" stop="20241204160000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204200000 +0000" stop="20241204160000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204200000 +0000" stop="20241204160000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204200500 +0000" stop="20241204160500 +0000" channel="PTVWorld.pk"><title lang="en">Perspective (R)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204200500 +0000" stop="20241204160500 +0000" channel="PTVWorld.pk"><title lang="en">Perspective (R)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204200500 +0000" stop="20241204160500 +0000" channel="PTVWorld.pk"><title lang="en">Perspective (R)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204210000 +0000" stop="20241204170000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204210000 +0000" stop="20241204170000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204210000 +0000" stop="20241204170000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204210500 +0000" stop="20241204170500 +0000" channel="PTVWorld.pk"><title lang="en">Diplomatic Enclave (R)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204210500 +0000" stop="20241204170500 +0000" channel="PTVWorld.pk"><title lang="en">Fault Lines (R)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204210500 +0000" stop="20241204170500 +0000" channel="PTVWorld.pk"><title lang="en">The Debate (R)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204220000 +0000" stop="20241204180000 +0000" channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204220000 +0000" stop="20241204180000 +0000" channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204220000 +0000" stop="20241204180000 +0000" channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204230000 +0000" stop="20241204190000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204230000 +0000" stop="20241204190000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204230000 +0000" stop="20241204190000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
 <programme start="20241204230500 +0000" stop="20241204190500 +0000" channel="PTVWorld.pk"><title lang="en">World This Morning (R)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204230500 +0000" stop="20241204190500 +0000" channel="PTVWorld.pk"><title lang="en">The Society</title><desc lang="en">No description available</desc></programme>
+<programme start="20241204230500 +0000" stop="20241204190500 +0000" channel="PTVWorld.pk"><title lang="en">World This Morning (R)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205000000 +0000" stop="20241204200000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205000000 +0000" stop="20241204200000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205000000 +0000" stop="20241204200000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205000500 +0000" stop="20241204200500 +0000" channel="PTVWorld.pk"><title lang="en">Al Quran</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205000500 +0000" stop="20241204200500 +0000" channel="PTVWorld.pk"><title lang="en">Al Quran</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205010000 +0000" stop="20241204210000 +0000" channel="PTVWorld.pk"><title lang="en">Al Quran</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205020000 +0000" stop="20241204220000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205020000 +0000" stop="20241204220000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205020000 +0000" stop="20241204220000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205020500 +0000" stop="20241204220500 +0000" channel="PTVWorld.pk"><title lang="en">News Room (R)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205020500 +0000" stop="20241204220500 +0000" channel="PTVWorld.pk"><title lang="en">News Room (Best Of The Week) (R)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205020500 +0000" stop="20241204220500 +0000" channel="PTVWorld.pk"><title lang="en">News Room (R)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205030000 +0000" stop="20241204230000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205030000 +0000" stop="20241204230000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205030000 +0000" stop="20241204230000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205030500 +0000" stop="20241204230500 +0000" channel="PTVWorld.pk"><title lang="en">Sports Extra (R)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205030500 +0000" stop="20241204230500 +0000" channel="PTVWorld.pk"><title lang="en">Sports Extra ( Highlights ) ( R )</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205030500 +0000" stop="20241204230500 +0000" channel="PTVWorld.pk"><title lang="en">Sports Extra (R)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205040000 +0000" stop="20241205000000 +0000" channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205050000 +0000" stop="20241205010000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205050000 +0000" stop="20241205010000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205050000 +0000" stop="20241205010000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205050500 +0000" stop="20241205010500 +0000" channel="PTVWorld.pk"><title lang="en">World This Morning (Best Of The Week)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205050500 +0000" stop="20241205010500 +0000" channel="PTVWorld.pk"><title lang="en">Diplomatic Enclave ( R )</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205050500 +0000" stop="20241205010500 +0000" channel="PTVWorld.pk"><title lang="en">World This Morning</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205060000 +0000" stop="20241205020000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205060000 +0000" stop="20241205020000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205060000 +0000" stop="20241205020000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205060500 +0000" stop="20241205020500 +0000" channel="PTVWorld.pk"><title lang="en">News Room(R)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205060500 +0000" stop="20241205020500 +0000" channel="PTVWorld.pk"><title lang="en">Fault Lines (R)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205060500 +0000" stop="20241205020500 +0000" channel="PTVWorld.pk"><title lang="en">News Room (R)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205070000 +0000" stop="20241205030000 +0000" channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205070000 +0000" stop="20241205030000 +0000" channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205070000 +0000" stop="20241205030000 +0000" channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205080000 +0000" stop="20241205040000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205080000 +0000" stop="20241205040000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205080000 +0000" stop="20241205040000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205080500 +0000" stop="20241205040500 +0000" channel="PTVWorld.pk"><title lang="en">The Debate(R)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205080500 +0000" stop="20241205040500 +0000" channel="PTVWorld.pk"><title lang="en">Sky Is The Limit</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205080500 +0000" stop="20241205040500 +0000" channel="PTVWorld.pk"><title lang="en">The Debate(R)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205090000 +0000" stop="20241205050000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205090000 +0000" stop="20241205050000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205090000 +0000" stop="20241205050000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205090500 +0000" stop="20241205050500 +0000" channel="PTVWorld.pk"><title lang="en">Perspective(R)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205090500 +0000" stop="20241205050500 +0000" channel="PTVWorld.pk"><title lang="en">Perspective ( R )</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205090500 +0000" stop="20241205050500 +0000" channel="PTVWorld.pk"><title lang="en">Views On News (R)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205100000 +0000" stop="20241205060000 +0000" channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205100000 +0000" stop="20241205060000 +0000" channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205100000 +0000" stop="20241205060000 +0000" channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205110000 +0000" stop="20241205070000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205110000 +0000" stop="20241205070000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205110000 +0000" stop="20241205070000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205110500 +0000" stop="20241205070500 +0000" channel="PTVWorld.pk"><title lang="en">World This Morning (Best Of The Week)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205110500 +0000" stop="20241205070500 +0000" channel="PTVWorld.pk"><title lang="en">Dine With World</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205110500 +0000" stop="20241205070500 +0000" channel="PTVWorld.pk"><title lang="en">Health Is Wealth (R)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205120000 +0000" stop="20241205080000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205120000 +0000" stop="20241205080000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205120000 +0000" stop="20241205080000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205120500 +0000" stop="20241205080500 +0000" channel="PTVWorld.pk"><title lang="en">Sports Extra (Highlights)</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205120500 +0000" stop="20241205080500 +0000" channel="PTVWorld.pk"><title lang="en">Health Is Wealth</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205120500 +0000" stop="20241205080500 +0000" channel="PTVWorld.pk"><title lang="en">Sports Extra</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205130000 +0000" stop="20241205090000 +0000" channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205130000 +0000" stop="20241205090000 +0000" channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205130000 +0000" stop="20241205090000 +0000" channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205140000 +0000" stop="20241205100000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205140000 +0000" stop="20241205100000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205140000 +0000" stop="20241205100000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205140500 +0000" stop="20241205100500 +0000" channel="PTVWorld.pk"><title lang="en">Sky Is The Limit</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205140500 +0000" stop="20241205100500 +0000" channel="PTVWorld.pk"><title lang="en">The Post</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205140500 +0000" stop="20241205100500 +0000" channel="PTVWorld.pk"><title lang="en">News Room</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205150000 +0000" stop="20241205110000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205150000 +0000" stop="20241205110000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205150000 +0000" stop="20241205110000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205150500 +0000" stop="20241205110500 +0000" channel="PTVWorld.pk"><title lang="en">Perspective</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205150500 +0000" stop="20241205110500 +0000" channel="PTVWorld.pk"><title lang="en">Perspective</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205150500 +0000" stop="20241205110500 +0000" channel="PTVWorld.pk"><title lang="en">Perspective</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205160000 +0000" stop="20241205120000 +0000" channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205160000 +0000" stop="20241205120000 +0000" channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205160000 +0000" stop="20241205120000 +0000" channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205170000 +0000" stop="20241205130000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205170000 +0000" stop="20241205130000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205170000 +0000" stop="20241205130000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205170500 +0000" stop="20241205130500 +0000" channel="PTVWorld.pk"><title lang="en">Fault Lines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205170500 +0000" stop="20241205130500 +0000" channel="PTVWorld.pk"><title lang="en">The Society</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205170500 +0000" stop="20241205130500 +0000" channel="PTVWorld.pk"><title lang="en">The Debate</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205180000 +0000" stop="20241205140000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205180000 +0000" stop="20241205140000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205180000 +0000" stop="20241205140000 +0000" channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205180500 +0000" stop="20241205140500 +0000" channel="PTVWorld.pk"><title lang="en">Diplomatice Enclave</title><desc lang="en">No description available</desc></programme>
+<programme start="20241205180500 +0000" stop="20241205140500 +0000" channel="PTVWorld.pk"><title lang="en">Sky Is The Limit (R)</title><desc lang="en">No description available</desc></programme>
 <programme start="20241205180500 +0000" stop="20241205140500 +0000" channel="PTVWorld.pk"><title lang="en">Sports Extra (R)</title><desc lang="en">No description available</desc></programme>
 </tv>
