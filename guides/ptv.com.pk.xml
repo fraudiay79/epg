@@ -8,138 +8,107 @@
 <channel id="PTVSports.pk"><display-name>PTV Sports</display-name><url>https://ptv.com.pk</url></channel>
 <channel id="PTVWorld.pk"><display-name>PTV World</display-name><url>https://ptv.com.pk</url></channel>
 <programme channel="PTVAJK.pk"><title lang="en">Logo Bismillah</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVAJK.pk"><title lang="en">Quran-o-Tarjuma</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVAJK.pk"><title lang="en">Quran-O-Tarjuma</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVAJK.pk"><title lang="en">Al Quran</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVAJK.pk"><title lang="en">Kashmir Report (Kashmir Cell)</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVAJK.pk"><title lang="en">Gomo Phero Mazay Uro</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVAJK.pk"><title lang="en">Local News (PTV News)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVAJK.pk"><title lang="en">Local News (Ptv News)</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVAJK.pk"><title lang="en">Kashmir Kahani</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVAJK.pk"><title lang="en">Tazkia</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVAJK.pk"><title lang="en">Tazkia (R)</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVAJK.pk"><title lang="en">Dhawona</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVAJK.pk"><title lang="en">Khabar Nama (PTV News)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVAJK.pk"><title lang="en">Khabar Nama (Ptv News)</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVAJK.pk"><title lang="en">Close Down</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">BISMILLAH+AL-QURAAN-UL-HAKEEM(PROGRAMME NO. 98).</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">AL-QURAAN(QUAIDA NO. 65)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">SUBH -E-BOLAN (BRAHVI TIME)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">SUBH -E-BOLAN BALOCHI TIME)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">SUBH -E-BOLAN (PASHTO TIME)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">CURRENT AFFAIRS TIME (REPEAT TELECAST)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">BALOCHI KHABRAIN (LIVE)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">BRAHVI KHABRAIN (LIVE)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">PASHTO KHABRAIN (LIVE)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">NA RASID GAIN PUL (BALOCHI PLAY) EP-04 (REPEAT TELECAST</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">BRAHVI TIME. (LIVE TRANSMISSION- REPEAT TELECAST)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">ZABAD 	 (BRAHVI MUSIC PROGRMME) (REPEAT TELECAST)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">BALOCHI TIME. (LIVE TRANSMISSION- REPEAT TELECAST)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">ALAKAI KHEL (PASHTO PROGRAMME)	 PROG NO 8 (REPEAT TELECAST)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">PASHTO TIME. (LIVE TRANSMISSION- REPEAT TELECAST)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">AL-QURAAN(QUAIDA NO. 65)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">CURRENT AFFAIRS TIME (LIVE- PASHTO)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">NA RASID GAIN PUL (BALOCHI PLAY) EP-04	 (REPEAT TELECAST</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">SADAF (BALOCHI MUSIC PROGRMME) 	 (REPEAT TELECAST)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">SHER KHAN . (BRAHVI PLAY) 	 EP NO 5 (REPEAT TELECAST)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">ZABAD	 (BRAHVI MUSIC PROGRAMME) (REPEAT TELECAST )</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">BALOCHI KHABRAIN (LIVE)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">LIVE ANCHOR PERSON+GUEST+LIVE CALLS</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">BRAHVI KHABRAIN (KHABRAAK) (LIVE)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">LIVE ANCHOR PERSON+GUEST+LIVE CALLS</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">PASHTO KHABRAIN (KHABROONA ) (LIVE)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">LIVE ANCHOR PERSON+GUEST+LIVE CALLS</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">HO NAHKI DA KHUNDA (PASHTO PLAY ) EP NO 3 (REPEATTELECAST</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">KHUNDRANG	 (PASHTO PROGRAM)		 (REPEATTELECAST)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVBolan.pk"><title lang="en">NATIONAL ANTHEM &amp; FLAG + CLOSE DOWN</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Har Dil Boley Pakistan (R) (EP-19)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Signature Tunes(S-IV) 25&apos;(R) (EP-49)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Siyasi Ehwal (F)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Bakht Hazari (R)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Sign Language News (F) Live</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Yadoun Ky Rang Geeton K Sang (R)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Ik Zara Sochne Do (R) (EP-17)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Al-Quran ul Hakeem (F) EP-74)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Laddu MAin Haddi (R) (EP-04)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Program Ilm-o-Dansih (R) (EP-01)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">English News (LIVE)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Rising @ Pakistan (R)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Al-Quran ul Hakeem (R) (EP-74)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Kainaat (F) (EP-60)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Bakht Hazari (R)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Morning @ Home (F)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Ashoob (R) (EP-02)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Virsa Heritage Revived (F)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Sign Language News (F) Live</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Remaning Part of Virsa Heritage Revived (F)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Perspetive (F)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Khabarnama (Live)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Ashoob (R) (EP-02)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Khatta Meetha (F) (EP-161)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Har Dil Boley Pakistan (F) (EP-23)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Sur Hamaray (S-II) (F) (EP-02)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Dard Diloon Kay (F) (Ep-23+24 )</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Dar &amp; Darling (F) (EP-31)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Ain Ishq (F) (EP-03)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVGlobal.pk"><title lang="en">Khabarnama (Live)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVHome.pk"><title lang="en">HAWA SAY FATIMA	(RPT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVHome.pk"><title lang="en">IQRA					(EP: 108)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVHome.pk"><title lang="en">ISLAM AUR HAMARA MUA’ASHRA 	(RPT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVHome.pk"><title lang="en">RISING PAKISTAN			(LIVE)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVHome.pk"><title lang="en">INAAM YAFTA LOG ( EP: 09) (RPT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVHome.pk"><title lang="en">AAWAY KA AAWA			(EP: 16) (RPT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVHome.pk"><title lang="en">MORNING @ HOME:			(LIVE)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVHome.pk"><title lang="en">BAKHT HAZARI			(EP: 28)	(RPT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVHome.pk"><title lang="en">IBTEDA (RPT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVHome.pk"><title lang="en">AZM E AALISHAN			(EP: 03) (RPT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVHome.pk"><title lang="en">CREATIVE KIDS			 (EP: 06)		(RPT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVHome.pk"><title lang="en">MIAN BIWI BACHON SAMAIT (MBBS) (EP: 25) 		(RPT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVHome.pk"><title lang="en">RISING PAKISTAN					(RPT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVHome.pk"><title lang="en">AL-QURA’AN</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVHome.pk"><title lang="en">CREATIVE KIDS			 (EP: 07)	 (RPT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVHome.pk"><title lang="en">INAAM YAFTA LOG 	(EP: 10) 	(RE-RUN)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVHome.pk"><title lang="en">AAWAY KA AAWA			(EP: 17)	 (RPT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVHome.pk"><title lang="en">AZM E AALISHAN			(EP: 04)		(RE-RUN)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVHome.pk"><title lang="en">BAKHT HAZARI			(EP: 29)		(FRESH)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVHome.pk"><title lang="en">KHABARNAMA 	(HEADLINES ONLY)		(LIVE)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVHome.pk"><title lang="en">VIRSA HERITAGE REVIVED					(RPT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVHome.pk"><title lang="en">BAKHT HAZARI			(EP: 29) (RPT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVNational.pk"><title lang="en">SINDHI NEWS PTV-NATIONAL</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVNational.pk"><title lang="en">BRUNCH @ PTV NATIONAL (LIVE SHOW)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVNational.pk"><title lang="en">AIOU MAGAZINE</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Bismillah+Al-Quraan-Ul-Hakeem(Programme No. 98).</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Al-Quraan(Quaida No. 65)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Subh -E-Bolan (Brahvi Time)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Subh -E-Bolan Balochi Time)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Subh -E-Bolan (Pashto Time)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Current Affairs Time (Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Balochi Khabrain (Live)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Brahvi Khabrain (Live)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Pashto Khabrain (Live)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Na Rasid Gain Pul (Balochi Play) Ep-04 (Repeat Telecast</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Brahvi Time. (Live Transmission- Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Zabad 	 (Brahvi Music Progrmme) (Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Balochi Time. (Live Transmission- Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Alakai Khel (Pashto Programme)	 Prog No 8 (Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Pashto Time. (Live Transmission- Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Al-Quraan(Quaida No. 65)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Current Affairs Time (Live- Pashto)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Na Rasid Gain Pul (Balochi Play) Ep-04	 (Repeat Telecast</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Sadaf (Balochi Music Progrmme) 	 (Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Sher Khan . (Brahvi Play) 	 Ep No 5 (Repeat Telecast)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Zabad	 (Brahvi Music Programme) (Repeat Telecast )</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Balochi Khabrain (Live)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Live Anchor Person+Guest+Live Calls</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Brahvi Khabrain (Khabraak) (Live)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Live Anchor Person+Guest+Live Calls</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Pashto Khabrain (Khabroona ) (Live)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Live Anchor Person+Guest+Live Calls</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Ho Nahki Da Khunda (Pashto Play ) Ep No 3 (Repeattelecast</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVBolan.pk"><title lang="en">Khundrang	 (Pashto Program)		 (Repeattelecast)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVHome.pk"><title lang="en">Hawa Say Fatima	(Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVHome.pk"><title lang="en">Iqra					(Ep: 108)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVHome.pk"><title lang="en">Islam Aur Hamara Mua’Ashra 	(Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVHome.pk"><title lang="en">Rising Pakistan			(Live)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVHome.pk"><title lang="en">Inaam Yafta Log ( Ep: 09) (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVHome.pk"><title lang="en">Aaway Ka Aawa			(Ep: 16) (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVHome.pk"><title lang="en">Morning @ Home:			(Live)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVHome.pk"><title lang="en">Bakht Hazari			(Ep: 28)	(Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVHome.pk"><title lang="en">Ibteda (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVHome.pk"><title lang="en">Azm E Aalishan			(Ep: 03) (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVHome.pk"><title lang="en">Creative Kids			 (Ep: 06)		(Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVHome.pk"><title lang="en">Mian Biwi Bachon Samait (Mbbs) (Ep: 25) 		(Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVHome.pk"><title lang="en">Rising Pakistan					(Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVHome.pk"><title lang="en">Al-Qura’An</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVHome.pk"><title lang="en">Creative Kids			 (Ep: 07)	 (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVHome.pk"><title lang="en">Inaam Yafta Log 	(Ep: 10) 	(Re-Run)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVHome.pk"><title lang="en">Aaway Ka Aawa			(Ep: 17)	 (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVHome.pk"><title lang="en">Azm E Aalishan			(Ep: 04)		(Re-Run)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVHome.pk"><title lang="en">Bakht Hazari			(Ep: 29)		(Fresh)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVHome.pk"><title lang="en">Khabarnama 	(Headlines Only)		(Live)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVHome.pk"><title lang="en">Virsa Heritage Revived					(Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVHome.pk"><title lang="en">Bakht Hazari			(Ep: 29) (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVNational.pk"><title lang="en">Sindhi News Ptv-National</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVNational.pk"><title lang="en">Brunch @ Ptv National (Live Show)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVNational.pk"><title lang="en">Aiou Magazine</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNational.pk"><title lang="en">Surhan Music Program</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVNational.pk"><title lang="en">TV CLINIC Health Based (LIVE )</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVNational.pk"><title lang="en">Tv Clinic Health Based (Live )</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNational.pk"><title lang="en">Natak Rang (Odd Play)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVNational.pk"><title lang="en">SINDHI NEWS PTV-NATIONAL</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVNational.pk"><title lang="en">KINARO NATAK RANG (Drama Serial )</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVNational.pk"><title lang="en">Sindhi News Ptv-National</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVNational.pk"><title lang="en">Kinaro Natak Rang (Drama Serial )</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNational.pk"><title lang="en">Natak Rang (Odd Play)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVNational.pk"><title lang="en">SINDH TIME REPEAT TIME 1</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVNational.pk"><title lang="en">BRUNCH @ PTV NATIONAL (REPEAT TIME)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVNational.pk"><title lang="en">AL-QURAN (PTV HOME)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVNational.pk"><title lang="en">SINDH TIME (REPEAT TIME 2)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVNational.pk"><title lang="en">Sindh Time Repeat Time 1</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVNational.pk"><title lang="en">Brunch @ Ptv National (Repeat Time)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVNational.pk"><title lang="en">Al-Quran (Ptv Home)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVNational.pk"><title lang="en">Sindh Time (Repeat Time 2)</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNews.pk"><title lang="en">Iqra</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVNews.pk"><title lang="en">News bulletin</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVNews.pk"><title lang="en">News Bulletin</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNews.pk"><title lang="en">Ibteda (Rpt)</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVNews.pk"><title lang="en">Debate @ 8 (LIVE)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVNews.pk"><title lang="en">Debate @ 8 (Live)</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVNews.pk"><title lang="en">Subha-e-Pakistan</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVNews.pk"><title lang="en">Subha-E-Pakistan</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVNews.pk"><title lang="en">Subha-e-Pakistan</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVNews.pk"><title lang="en">Subha-E-Pakistan</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNews.pk"><title lang="en">Riasat (Rpt)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVNews.pk"><title lang="en">News bulletin</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVNews.pk"><title lang="en">News Bulletin</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNews.pk"><title lang="en">Sara Pakistan</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVNews.pk"><title lang="en">Jumma Speech + Arabic Khutba only (LIVE) / Naat + Qaseeda</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVNews.pk"><title lang="en">Jumma Speech + Arabic Khutba Only (Live) / Naat + Qaseeda</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNews.pk"><title lang="en">News Headlines</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVNews.pk"><title lang="en">Sach tu yeh hay (Rpt)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVNews.pk"><title lang="en">Sach Tu Yeh Hay (Rpt)</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNews.pk"><title lang="en">Headlines News</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNews.pk"><title lang="en">Parliament News</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNews.pk"><title lang="en">Kashmiri News + Gojri News+Sheena + Balti</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNews.pk"><title lang="en">Headlines News</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNews.pk"><title lang="en">Sochna Ho Ga</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNews.pk"><title lang="en">Headlines News</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVNews.pk"><title lang="en">Baat Karobar Ki –LIVE</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVNews.pk"><title lang="en">Baat Karobar Ki –Live</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNews.pk"><title lang="en">Headline News</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNews.pk"><title lang="en">Bakhabar</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNews.pk"><title lang="en">Arabic News</title><desc lang="en">No description available</desc></programme>
@@ -150,62 +119,62 @@
 <programme channel="PTVNews.pk"><title lang="en">News Room 9</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNews.pk"><title lang="en">Kashmir Report</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNews.pk"><title lang="en">Headline News</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVNews.pk"><title lang="en">Sur Giyan - PTV H</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVNews.pk"><title lang="en">Sur Giyan - Ptv H</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNews.pk"><title lang="en">Headline News</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVNews.pk"><title lang="en">Chotha Satoon</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVSports.pk"><title lang="en">FIFA WOMENS WC 2023 FRANCE VS BRAZIL (REPEAT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVSports.pk"><title lang="en">PAK VS ENG TEST SERIES 2024 2nd TEST (REPEAT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVSports.pk"><title lang="en">WINTER OLYMPICS 2022 WOMENS FREESKI HALFPIPE FINAL (REPEAT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVSports.pk"><title lang="en">ICC T20 WORLD CUP 2024 MATCH 50 WI VS SA (REPEAT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVSports.pk"><title lang="en">FRENCH OPEN 2024 ARYNA SABALENKA VS PAULA BADOSA (REPEAT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVSports.pk"><title lang="en">SPORTS GLITTERATI 14-11-24 FRESH REPEAT</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVSports.pk"><title lang="en">ASIAN GAMES 2023 BEDMENTON + FILLINGS REPEAT</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVSports.pk"><title lang="en">ICC WOMEN&apos;S T20 WORLD CUP 2024 MATCH 20 ENG (W) VS WI (W) (REPEAT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVSports.pk"><title lang="en">AZLAN SHAH 2024 MAL VS KOR REPEAT</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVSports.pk"><title lang="en">BOXING TOKYO OLYMPICS MENS CUB VS ROC SF2 (REPEAT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVSports.pk"><title lang="en">PAKISTAN VS AUSTRALIA 2nd ODI (REPEAT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVSports.pk"><title lang="en">COPA AMERICA 2024 ARGENTINA VS PERU (REPEAT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVSports.pk"><title lang="en">ICC T20 WORLD CUP 2024 MATCH 15 BAN VS SRI (REPEAT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVSports.pk"><title lang="en">WIMEBLDON 2022 PARRY VS JABEUR FULL MATCH (REPEAT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVSports.pk"><title lang="en">PAKISTAN VS AUSTRALIA 2nd ODI REPEAT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVSports.pk"><title lang="en">KICK OFF ( LIVE)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVSports.pk"><title lang="en">ASIAN GAMES BOXING+FILLINGS (REPEAT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVSports.pk"><title lang="en">ASIA CUP 2022 SUPER 4 PAKISTAN VS AFGHANISTAN H/L (REPEAT)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVWorld.pk"><title lang="en">BULLETIN</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVSports.pk"><title lang="en">Fifa Womens Wc 2023 France Vs Brazil (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVSports.pk"><title lang="en">Pak Vs Eng Test Series 2024 2nd Test (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVSports.pk"><title lang="en">Winter Olympics 2022 Womens Freeski Halfpipe Final (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVSports.pk"><title lang="en">Icc T20 World Cup 2024 Match 50 Wi Vs Sa (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVSports.pk"><title lang="en">French Open 2024 Aryna Sabalenka Vs Paula Badosa (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVSports.pk"><title lang="en">Sports Glitterati 14-11-24 Fresh Repeat</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVSports.pk"><title lang="en">Asian Games 2023 Bedmenton + Fillings Repeat</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVSports.pk"><title lang="en">Icc Women&apos;S T20 World Cup 2024 Match 20 Eng (W) Vs Wi (W) (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVSports.pk"><title lang="en">Azlan Shah 2024 Mal Vs Kor Repeat</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVSports.pk"><title lang="en">Boxing Tokyo Olympics Mens Cub Vs Roc Sf2 (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVSports.pk"><title lang="en">Pakistan Vs Australia 2nd Odi (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVSports.pk"><title lang="en">Copa America 2024 Argentina Vs Peru (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVSports.pk"><title lang="en">Icc T20 World Cup 2024 Match 15 Ban Vs Sri (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVSports.pk"><title lang="en">Wimebldon 2022 Parry Vs Jabeur Full Match (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVSports.pk"><title lang="en">Pakistan Vs Australia 2nd Odi Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVSports.pk"><title lang="en">Kick Off ( Live)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVSports.pk"><title lang="en">Asian Games Boxing+Fillings (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVSports.pk"><title lang="en">Asia Cup 2022 Super 4 Pakistan Vs Afghanistan H/L (Repeat)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVWorld.pk"><title lang="en">Perspective (R)</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVWorld.pk"><title lang="en">The Debate (R)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVWorld.pk"><title lang="en">BULLETIN</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVWorld.pk"><title lang="en">World this Morning (R)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVWorld.pk"><title lang="en">World This Morning (R)</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVWorld.pk"><title lang="en">Al Quran</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVWorld.pk"><title lang="en">NEWS ROOM (R)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVWorld.pk"><title lang="en">News Room (R)</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVWorld.pk"><title lang="en">Sports Extra (R)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVWorld.pk"><title lang="en">BULLETIN</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVWorld.pk"><title lang="en">World this Morning</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVWorld.pk"><title lang="en">World This Morning</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVWorld.pk"><title lang="en">News Room (R)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVWorld.pk"><title lang="en">BULLETIN</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVWorld.pk"><title lang="en">The Debate(R)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVWorld.pk"><title lang="en">HEADLINES</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVWorld.pk"><title lang="en">Views on News (R)</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVWorld.pk"><title lang="en">BULLETIN</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVWorld.pk"><title lang="en">Health is wealth (R)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVWorld.pk"><title lang="en">Views On News (R)</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVWorld.pk"><title lang="en">SPORTS EXTRA</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVWorld.pk"><title lang="en">BULLETIN</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVWorld.pk"><title lang="en">Health Is Wealth (R)</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVWorld.pk"><title lang="en">News room</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVWorld.pk"><title lang="en">Sports Extra</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVWorld.pk"><title lang="en">News Room</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVWorld.pk"><title lang="en">Perspective</title><desc lang="en">No description available</desc></programme>
-<programme channel="PTVWorld.pk"><title lang="en">BULLETIN</title><desc lang="en">No description available</desc></programme>
+<programme channel="PTVWorld.pk"><title lang="en">Bulletin</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVWorld.pk"><title lang="en">The Debate</title><desc lang="en">No description available</desc></programme>
 <programme channel="PTVWorld.pk"><title lang="en">Headlines</title><desc lang="en">No description available</desc></programme>
