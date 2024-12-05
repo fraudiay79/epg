@@ -34,7 +34,7 @@ module.exports = {
       const items = JSON.parse(content)
       items.forEach(item => {
         const start = parseProgramTime(item.programTime)
-        const stop = start.add(30, 'm')
+        const stop = calculateStopTime(start)
         programs.push({
           title: toProperCase(item.programName),
           description: item.descr || 'No description available',
@@ -68,4 +68,9 @@ function parseProgramTime(timeStr) {
   } else {
     return 'Invalid time format'
   }
+}
+
+function calculateStopTime(start) {
+  const timeZone = 'Asia/Karachi';
+  return dayjs.tz(startTime, 'HH:mm:ss', timeZone).add(1, 'hour').format('HH:mm:ss');
 }
