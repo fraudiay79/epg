@@ -71,6 +71,6 @@ function parseProgramTime(timeStr) {
 }
 
 function calculateStopTime(start) {
-  const timeZone = 'Asia/Karachi';
-  return dayjs.tz(startTime, 'HH:mm:ss', timeZone).add(1, 'hour').format('HH:mm:ss');
+  const timeZone = 'Asia/Karachi'
+  return dayjs.tz(start, 'HH:mm:ss', timeZone).add(1, 'hour').format('HH:mm:ss')
 }
