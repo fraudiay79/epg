@@ -33,12 +33,20 @@ module.exports = {
     try {
       const items = JSON.parse(content);
       items.forEach(item => {
-        const programTime = parseProgramTime(item.programTime);
+        let start = parseProgramTime(item.programTime)
+        if (prev) {
+        if (start.isBefore(prev.start)) {
+          start = start.add(1, 'd')
+          date = date.add(1, 'd')
+        }
+        prev.stop = start
+        }
+        const stop = start.add(60, 'm')
         programs.push({
-          title: item.programName,
-          programTime: item.programTime,
-          start: programTime,
-          description: item.descr || 'No description available'
+          title: toProperCase(item.programName),
+          description: item.descr || 'No description available',
+          start,
+          stop
         });
       });
     } catch (error) {
@@ -48,6 +56,10 @@ module.exports = {
     return programs;
   }
 };
+
+function toProperCase(str) {
+  return str.toLowerCase().replace(/\b\w/g, char => char.toUpperCase());
+}
 
 function parseProgramTime(timeStr) {
   // Handle different formats of time
