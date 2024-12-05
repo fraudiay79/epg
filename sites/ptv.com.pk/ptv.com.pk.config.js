@@ -50,20 +50,17 @@ module.exports = {
 };
 
 function parseProgramTime(timeStr) {
-  // Split the time string into components
-  const [time, period] = timeStr.split(' ');
-  let [hours, minutes] = time.split('.').map(Number);
-
-  // Convert 12-hour time to 24-hour time
-  if (period.toLowerCase() === 'pm' && hours !== 12) {
-    hours += 12;
+  // Handle different formats of time
+  if (timeStr.includes('am') || timeStr.includes('pm') || timeStr.includes('AM') || timeStr.includes('PM')) {
+    return dayjs(timeStr, 'hh.mm a').format('HH:mm:ss');
+  } else if (timeStr.includes(':')) {
+    return dayjs(timeStr, 'h:mm A').format('HH:mm:ss');
+  } else if (timeStr.length === 4) {
+    return dayjs(timeStr, 'HHmm').format('HH:mm:ss');
+  } else if (timeStr.includes('PST') || timeStr.includes('UK') || timeStr.includes('USA')) {
+    const times = timeStr.split(',').map(t => t.trim());
+    return times.map(t => dayjs(t, 'HHmmZZ').format('HH:mm:ss')).join(', ');
+  } else {
+    return 'Invalid time format';
   }
-  if (period.toLowerCase() === 'am' && hours === 12) {
-    hours = 0;
-  }
-
-  // Format the time in HH:mm:ss format
-  const formattedTime = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:00`;
-
-  return formattedTime;
 }
