@@ -28,51 +28,44 @@ module.exports = {
     return `http://ptv.com.pk/getShowTvGuide?channel=${channel.site_id}&nameofday=${daysOfWeek[day]}`
   },
   parser: function ({ content, date }) {
-    let programs = [];
+    let programs = []
 
     try {
-      const items = JSON.parse(content);
+      const items = JSON.parse(content)
       items.forEach(item => {
-        let start = parseProgramTime(item.programTime)
-        if (prev) {
-        if (start.isBefore(prev.start)) {
-          start = start.add(1, 'd')
-          date = date.add(1, 'd')
-        }
-        prev.stop = start
-        }
-        const stop = start.add(60, 'm')
+        const start = parseProgramTime(item.programTime)
+        const stop = start.add(30, 'm')
         programs.push({
           title: toProperCase(item.programName),
           description: item.descr || 'No description available',
           start,
           stop
-        });
-      });
+        })
+      })
     } catch (error) {
-      console.error("Error parsing content:", error);
+      console.error("Error parsing content:", error)
     }
 
-    return programs;
+    return programs
   }
-};
+}
 
 function toProperCase(str) {
   return str.toLowerCase().replace(/\b\w/g, char => char.toUpperCase());
 }
 
 function parseProgramTime(timeStr) {
-  // Handle different formats of time
+  const timeZone = 'Asia/Karachi'
   if (timeStr.includes('am') || timeStr.includes('pm') || timeStr.includes('AM') || timeStr.includes('PM')) {
-    return dayjs(timeStr, 'hh.mm a').format('HH:mm:ss');
+    return dayjs.tz(timeStr, 'hh.mm a', timeZone).format('HH:mm:ss')
   } else if (timeStr.includes(':')) {
-    return dayjs(timeStr, 'h:mm A').format('HH:mm:ss');
+    return dayjs.tz(timeStr, 'h:mm A', timeZone).format('HH:mm:ss')
   } else if (timeStr.length === 4) {
-    return dayjs(timeStr, 'HHmm').format('HH:mm:ss');
+    return dayjs.tz(timeStr, 'HHmm', timeZone).format('HH:mm:ss')
   } else if (timeStr.includes('PST') || timeStr.includes('UK') || timeStr.includes('USA')) {
-    const times = timeStr.split(',').map(t => t.trim());
-    return times.map(t => dayjs(t, 'HHmmZZ').format('HH:mm:ss')).join(', ');
+    const times = timeStr.split(',').map(t => t.trim())
+    return times.map(t => dayjs.tz(t, 'HHmmZZ', timeZone).format('HH:mm:ss')).join(', ')
   } else {
-    return 'Invalid time format';
+    return 'Invalid time format'
   }
 }
