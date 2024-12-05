@@ -1,8 +1,13 @@
 const dayjs = require('dayjs');
 const _ = require('lodash');
 const utc = require('dayjs/plugin/utc');
+const timezone = require('dayjs/plugin/timezone');
+const customParseFormat = require('dayjs/plugin/customParseFormat');
+const axios = require('axios');
 
 dayjs.extend(utc);
+dayjs.extend(timezone);
+dayjs.extend(customParseFormat);
 
 module.exports = {
   site: 'cablenet.com.cy',
@@ -15,33 +20,32 @@ module.exports = {
   url({ date }) {
     return `https://cablenet.com.cy/wp-content/plugins/tv-guide-plugin/data/epg${date.format('YYYY-MM-DD')}.json`;
   },
-  parser: function ({ content, channel, date }) {
-  const parsedData = JSON.parse(content, channel);
-  const programs = [];
+  parser: function ({ content }) {
+    const parsedData = JSON.parse(content);
+    const programs = [];
 
-  Object.keys(parsedData).forEach(id => {
-    const channel = parsedData[id];
-    if (channel.pr) {
-      channel.pr.forEach(item => {
-        const program = {
-          title: item.ti,
-          start: item.df,
-          stop: item.dt,
-          description: item.sd || item.ld
-        }
-        programs.push(program)
-      })
-    }
-  })
+    Object.keys(parsedData).forEach(id => {
+      const channel = parsedData[id];
+      if (channel.pr) {
+        channel.pr.forEach(item => {
+          const program = {
+            title: item.ti,
+            start: parseDateTime(item.df),
+            stop: parseDateTime(item.dt),
+            description: item.sd || item.ld
+          };
+          programs.push(program);
+        });
+      }
+    });
 
-  return programs
-},
+    return programs;
+  },
   async channels() {
-    const axios = require('axios');
     const data = await axios
-      .get(`https://cablenet.com.cy/wp-content/plugins/tv-guide-plugin/data/epg2024-11-27.json`)
+      .get(`https://cablenet.com.cy/wp-content/plugins/tv-guide-plugin/data/epg2024-12-05.json`)
       .then(r => r.data)
-      .catch(console.log);
+      .catch(console.error);
 
     const channelData = Object.keys(data).map(channelId => ({
       lang: 'el',
@@ -52,3 +56,7 @@ module.exports = {
     return channelData;
   }
 };
+
+function parseDateTime(dateTime) {
+  return dayjs(dateTime, 'YYYYMMDDHHmmss').format('YYYY-MM-DDTHH:mm:ssZ');
+}
