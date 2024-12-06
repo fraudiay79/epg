@@ -33,7 +33,7 @@ module.exports = {
 
     const promises = [3, 6, 9, 12, 15, 18, 21].map(i =>
       axios.get(
-        `${API_ENDPOINT}/epg/channel/schedules/channelMap_id=${channel.site_id}&date=${date.format(
+        `${API_ENDPOINT}/epg/channel/schedules?channelMap_id=${channel.site_id}&date=${date.format(
           'YYYY-MM-DD'
         )}&hour_offset=${i}&hour_range=3&natco_code=mk`,
         { headers }
