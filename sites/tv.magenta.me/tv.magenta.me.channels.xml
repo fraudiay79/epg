@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <channels>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="357126696327">RTCG 1</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="357129256090">RTCG 2</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="357130280088">Parlamentarni kanal</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="357130280091">Vijesti</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="357130792083">Prva</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="357130792085">Nova M</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="357131304057">Adria TV</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="357138472288">RTV HN</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="357140008211">Gradska TV</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="357140008401">TV E</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="357140008402">TV7</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="357140008407">Adriatic Sport 1</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="357140520263">TV Nikšić</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="357140520342">RTV Pljevlja</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="357141032108">Srpska TV</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="357142567974">TV Budva</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="357142568065">Adriatic Sport 2</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="357142568066">Adriatic Sport 3</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="357144616203">TV A +</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359181864255">Pink M</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="RTCG1.me" site_id="357126696327">RTCG 1</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="RTCG2.me" site_id="357129256090">RTCG 2</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="RTCG3.me" site_id="357130280088">Parlamentarni Kanal</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="Vijesti.me" site_id="357130280091">Vijesti</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="PrvaM.me" site_id="357130792083">Prva M</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="NovaM.me" site_id="357130792085">Nova M</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="AdriaTV.me" site_id="357131304057">Adria TV</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="TVHercegNovi.me" site_id="357138472288">RTV Herceg Novi</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="GradskaTV.me" site_id="357140008211">Gradska TV</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="TelevizijaE.me" site_id="357140008401">TV E</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="TelevizijaTV7.me" site_id="357140008402">TV7</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="AdriaticSport1.me" site_id="357140008407">Adriatic Sport 1</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="TVNiksic.me" site_id="357140520263">TV Nikšić</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="RTVPljevlja.me" site_id="357140520342">RTV Pljevlja</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="SrpskaTV.me" site_id="357141032108">Srpska TV</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="TVBudva.me" site_id="357142567974">TV Budva</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="AdriaticSport2.me" site_id="357142568065">Adriatic Sport 2</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="AdriaticSport3.me" site_id="357142568066">Adriatic Sport 3</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="APlusTV.me" site_id="357144616203">TV A +</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="PinkM.me" site_id="359181864255">Pink M</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359837736442">Superstar TV</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359837736444">RTS 2</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359837736445">RTS Svet</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359837736449">Arena PREMIUM 3</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359838248354">Star</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359838248387">Arenasport 2</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="ArenaSport2.me" site_id="359838248387">Arenasport 2</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359838248389">Arena Esport</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359838248391">Narodna TV</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359838248395">Prva World</channel>
@@ -34,8 +34,8 @@
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359838248401">Star Crime</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359838248420">Zadruga 1</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359838248428">RTS Život</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359838760331">Arenasport 5</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359838760334">Arenasport 8</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="ArenaSport5.me" site_id="359838760331">Arenasport 5</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="ArenaSport8.me" site_id="359838760334">Arenasport 8</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359838760339">Prva Max</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359838760341">Prva Kick</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359838760351">Duck TV</channel>
@@ -76,8 +76,8 @@
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359839784118">RTS 1</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359839784121">Kitchen TV</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359839784124">Arena PREMIUM 1</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359839784128">Arenasport 4</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359839784130">Arenasport 6</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="ArenaSport4.me" site_id="359839784128">Arenasport 4</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="ArenaSport6.me" site_id="359839784130">Arenasport 6</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359839784136">NBA TV</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359839784150">Diva</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359839784156">Disney Channel</channel>
@@ -91,7 +91,7 @@
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359839784273">Pink Show</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359839784289">O kanal</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359839784291">Vikom TV</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359840295971">Arenasport 7</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="ArenaSport7.me" site_id="359840295971">Arenasport 7</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359840295973">B92</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359840295974">Happy TV</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359840295979">Prva Life</channel>
@@ -111,8 +111,8 @@
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359840296057">City Play</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359840296066">Pink Kids</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359840296092">Pink World Cinema</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359840807951">Arenasport 1</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359840807953">Arenasport 3</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="ArenaSport1.me" site_id="359840807951">Arenasport 1</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="ArenaSport3.me" site_id="359840807953">Arenasport 3</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359840807967">Star Life</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359840807982">Zadruga 3</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="359840807983">Zadruga 4</channel>
@@ -212,8 +212,8 @@
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="503904296078">Nickelodeon</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="510959144300">HGTV</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="510960680070">Investigation Discovery</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="540088871996">Teuta TV</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="591971880133">Arenasport 9</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="TVTeuta.me" site_id="540088871996">Teuta TV</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="ArenaSport9.me" site_id="591971880133">Arenasport 9</channel>
   <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="591972392104">WOW Montenegro</channel>
-  <channel site="tv.magenta.me" lang="me" xmltv_id="" site_id="591972904029">Arenasport 10</channel>
+  <channel site="tv.magenta.me" lang="me" xmltv_id="ArenaSport10.me" site_id="591972904029">Arenasport 10</channel>
 </channels>
