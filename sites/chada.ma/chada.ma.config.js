@@ -11,6 +11,7 @@ dayjs.extend(customParseFormat);
 
 module.exports = {
   site: 'chada.ma',
+  channels: 'chada.ma.channels.xml',
   days: 1,
   request: {
     cache: {
