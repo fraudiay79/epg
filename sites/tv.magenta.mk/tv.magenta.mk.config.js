@@ -22,7 +22,7 @@ module.exports = {
     }
   },
   url: function ({ channel, date }) {
-    return `${API_ENDPOINT}/epg/channel/schedules/v2?date=${date.format('YYYY-MM-DD')}&hour_offset=${date.format('H')}&hour_range=3&filler=true&station_ids=${channel.site_id}&app_language=mk&natco_code=mk`
+    return `${API_ENDPOINT}/epg/channel/schedules/schedules?date=${date.format('YYYY-MM-DD')}&hour_offset=${date.format('H')}&hour_range=3&filler=true&channelMap_id=${channel.site_id}&app_language=mk&natco_code=mk`
   },
   async parser({ content, channel, date }) {
     let programs = []
@@ -33,7 +33,7 @@ module.exports = {
 
     const promises = [3, 6, 9, 12, 15, 18, 21].map(i =>
       axios.get(
-        `${API_ENDPOINT}/epg/channel/schedules/v2?station_ids=${channel.site_id}&date=${date.format(
+        `${API_ENDPOINT}/epg/channel/schedules/channelMap_id=${channel.site_id}&date=${date.format(
           'YYYY-MM-DD'
         )}&hour_offset=${i}&hour_range=3&natco_code=mk`,
         { headers }
