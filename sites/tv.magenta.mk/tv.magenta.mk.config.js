@@ -22,7 +22,7 @@ module.exports = {
     }
   },
   url: function ({ channel, date }) {
-    return `${API_ENDPOINT}/epg/channel/schedules/schedules?date=${date.format('YYYY-MM-DD')}&hour_offset=${date.format('H')}&hour_range=3&filler=true&channelMap_id=${channel.site_id}&app_language=mk&natco_code=mk`
+    return `${API_ENDPOINT}/epg/channel/schedules?date=${date.format('YYYY-MM-DD')}&hour_offset=${date.format('H')}&hour_range=3&filler=true&channelMap_id=${channel.site_id}&app_language=mk&natco_code=mk`
   },
   async parser({ content, channel, date }) {
     let programs = []
