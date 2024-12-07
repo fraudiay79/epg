@@ -25,12 +25,12 @@ jobs:
       run: |
           npm install
           #npm run grab -- --channels=../sites/canalplus.com/canalplus.com_cm.channels.xml--maxConnections=20 --gzip --output=guides/propg.net.xml --days=2 --timeout=90000
-          #npm run channels:parse -- --config=./sites/go3.tv/go3.tv.config.js --output=./sites/go3.tv/go3.tv.channels.xml
+          npm run channels:parse -- --config=./sites/hot.net.il/hot.net.il.config.js --output=./sites/hot.net.il/hot.net.il.channels.xml
           #npm run channels:parse -- --config=./sites/tv.magenta.me/tv.magenta.me.config.js --output=./sites/tv.magenta.me/tv.magenta.me.channels.xml
           #npm run grab -- --site=tv.magenta.mk --maxConnections=20 --gzip --output=guides/tv.magenta.mk.xml --days=2 --timeout=90000
           #npm run grab -- --site=propg.net --maxConnections=20 --gzip --output=guides/propg.net.xml --days=2 --timeout=90000
-          npm run grab -- --site=hot.net.il --maxConnections=20 --gzip --output=guides/hot.net.il.xml --days=2 --timeout=90000
-          #npm run grab -- --site=go3.tv --maxConnections=20 --output=guides/go3.tv.xml --days=1 --timeout=90000
+          #npm run grab -- --site=hot.net.il --maxConnections=20 --gzip --output=guides/hot.net.il.xml --days=2 --timeout=90000
+          #npm run grab -- --site=hot.net.il --maxConnections=20 --output=guides/hot.net.il.xml --days=1 --timeout=90000
    
     - name: Commit changes
       run: |
@@ -38,8 +38,8 @@ jobs:
         git config --local user.name "Your Name"
         #git add -f sites/canalplus.com/canalplus.com_test.channels.xml
         #git add -f guides/tv.magenta.mk.xml
-        git add -f guides/hot.net.il.xml
-        #git add -f guides/go3.tv.xml
-        #git add -f sites/go3.tv/go3.tv.channels.xml
+        #git add -f guides/hot.net.il.xml
+        #git add -f guides/hot.net.il.xml
+        git add -f sites/hot.net.il/hot.net.il.channels.xml
         git commit -m "Update xml"
         git push
