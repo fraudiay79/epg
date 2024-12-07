@@ -3,6 +3,7 @@ const utc = require('dayjs/plugin/utc');
 const timezone = require('dayjs/plugin/timezone');
 const customParseFormat = require('dayjs/plugin/customParseFormat');
 const axios = require('axios');
+const API_CHANNEL_ENDPOINT = 'https://go3.tv/api/products/sections/v2/live_tv?platform=BROWSER&lang=EE&tenant=OM_EE'
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -43,16 +44,17 @@ module.exports = {
     return programs;
   },
   async channels() {
-    try {
-      const response = await axios.get(`https://go3.tv/api/products/sections/v2/live_tv?platform=BROWSER&lang=EE&tenant=OM_EE`);
-      return response.data.elements.items.map(item => ({
+    const axios = require('axios')
+    const data = await axios
+      .get(API_CHANNEL_ENDPOINT)
+      .then(r => r.data)
+      .catch(console.log)
+    return data.elements.item.map(i => {
+      return {
         lang: 'ee',
-        name: item.title,
-        site_id: item.id
-      }));
-    } catch (error) {
-      console.error('Error fetching channels:', error);
-      return [];
-    }
+	      name: i.title,
+        site_id: i.id
+      }
+    })
   }
 }
