@@ -1,5 +1,5 @@
-const axios = require('axios');
 const dayjs = require('dayjs');
+const axios = require('axios');
 const utc = require('dayjs/plugin/utc');
 const timezone = require('dayjs/plugin/timezone');
 const customParseFormat = require('dayjs/plugin/customParseFormat');
@@ -22,12 +22,12 @@ module.exports = {
     const till = `${formattedDate}T23:59-0500`;
     return `https://go3.tv/api/products/lives/programmes?liveId[]=${channel.site_id}&since=${since}&till=${till}&platform=BROWSER&lang=EN&tenant=OM_EE`;
   },
-  async fetchEPGData(url) {
+  parser: async function ({ content }) {
     try {
-      const response = await axios.get(url);
-      return this.parseEPGData(response.data);
+      const data = JSON.parse(content);
+      return this.parseEPGData(data);
     } catch (error) {
-      console.error('Error fetching EPG data:', error);
+      console.error('Error parsing EPG data:', error);
       return [];
     }
   },
