@@ -21,7 +21,14 @@ module.exports = {
   },
   async parser({ content }) {
     const shows = [];
-    const data = JSON.parse(content);
+    let data;
+
+    try {
+      data = JSON.parse(content);
+    } catch (error) {
+      console.error('Error parsing JSON:', error);
+      data = []; // Set a default value if JSON parsing fails
+    }
 
     data.forEach(program => {
       const show = {
