@@ -22,26 +22,32 @@ module.exports = {
     const till = `${formattedDate}T23:59-0500`;
     return `https://go3.tv/api/products/lives/programmes?liveId[]=${channel.site_id}&since=${since}&till=${till}&platform=BROWSER&lang=EN&tenant=OM_EE`;
   },
-  parser: function ({ content }) {
-    const programs = [];
-    const data = JSON.parse(content);
+  async function fetchEPGData(url) {
+  try {
+    const response = await axios.get(url);
+    const data = response.data;
+    return parseEPGData(data);
+  } catch (error) {
+    console.error('Error fetching EPG data:', error);
+    return [];
+  }
+}
 
-    data.forEach(channel => {
-      channel.programs.forEach(program => {
-        const start = dayjs.utc(program.start_time).format('YYYY-MM-DDTHH:mm:ssZ');
-        const stop = dayjs.utc(program.end_time).format('YYYY-MM-DDTHH:mm:ssZ');
-        const programData = {
-          title: program.description,
-          description: program.full_description || program.description || 'No description available',
-          start,
-          stop
-        };
-        programs.push(programData);
-      });
-    });
+function parseEPGData(data) {
+  const programs = data.map(program => ({
+    id: program.id,
+    title: program.title,
+    description: program.description || 'No description available',
+    start: dayjs(program.since).format('YYYY-MM-DDTHH:mm:ssZ'),
+    stop: dayjs(program.till).format('YYYY-MM-DDTHH:mm:ssZ'),
+    genres: program.genres.map(genre => genre.name),
+    images: program.images,
+    mainCategory: program.mainCategory ? program.mainCategory.title : 'No main category',
+    live: program.live ? program.live.title : 'No live information available'
+  }));
 
-    return programs;
-  },
+  return programs;
+},
   
   async channels() {
     const axios = require('axios')
