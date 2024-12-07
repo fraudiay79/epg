@@ -70,32 +70,38 @@ module.exports = {
     const pageSize = 100;
     return `http://www.hot.net.il/PageHandlers/LineUpAdvanceSearch.aspx?text=&channel=${channel.site_id}&genre=-1&ageRating=-1&publishYear=-1&productionCountry=-1&startDate=${startDate}&endDate=${endDate}&currentPage=1&pageSize=${pageSize}&isOrderByDate=true&lcid=1037&pageIndex=1`;
   },
-  async parser({ content }) {
-    const shows = [];
-    const $ = cheerio.load(content);
-    const rows = $('tr.redtr_off');
-    
-    rows.each((index, row) => {
-      const tds = $(row).find('td');
-      const show = {
-        title: $(tds[2]).text().trim(),
-        startTime: dayjs($(tds[4]).text().split(',')[1].trim(), 'DD/MM/YYYY HH:mm').utc().format(),
-        endTime: dayjs($(tds[4]).text().split(',')[1].trim(), 'DD/MM/YYYY HH:mm').add($(tds[5]).text().trim(), 'HH:mm').utc().format(),
-        channel: $(tds[1]).text().trim(),
-        description: ''
-      };
-      
-      const onclick = $(row).attr('onclick');
-      if (onclick && onclick.includes('=')) {
-        const url = onclick.split('=')[1].replace(/'/g, '').trim();
-        show.description = await getDescription(`https://www.hot.net.il${url}`);
-      }
+  async function parseShows(content) {
+  const $ = cheerio.load(content);
+  const rows = $('tr.redtr_off');
 
-      shows.push(show);
-    });
+  const shows = rows.map((index, row) => {
+    const tds = $(row).find('td');
 
-    return shows;
-  },
+    return {
+      title: $(tds[2]).text().trim(),
+      startTime: dayjs($(tds[4]).text().split(',')[1].trim(), 'DD/MM/YYYY HH:mm').utc().format(),
+      endTime: dayjs($(tds[4]).text().split(',')[1].trim(), 'DD/MM/YYYY HH:mm').add($(tds[5]).text().trim(), 'HH:mm').utc().format(),
+      channel: $(tds[1]).text().trim(),
+      description: '',
+    };
+  });
+
+  // Filter shows with descriptions and fetch asynchronously
+  const showsWithDescriptions = shows.filter(show => {
+    const onclick = $(row).attr('onclick');
+    if (onclick && onclick.includes('=')) {
+      const url = onclick.split('=')[1].replace(/'/g, '').trim();
+      show.description = await getDescription(`https://www.hot.net.il${url}`);
+      return true; // Keep shows with descriptions
+    }
+    return false; // Discard shows without descriptions
+  });
+
+  // Combine shows with and without descriptions (optional)
+  const allShows = [...shows, ...showsWithDescriptions];
+
+  return allShows; // Return all shows (with or without descriptions)
+},
   async channels() {
     const channels = [];
     for (const key in Channels) {
