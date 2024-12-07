@@ -40,7 +40,7 @@ module.exports = {
       start: startTime.toISOString(),
       stop: endTime.toISOString(),
       channel: program.channelID
-    }
+    }})
   },
   async channels() {
     const axios = require('axios');
