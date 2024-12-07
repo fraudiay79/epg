@@ -39,7 +39,7 @@ jobs:
         #git add -f sites/canalplus.com/canalplus.com_test.channels.xml
         #git add -f guides/tv.magenta.mk.xml
         #git add -f guides/propg.net.xml
-        git add -f guides/tv.magenta.mk.xml
+        #git add -f guides/tv.magenta.mk.xml
         git add -f sites/go3.tv/go3.tv.channels.xml
         git commit -m "Update xml"
         git push
