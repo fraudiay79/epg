@@ -30,13 +30,17 @@ module.exports = {
     }
   },
   parseEPGData(data) {
-    return data.map(program => ({
-      id: program.channelID,
+    return data.map(program => {
+    const startTime = new Date(`${program.startDate} ${program.startTime}`);
+    const endTime = new Date(startTime.getTime() + program.broadcastItemDuration * 3600000); // Convert duration to milliseconds
+
+    return {
       title: program.scheduleItemName,
-      description: program.scheduleItemSynopsis || 'No description available',
-      start: dayjs(program.startTime).format('YYYY-MM-DDTHH:mm:ssZ'),
-      stop: start.add(item.broadcastItemDuration, 'm')
-    }));
+      description: program.scheduleItemSynopsis,
+      start: startTime.toISOString(),
+      stop: endTime.toISOString(),
+      channel: program.channelID
+    }
   },
   async channels() {
     const axios = require('axios');
