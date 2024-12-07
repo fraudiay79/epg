@@ -31,25 +31,22 @@ module.exports = {
   },
   parseEPGData(data) {
     return data.map(program => ({
-      id: program.id,
-      title: program.title,
-      description: program.description || 'No description available',
+      id: program.channelID,
+      title: program.scheduleItemName,
+      description: program.scheduleItemSynopsis || 'No description available',
       start: dayjs(program.startTime).format('YYYY-MM-DDTHH:mm:ssZ'),
-      stop: dayjs(program.endTime).format('YYYY-MM-DDTHH:mm:ssZ'),
-      genres: program.genres || [],
-      images: program.images || [],
-      mainCategory: program.mainCategory || 'No main category'
+      stop: start.add(item.broadcastItemDuration, 'm')
     }));
   },
   async channels() {
-    // Modify this part based on how you fetch channels information
     const axios = require('axios');
     try {
-      const response = await axios.get('https://www.yes.co.il/o/yes/servletlinearsched/getchannels');
+      const response = await axios.get('https://www.yes.co.il/o/yes/servletlinearsched/getchannels?p_auth=TB5Pe8T1');
       return response.data.channels.map(channel => {
         return {
-          name: channel.name,
-          site_id: channel.id
+        lang: 'he',
+        site_id: item.channelId,
+        name: item.channelName
         };
       });
     } catch (error) {
