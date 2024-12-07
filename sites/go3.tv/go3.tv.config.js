@@ -1,8 +1,8 @@
+const axios = require('axios');
 const dayjs = require('dayjs');
 const utc = require('dayjs/plugin/utc');
 const timezone = require('dayjs/plugin/timezone');
 const customParseFormat = require('dayjs/plugin/customParseFormat');
-const axios = require('axios');
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -25,15 +25,14 @@ module.exports = {
   async fetchEPGData(url) {
     try {
       const response = await axios.get(url);
-      const data = response.data;
-      return parseEPGData(data);
+      return this.parseEPGData(response.data);
     } catch (error) {
       console.error('Error fetching EPG data:', error);
       return [];
     }
   },
   parseEPGData(data) {
-    const programs = data.map(program => ({
+    return data.map(program => ({
       id: program.id,
       title: program.title,
       description: program.description || 'No description available',
@@ -44,12 +43,10 @@ module.exports = {
       mainCategory: program.mainCategory ? program.mainCategory.title : 'No main category',
       live: program.live ? program.live.title : 'No live information available'
     }));
-
-    return programs;
   },
   async channels() {
     try {
-      const response = await axios.get(`https://go3.tv/api/products/sections/v2/live_tv?platform=BROWSER&lang=EE&tenant=OM_EE`);
+      const response = await axios.get('https://go3.tv/api/products/sections/v2/live_tv?platform=BROWSER&lang=EE&tenant=OM_EE');
       return response.data.sections[0].items.map(item => ({
         lang: 'ee',
         name: item.title,
