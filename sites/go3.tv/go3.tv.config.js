@@ -26,9 +26,8 @@ module.exports = {
     const programs = [];
     const data = JSON.parse(content);
 
-    Object.keys(data.channels).forEach(channelId => {
-      const channelPrograms = data.channels[channelId];
-      channelPrograms.forEach(program => {
+    data.forEach(channel => {
+      channel.programs.forEach(program => {
         const start = dayjs.utc(program.start_time).format('YYYY-MM-DDTHH:mm:ssZ');
         const stop = dayjs.utc(program.end_time).format('YYYY-MM-DDTHH:mm:ssZ');
         const programData = {
@@ -43,21 +42,17 @@ module.exports = {
 
     return programs;
   },
-  async function channels() {
-  const axios = require('axios');
-  try {
-    const response = await axios.get(`https://go3.tv/api/products/sections/v2/live_tv?platform=BROWSER&lang=EE&tenant=OM_EE`);
-    return response.elements.items.map(item => {
-      return {
+  async channels() {
+    try {
+      const response = await axios.get(`https://go3.tv/api/products/sections/v2/live_tv?platform=BROWSER&lang=EE&tenant=OM_EE`);
+      return response.data.sections[0].items.map(item => ({
         lang: 'ee',
         name: item.title,
         site_id: item.id
-      };
-    });
-  } catch (error) {
-    console.error('Error fetching channels:', error);
-    return [];
+      }));
+    } catch (error) {
+      console.error('Error fetching channels:', error);
+      return [];
+    }
   }
-}
-
 }
