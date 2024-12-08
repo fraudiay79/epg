@@ -10,7 +10,7 @@ dayjs.extend(customParseFormat);
 
 module.exports = {
   site: 'yes.co.il',
-  days: 7, // maxdays=7
+  days: 3,
   request: {
     cache: {
       ttl: 60 * 60 * 1000 // 1 hour
@@ -21,17 +21,7 @@ module.exports = {
   },
   async parser({ content }) {
     const shows = [];
-    let data;
-
-    try {
-      if (content.trim().length === 0 || content.trim() === '{}') {
-        throw new Error('Empty or invalid response content');
-      }
-      data = JSON.parse(content);
-    } catch (error) {
-      console.error('Error parsing JSON:', error);
-      data = []; // Set a default value if JSON parsing fails
-    }
+    const data = JSON.parse(content);
 
     data.forEach(program => {
       const show = {
