@@ -54,9 +54,8 @@ module.exports = {
       const response = await axios.get(url);
       const channels = response.data.map(channel => ({
         lang: 'he',
-        name: channel.channelID,
-        site_id: channel.channelID,
-        p_auth: authToken
+        name: channel.channelName,
+        site_id: channel.channelID
       }));
       return channels;
     } catch (error) {
