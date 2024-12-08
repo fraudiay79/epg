@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channels>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="agrotv">AgroTV</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="animal-planet">Animal Planet</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="aqlvoy">Aqlvoy TV</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="arena">Матч! Арена</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="avto-plyus">Авто Плюс</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="bolajon">Bolajon Telekanali</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="dasturxontv">Dasturxon TV</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="detskiy-mir">Детский мир</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="discover">Discovery Channel</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="discovery-science">Discovery Science</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="disney">Канал Disney</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="dom-kino">Дом кино</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="dunyo-boylab">Dunyo Bo‘ylab Telekanali</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="euro-sport">Eurosport 1</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="euronews">Euronews</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="fashion-tv">Fashion TV</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="football-tv">Futbol TV Telekanali</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="foreign">Foreign languages</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="ftvuz">FTV telekanali</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="futbol-1">Матч! Футбол 1</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="futbol-2-test">Матч! Футбол 2</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="indiyskoe-kino">Индийское кино</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="karusel">Карусель</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="kinohit">Кинохит</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="kinopokaz">Кинопоказ</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="kinopremera">Кинопремьера</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="kinosvidanie">Киносвидание</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="kinoteatr">Kinoteatr HD Telekanali</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="kinoteatruz">Kinoteatr.uz Telekanali</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="madaniyat-va-marifat">Madaniyat va Marifat Telekanali</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="mahalla">Mahalla Telekanali</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="match-futbol-1-hd">Матч! Футбол 1 HD</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="match-igra">Матч! Игра</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="match-tv">Матч!</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="mening-yurtim">Mening Yurtim</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="milliy-tv">Milliy TV</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="muz-tv">МУЗ-ТВ</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="muzika-pervogo">Музыка Первого</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="nashe-novoe-kino">Наше Новое Кино</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="nat-geo-wild-hd">National Geographic Wild HD</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="national-geo">National Geographic</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="national-geographic-hd">National Geographic HD</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="navo">Navo Telekanali</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="nurafshontv">Nurafshon TV</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="ohota-i-rybalka">Охота и рыбалка</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="oilaviy">Oilaviy Telekanali</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="renessanstv">RenessansTV</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="retro">Ретро ТВ</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="rodnoe-kino">Родное кино</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="ru-tv">RU TV</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="setanta1">Setanta Sports 1</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="setanta2">Setanta Sports 2</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="sevimli-tv">Sevimli TV</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="sport2">Sport 2</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="sport-tv">Sport TV Telekanali</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="taraqqiyot">Taraqqiyot TV</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="telekafe">Телекафе</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="texno-24">24 Техно</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="toshkent">Toshkent Telekanali</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="travel-channel-hd">Travel Channel HD</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="tv-3">ТВ-3</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="tv-1000">TV1000</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="tv-1000-russkoe-kino">TV1000 Русское кино</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="uzbekistan">O‘zbekiston Telekanali</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="uzbekistan-24">O&apos;zbekiston 24</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="uzbtarix">Oʻzbekiston tarixi</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="uzreport">UzReport</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="viasat-explorer">Viasat Explore</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="viasat-history">viju History</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="yoshlar">Yoshlar Telekanali</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="zor-tv">ZO‘R TV</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="" site_id="zvezda">Звезда</channel>
+</channels>
