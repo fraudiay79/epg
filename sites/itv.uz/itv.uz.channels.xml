@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <channels>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="Sevimli TV" site_id="sevimli-tv">Sevimli TV</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="ZO‘R TV" site_id="zor-tv">ZO‘R TV</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="Milliy TV" site_id="milliy-tv">Milliy TV</channel>
+  <channel site="tvinfo.uz" lang="uz" xmltv_id="Mening Yurtim" site_id="mening-yurtim">Mening Yurtim</channel>
 </channels>
