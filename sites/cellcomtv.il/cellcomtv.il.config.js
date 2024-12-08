@@ -114,7 +114,7 @@ async function getEPGData(ks, date, channelDict) {
 }
 
 module.exports = {
-  site: 'CellcomTV.il',
+  site: 'cellcomtv.il',
   days: 3, // Default days to grab
   request: {
     cache: {
