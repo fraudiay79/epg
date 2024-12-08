@@ -24,8 +24,8 @@ module.exports = {
     let data;
 
     try {
-      if (content.trim().length === 0) {
-        throw new Error('Empty response content');
+      if (content.trim().length === 0 || content.trim() === '{}') {
+        throw new Error('Empty or invalid response content');
       }
       data = JSON.parse(content);
     } catch (error) {
