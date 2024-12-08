@@ -32,6 +32,11 @@ module.exports = {
       if (content.trim().length === 0) {
         throw new Error('Empty response content');
       }
+      
+      if (!isJSON(content)) {
+        throw new Error('Response is not in JSON format');
+      }
+      
       data = JSON.parse(content);
     } catch (error) {
       console.error('Error parsing JSON:', error);
@@ -89,3 +94,13 @@ module.exports = {
     return channels;
   }
 };
+
+// Helper function to check if content is in JSON format
+function isJSON(content) {
+  try {
+    JSON.parse(content);
+    return true;
+  } catch (error) {
+    return false;
+  }
+}
