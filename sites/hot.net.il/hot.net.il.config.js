@@ -10,7 +10,7 @@ dayjs.extend(timezone);
 dayjs.extend(customParseFormat);
 
 const Channels = {
-  Channel20: 766,
+  HOTSenior: 575,
   Kan11: 839,
   Keshet12: 861,
   Reshet13: 863,
