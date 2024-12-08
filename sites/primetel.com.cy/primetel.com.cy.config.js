@@ -1,68 +1,91 @@
+const axios = require('axios');
 const dayjs = require('dayjs');
 const utc = require('dayjs/plugin/utc');
-const axios = require('axios');
+const timezone = require('dayjs/plugin/timezone');
+const customParseFormat = require('dayjs/plugin/customParseFormat');
 
 dayjs.extend(utc);
-
-const paths = {
-  1: '1',
-  2: '2',
-  3: '3',
-  4: '4',
-  5: '5'
-};
+dayjs.extend(timezone);
+dayjs.extend(customParseFormat);
 
 module.exports = {
   site: 'primetel.com.cy',
-  days: 5,
-  url: function ({ paths }) { // Updated to use channel instead of paths
-    return `https://primetel.com.cy/tv_guide_json/tv${paths}.json`; // Corrected URL parameter
-  },
+  days: 7, // maxdays=7
   request: {
-    headers: {
-      "X-Csrf-Token": "ndDHaV4QqdbXfnrhBKo5DSROYBSIAkFVEkcRrXDw",
-      "X-Requested-With": "XMLHttpRequest",
-      "referer": "https://primetel.com.cy/tv-guide-program",
-      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0",
-      "Accept": "application/json, text/javascript, */*; q=0.01"
-    },
-    timeout: 60000,
     cache: {
       ttl: 60 * 60 * 1000 // 1 hour
+    },
+    headers: {
+      'Accept-Encoding': 'gzip, deflate',
+      'X-Requested-With': 'XMLHttpRequest'
     }
   },
-  parser: function ({ content }) {
-    const parsedData = JSON.parse(content);
-  const programs = [];
+  url({ date }) {
+    const formattedDate = date.add(2, 'days').format('YYYY-MM-DD');
+    return `https://primetel.com.cy/tv_guide_json/tv${formattedDate}.json`;
+  },
+  async parser({ content, channel }) {
+    const shows = [];
+    let data;
 
-  Object.keys(parsedData).forEach(channelKey => {
-    const channel = parsedData[channelKey];
-    channel.pr.forEach(program => {
-      programs.push({
-        channel: channel.ch,
-        title: program.title,
-        start: program.starting,
-        stop: program.ending,
-        description: program.description || 'No description available'
+    try {
+      if (content.trim().length === 0) {
+        throw new Error('Empty response content');
+      }
+      data = JSON.parse(content);
+    } catch (error) {
+      console.error('Error parsing JSON:', error);
+      return shows; // Return empty shows array if parsing fails
+    }
+
+    data.forEach(item => {
+      if (item.id === channel.site_id) {
+        item.pr.forEach(pr => {
+          const show = {
+            title: pr.title || '',
+            startTime: dayjs(pr.starting).utc().format(),
+            endTime: dayjs(pr.ending).utc().format(),
+            description: pr.description || 'No description available'
+          };
+          if (pr.description) {
+            const seasonEpisodeMatch = pr.description.match(/Season#(\d+)Episode#(\d+)/);
+            if (seasonEpisodeMatch) {
+              show.episode = `S${seasonEpisodeMatch[1]}E${seasonEpisodeMatch[2]}`;
+              show.description = show.description.replace(/Season#\d+Episode#\d+/, '').trim();
+            }
+            const synopsisMatch = pr.description.match(/.*?Synopsis:/);
+            if (synopsisMatch) {
+              show.subtitle = pr.description.split('Synopsis:')[0].trim();
+              show.description = pr.description.split('Synopsis:')[1].trim();
+            }
+          }
+          shows.push(show);
+        });
+      }
+    });
+
+    return shows;
+  },
+  async channels() {
+    const url = `https://primetel.com.cy/tv_guide_json/tv${dayjs().format('YYYY-MM-DD')}.json`;
+    const response = await axios.get(url, {
+      headers: {
+        'Accept-Encoding': 'gzip, deflate',
+        'X-Requested-With': 'XMLHttpRequest'
+      }
+    });
+
+    const data = response.data;
+    const channels = [];
+
+    data.forEach(channel => {
+      channels.push({
+        lang: 'el',
+        name: channel.ch || 'Unknown',
+        site_id: channel.id.toString()
       });
     });
-  });
 
-  return programs;
-},
-  async channels() {
-    try {
-      const response = await axios.get(`https://primetel.com.cy/tv_guide_json/tv1.json`);
-      return response.data.map(item => {
-        return {
-          lang: 'el',
-          name: item.ch,
-          site_id: item.id
-        };
-      });
-    } catch (error) {
-      console.error('Error fetching channels:', error);
-      return [];
-    }
+    return channels;
   }
 };
