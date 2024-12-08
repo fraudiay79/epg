@@ -25,7 +25,7 @@ jobs:
       run: |
           npm install
           #npm run grab -- --channels=../sites/canalplus.com/canalplus.com_cm.channels.xml--maxConnections=20 --gzip --output=guides/propg.net.xml --days=2 --timeout=90000
-          npm run channels:parse -- --config=./sites/cellcomtv.il/cellcomtv.il.config.js --output=./sites/cellcomtv.il/cellcomtv.il.channels.xml
+          npm run channels:parse -- --config=./sites/ishow.gr/ishow.gr.config.js --output=./sites/ishow.gr/ishow.gr.channels.xml
           #npm run channels:parse -- --config=./sites/tv.magenta.me/tv.magenta.me.config.js --output=./sites/tv.magenta.me/tv.magenta.me.channels.xml
           #npm run grab -- --site=tv.magenta.mk --maxConnections=20 --gzip --output=guides/tv.magenta.mk.xml --days=2 --timeout=90000
           #npm run grab -- --site=propg.net --maxConnections=20 --gzip --output=guides/propg.net.xml --days=2 --timeout=90000
@@ -40,6 +40,6 @@ jobs:
         #git add -f guides/tv.magenta.mk.xml
         #git add -f guides/hot.net.il.xml
         #git add -f guides/yes.co.il.xml
-        git add -f sites/cellcomtv.il/cellcomtv.il.channels.xml
+        git add -f sites/ishow.gr/ishow.gr.channels.xml
         git commit -m "Update xml"
         git push
