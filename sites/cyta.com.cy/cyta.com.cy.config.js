@@ -1,60 +1,68 @@
-const dayjs = require('dayjs')
-const utc = require('dayjs/plugin/utc')
-const timezone = require('dayjs/plugin/timezone')
-const customParseFormat = require('dayjs/plugin/customParseFormat')
+const axios = require('axios');
+const dayjs = require('dayjs');
+const utc = require('dayjs/plugin/utc');
+const timezone = require('dayjs/plugin/timezone');
+const customParseFormat = require('dayjs/plugin/customParseFormat');
+const cheerio = require('cheerio');
 
-dayjs.extend(utc)
-dayjs.extend(timezone)
-dayjs.extend(customParseFormat)
+dayjs.extend(utc);
+dayjs.extend(timezone);
+dayjs.extend(customParseFormat);
 
 module.exports = {
   site: 'cyta.com.cy',
-  days: 5,
+  days: 9, // maxdays=9
   request: {
     cache: {
       ttl: 60 * 60 * 1000 // 1 hour
+    },
+    headers: {
+      'Accept-Encoding': 'gzip, deflate'
     }
   },
-  url({ channel, date }) {
-    return `https://epg.cyta.com.cy/api/mediacatalog/fetchEpg?startTimeEpoch=${date.unix()}&endTimeEpoch=${date.add(1, 'd').unix()}&language=0&channelIds=${channel.site_id}`
+  url({ date }) {
+    const formattedDate = date.add(0, 'days').format('YYYY-MM-DD');
+    return `https://data.cytavision.com.cy/epg/?site=cyprus&day=${formattedDate}&lang=el&package=all&category=all`;
   },
-  parser: function ({ content, channel }) {
-    let programs = []
-    const items = parseItems(content, channel)
-    if (!items.length) return programs
-      items.forEach(item => {
-        const start = dayjs.unix(item.channelEpgs.epgPlayables.startTime)
-        const stop = dayjs.unix(item.channelEpgs.epgPlayables.endTime)
-        programs.push({
-        title: item.channelEpgs.epgPlayables.name,
-	description: item.playbillDetail.introduce
-        ? `https://epg.cyta.com.cy/api//mediacatalog/fetchEpgDetails?language=0&id=${item.channelEpgs.epgPlayables.id}`
-        : null,
-        start,
-        stop
-        })
-      })
-    
-    return programs
+  async parser({ content, channel }) {
+    const shows = [];
+    const $ = cheerio.load(content);
+    const rows = $('div.epgrow.clearfix').filter((index, element) => {
+      return $(element).find('.channel-id').text().trim() === channel.site_id;
+    });
+
+    rows.each((index, row) => {
+      const show = {
+        title: $(row).find('span.program_title').text().trim(),
+        start: dayjs($(row).find('h4').text().match(/\d{1,2}:\d{2}/)[0], 'HH:mm').utc().format(),
+        description: $(row).find('div.program_desc').text().trim() || 'No description available'
+      };
+      shows.push(show);
+    });
+
+    return shows;
   },
   async channels() {
-    const axios = require('axios')
-    const data = await axios
-      .get(`https://epg.cyta.com.cy/api/mediacatalog/fetchChannels?language=0`)
-      .then(r => r.data)
-      .catch(console.log)
-    return data.channels.map(item => {
-      return {
-        lang: 'el',
-        site_id: item.id,
-		name: item.name
+    const url = 'https://data.cytavision.com.cy/epg/?site=cyprus&day=2023-01-01&lang=en&package=all&category=all';
+    const response = await axios.get(url, {
+      headers: {
+        'Accept-Encoding': 'gzip, deflate'
       }
-    })
-  }
-}
-  
-function parseItems(content, channel) {
-  const data = JSON.parse(content, channel)
+    });
+    const $ = cheerio.load(response.data);
+    const channels = [];
 
-  return data
-}
+    $('h1').each((index, element) => {
+      const siteId = $(element).find('a').attr('href').match(/\/(\d+)\/$/)[1];
+      const name = $(element).text().trim();
+
+      channels.push({
+        lang: 'el',
+        name: name,
+        site_id: siteId
+      });
+    });
+
+    return channels;
+  }
+};
