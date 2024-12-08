@@ -41,8 +41,8 @@ module.exports = {
       data.data.forEach(item => {
         const show = {
           title: item.programTitle || '',
-          startTime: dayjs.unix(item.startAt).utc().format(),
-          endTime: dayjs.unix(item.endAt).utc().format(),
+          start: dayjs.unix(item.startAt).utc().format(),
+          stop: dayjs.unix(item.endAt).utc().format(),
           description: item.programDescription || 'No description available'
         };
         shows.push(show);
@@ -62,10 +62,10 @@ module.exports = {
     const data = response.data;
     const channels = [];
 
-    if (data.channels) {
-      data.channels.forEach(channel => {
+    if (data.data) {
+      data.data.forEach(channel => {
         channels.push({
-          lang: 'ru',
+          lang: 'uz',
           name: channel.channelTitle.replace(/'/g, '`'),
           site_id: channel.channelId.toString()
         });
