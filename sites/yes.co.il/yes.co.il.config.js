@@ -28,8 +28,8 @@ module.exports = {
         channel: program.channelID,
         title: program.scheduleItemName,
         description: program.scheduleItemSynopsis || 'No description available',
-        startTime: dayjs(program.startDate).utc().format(),
-        endTime: dayjs(program.startDate).add(dayjs.duration(program.broadcastItemDuration)).utc().format()
+        start: dayjs(program.startDate).utc().format(),
+        stop: dayjs(program.startDate).add(dayjs.duration(program.broadcastItemDuration)).utc().format()
       };
       shows.push(show);
     });
