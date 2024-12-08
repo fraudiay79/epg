@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <channels>	
-  <channel site="api.itv.uz" lang="uz" xmltv_id="Узбекистан" site_id="1##2020/06/17//379d07323f571965a4dc44b456a14530">Узбекистан</channel>
-	<channel site="api.itv.uz" lang="uz" xmltv_id="Ёшлар"  site_id="3##2022/08/23//105c61567d1ca0420d2ff99256054af6">Ёшлар</channel>
-	<channel site="api.itv.uz" lang="uz" xmltv_id="Ташкент" site_id="4##2020/06/17//96e9b1e79d2d9442b778115079e09d21">Ташкент</channel>
-	<channel site="api.itv.uz" lang="uz" xmltv_id="Sport UZ HD" site_id="5##2020/06/17//f79dce2ae2bd9ef84b6888f226fbb293">Sport UZ HD</channel>
+ <channel site="itv.uz" lang="uz" xmltv_id="Узбекистан" site_id="1##2020/06/17//379d07323f571965a4dc44b456a14530">Узбекистан</channel>
+ <channel site="itv.uz" lang="uz" xmltv_id="Ёшлар"  site_id="3##2022/08/23//105c61567d1ca0420d2ff99256054af6">Ёшлар</channel>
+ <channel site="itv.uz" lang="uz" xmltv_id="Ташкент" site_id="4##2020/06/17//96e9b1e79d2d9442b778115079e09d21">Ташкент</channel>
+ <channel site="itv.uz" lang="uz" xmltv_id="Sport UZ HD" site_id="5##2020/06/17//f79dce2ae2bd9ef84b6888f226fbb293">Sport UZ HD</channel>
 </channels>
