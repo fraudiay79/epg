@@ -49,8 +49,9 @@ async function getChannels(ks) {
     }
   });
   const channels = response.data.result.objects.map(channel => ({
-    id: channel.externalIds,
-    name: channel.name
+    lang: 'he',
+    name: channel.name,
+    id: channel.externalIds
   }));
   return channels;
 }
