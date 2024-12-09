@@ -32,21 +32,22 @@ module.exports = {
       };
     });
   },
-  async channels() {
-    // Modify this part based on how you fetch channels information
-    const axios = require('axios');
-    try {
-      const response = await axios.get('https://www.yes.co.il/o/yes/servletlinearsched/getchannels?p_auth=ue2qQse6');
-      return response.data.map(channel => {
-        return {
-		  lang: 'he',
-          name: channel.name,
-          site_id: channel.id
-        };
-      });
-    } catch (error) {
-      console.error('Error fetching channels:', error);
-      return [];
+  async function getChannels() {
+  try {
+    const response = await axios.get('https://www.yes.co.il/o/yes/servletlinearsched/getchannels?p_auth=ue2qQse6');
+
+    if (!response.data || !Array.isArray(response.data)) {
+      throw new Error('Invalid response format');
     }
+
+    return response.data.map(channel => ({
+      lang: 'he',
+      name: channel.channelName,
+      site_id: channel.channelID
+    }));
+  } catch (error) {
+    console.error('Error fetching channels:', error);
+    return [];
   }
+}
 };
