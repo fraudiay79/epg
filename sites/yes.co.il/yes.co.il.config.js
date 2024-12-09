@@ -46,20 +46,19 @@ module.exports = {
   return programs;
 },
   async channels() {
-    const authToken = await this.getAuthToken();
-    const url = `https://www.yes.co.il/o/yes/servletlinearsched/getchannels?p_auth=${authToken}`;
-    
+    const authToken = await this.getAuthToken()
     try {
-      const response = await axios.get(url);
-      const channels = response.data.map(channel => ({
-        lang: 'he',
-        name: channel.channelName,
-        site_id: channel.channelID
-      }));
-      return channels;
+      const response = await axios.get(`https://www.yes.co.il/o/yes/servletlinearsched/getchannels?p_auth=${authToken}`)
+      return response.data.map(item => {
+        return {
+          lang: 'he',
+          name: item.channelName,
+          site_id: item.channelId
+        }
+      })
     } catch (error) {
-      console.error('Error fetching channels:', error);
-      return [];
+      console.error('Error fetching channels:', error)
+      return []
     }
   },
   async getAuthToken() {
