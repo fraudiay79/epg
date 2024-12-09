@@ -20,31 +20,31 @@ module.exports = {
     return `https://www.yes.co.il/o/yes/servletlinearsched/getscheduale?startdate=${date.format('YYYYMMDD')}&p_auth=${channel.p_auth}`;
   },
   parser: async function ({ content, date, channel }) {
-  let programs = [];
-  let data;
+    let programs = [];
+    let data;
 
-  try {
-    if (!content || content.trim().length === 0) {
-      throw new Error('Empty response content');
+    try {
+      if (!content || content.trim().length === 0) {
+        throw new Error('Empty response content');
+      }
+      data = JSON.parse(content);
+      if (!data || !Array.isArray(data)) {
+        return programs;
+      }
+    } catch (error) {
+      console.error('Error parsing JSON:', error);
+      return programs; // Return empty programs array if parsing fails
     }
-    data = JSON.parse(content);
-    if (!data || !Array.isArray(data)) {
-      return programs;
-    }
-  } catch (error) {
-    console.error('Error parsing JSON:', error);
-    return programs; // Return empty programs array if parsing fails
-  }
 
-  programs = data.map(item => ({
-    title: item.scheduleItemName,
-    description: item.scheduleItemSynopsis || 'No description available',
-    start: dayjs(item.startDate).utc().format(),
-    stop: dayjs(item.startDate).add(dayjs.duration(item.broadcastItemDuration)).utc().format()
-  }));
+    programs = data.map(item => ({
+      title: item.scheduleItemName,
+      description: item.scheduleItemSynopsis || 'No description available',
+      start: dayjs(item.startDate).utc().format(),
+      stop: dayjs(item.startDate).add(dayjs.duration(item.broadcastItemDuration)).utc().format()
+    }));
 
-  return programs;
-},
+    return programs;
+  },
   async channels() {
     const authToken = await this.getAuthToken();
     let data;
@@ -68,13 +68,21 @@ module.exports = {
     }
   },
   async getAuthToken() {
-    const url = 'https://www.yes.co.il/content/tvguide';
-    const response = await axios.get(url);
-    const textToSearch = ';Liferay.authToken=';
-    const mainPageHtml = response.data;
-    const idx = mainPageHtml.indexOf(textToSearch);
-    const val = mainPageHtml.substring(idx + textToSearch.length + 1, 30);
-    const authToken = val.split(';')[0].substring(0, val.length - 1);
-    return authToken;
+    try {
+      const url = 'https://www.yes.co.il/content/tvguide';
+      const response = await axios.get(url);
+      const textToSearch = ';Liferay.authToken=';
+      const mainPageHtml = response.data;
+      const idx = mainPageHtml.indexOf(textToSearch);
+      if (idx === -1) {
+        throw new Error('Auth token not found');
+      }
+      const val = mainPageHtml.substring(idx + textToSearch.length);
+      const authToken = val.split(';')[0].trim();
+      return authToken;
+    } catch (error) {
+      console.error('Error fetching auth token:', error);
+      return null;
+    }
   }
 };
