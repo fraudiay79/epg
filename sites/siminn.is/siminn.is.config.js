@@ -24,33 +24,26 @@ module.exports = {
     const formattedDate = date.format('YYYY-MM-DD');
     return `https://siminn-proxy.siminn.is/api/getChannels?channelId=${channel.site_id}&time=${formattedDate}`;
   },
-  async parser({ content }) {
-    const shows = [];
-    let data;
+  parser: function ({ content, channel, date }) {
+    let programs = []
+    const items = parseItems(content)
+    items.forEach(item => {
+      programs.push({
+        title: item.title,
+        description: item.description,
+        rating: parseRating(item),
+        episode: item.episode ? {
+         title: item.episode.title,
+         description: item.episode.description,
+         seasonNumber: item.episode.seasonNumber,
+         episodeNumber: item.episode.episodeNumber
+        } : null,
+        start: dayjs(item.start).utc().format(),
+        stop: dayjs(item.end).utc().format()
+      })
+    })
 
-    try {
-      if (content.trim().length === 0) {
-        throw new Error('Empty response content');
-      }
-      data = JSON.parse(content);
-    } catch (error) {
-      console.error('Error parsing JSON:', error);
-      return shows; // Return empty shows array if parsing fails
-    }
-
-    if (data && data.epg) {
-      data.epg.forEach(item => {
-        const show = {
-          title: item.title || '',
-          description: item.description || 'No description available',
-          start: dayjs(item.start).utc().format(),
-          stop: dayjs(item.end).utc().format()
-        };
-        shows.push(show);
-      });
-    }
-
-    return shows;
+    return programs
   },
   async channels() {
     const url = 'https://www.siminn.is/sjonvarp';
