@@ -24,11 +24,11 @@ module.exports = {
     const formattedDate = date.format('YYYY-MM-DD');
     return `https://siminn-proxy.siminn.is/api/getChannels?channelId=${channel.site_id}&time=${formattedDate}`;
   },
-  parser: function ({ content, channel, date }) {
+  parser: function ({ content, date, channel }) {
     let programs = []
-    const items = parseItems(content)
-    items.forEach(item => {
-      programs.push({
+    const data = JSON.parse(content)
+	if (!data || !Array.isArray(data)) return []
+    return data.map(item => ({
         title: item.title,
         description: item.description,
         rating: parseRating(item),
@@ -40,8 +40,7 @@ module.exports = {
         } : null,
         start: dayjs(item.start).utc().format(),
         stop: dayjs(item.end).utc().format()
-      })
-    })
+    }))
 
     return programs
   },
