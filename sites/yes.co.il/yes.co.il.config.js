@@ -3,6 +3,9 @@ const dayjs = require('dayjs');
 const utc = require('dayjs/plugin/utc');
 const timezone = require('dayjs/plugin/timezone');
 const customParseFormat = require('dayjs/plugin/customParseFormat');
+const authToken = await this.getAuthToken();
+
+const API_ENDPOINT = 'https://www.yes.co.il/o/yes/servletlinearsched'
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -16,8 +19,8 @@ module.exports = {
       ttl: 60 * 60 * 1000 // 1 hour
     }
   },
-  url({ channel, date }) {
-    return `https://www.yes.co.il/o/yes/servletlinearsched/getscheduale?startdate=${date.format('YYYYMMDD')}&p_auth=${channel.p_auth}`;
+  url({ date, authToken }) {
+    return `${API_ENDPOINT}/getscheduale?startdate=${date.format('YYYYMMDD')}&p_auth=${authToken}`;
   },
   async parser({ content, date, channel }) {
     let programs = [];
@@ -46,11 +49,11 @@ module.exports = {
     return programs;
   },
   async channels() {
-    const authToken = await this.getAuthToken();
+    
     let data;
 
     try {
-      const response = await axios.get(`https://www.yes.co.il/o/yes/servletlinearsched/getchannels?p_auth=${authToken}`);
+      const response = await axios.get(`${API_ENDPOINT}/getchannels?p_auth=${authToken}`);
       data = response.data;
 
       if (!data || !Array.isArray(data)) {
@@ -60,8 +63,7 @@ module.exports = {
       return data.map(item => ({
         lang: 'he',
         site_id: item.channelID,
-        name: item.channelName,
-        p_auth: authToken
+        name: item.channelName
       }));
     } catch (error) {
       console.error('Error fetching channels:', error);
