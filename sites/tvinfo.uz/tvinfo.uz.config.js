@@ -32,8 +32,9 @@ module.exports = {
     rows.each((index, row) => {
       const show = {
         title: $(row).find('div').eq(1).text().trim(),
-        startTime: dayjs($(row).find('div.w-12.shrink-0').text().trim(), 'HH:mm').utc().format(),
-        description: ''
+        description: '',
+        start: dayjs($(row).find('div.w-12.shrink-0').text().trim(), 'HH:mm').utc().format(),
+        stop: dayjs($(row).next('div.w-12.shrink-0').text().trim(), 'HH:mm').utc().format()
       };
       shows.push(show);
     });
