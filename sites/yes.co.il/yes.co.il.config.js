@@ -4,8 +4,6 @@ const utc = require('dayjs/plugin/utc');
 const timezone = require('dayjs/plugin/timezone');
 const customParseFormat = require('dayjs/plugin/customParseFormat');
 
-const API_ENDPOINT = 'https://www.yes.co.il/o/yes/servletlinearsched';
-
 dayjs.extend(utc);
 dayjs.extend(timezone);
 dayjs.extend(customParseFormat);
@@ -20,7 +18,7 @@ module.exports = {
   },
   url({ date }) {
     const formattedDate = date.utc().format('YYYYMMDD');
-    return `${API_ENDPOINT}/getscheduale?startdate=${formattedDate}&p_auth=ue2qQse6`;
+    return `https://www.yes.co.il/o/yes/servletlinearsched/getscheduale?startdate=${formattedDate}&p_auth=ue2qQse6`;
   },
   parser({ content }) {
     const programs = JSON.parse(content).schedule || [];
@@ -38,7 +36,7 @@ module.exports = {
     // Modify this part based on how you fetch channels information
     const axios = require('axios');
     try {
-      const response = await axios.get('${API_ENDPOINT}/getchannels?p_auth=ue2qQse6');
+      const response = await axios.get('https://www.yes.co.il/o/yes/servletlinearsched/getchannels?p_auth=ue2qQse6');
       return response.data.map(channel => {
         return {
 		  lang: 'he',
