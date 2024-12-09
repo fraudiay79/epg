@@ -46,19 +46,25 @@ module.exports = {
   return programs;
 },
   async channels() {
-    const authToken = await this.getAuthToken()
+    const authToken = await this.getAuthToken();
+    let data;
+
     try {
-      const response = await axios.get(`https://www.yes.co.il/o/yes/servletlinearsched/getchannels?p_auth=${authToken}`)
-      return response.data.map(item => {
-        return {
-          lang: 'he',
-          name: item.channelName,
-          site_id: item.channelId
-        }
-      })
+      const response = await axios.get(`https://www.yes.co.il/o/yes/servletlinearsched/getchannels?p_auth=${authToken}`);
+      data = response.data;
+
+      if (!data || !Array.isArray(data)) {
+        return [];
+      }
+
+      return data.map(item => ({
+        lang: 'he',
+        site_id: item.channelID,
+        name: item.channelName
+      }));
     } catch (error) {
-      console.error('Error fetching channels:', error)
-      return []
+      console.error('Error fetching channels:', error);
+      return [];
     }
   },
   async getAuthToken() {
