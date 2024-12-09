@@ -56,7 +56,7 @@ module.exports = {
 },
 
 async channels() {
-  const authToken = await getAuthToken();
+  const authToken = await this.getAuthToken();
   if (!authToken) {
     console.error('No auth token available');
     return [];
