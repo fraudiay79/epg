@@ -19,22 +19,18 @@ module.exports = {
   url({ channel, date }) {
     return `https://www.yes.co.il/o/yes/servletlinearsched/getscheduale?startdate=${date.format('YYYYMMDD')}&p_auth=${channel.p_auth}`;
   },
-  async parser({ content }) {
-    const shows = [];
-    const data = JSON.parse(content);
+  parser: function ({ content, date, channel }) {
+    let programs = []
+    const data = JSON.parse(content)
+	if (!data || !Array.isArray(data)) return []
+    return data.map(item => ({
+        title: item.scheduleItemName,
+        description: item.scheduleItemSynopsis || 'No description available',
+        start: dayjs(item.startDate).utc().format(),
+        stop: dayjs(item.startDate).add(dayjs.duration(item.broadcastItemDuration)).utc().format()
+    }))
 
-    data.forEach(program => {
-      const show = {
-        channel: program.channelID,
-        title: program.scheduleItemName,
-        description: program.scheduleItemSynopsis || 'No description available',
-        start: dayjs(program.startDate).utc().format(),
-        stop: dayjs(program.startDate).add(dayjs.duration(program.broadcastItemDuration)).utc().format()
-      };
-      shows.push(show);
-    });
-
-    return shows;
+    return programs
   },
   async channels() {
     const authToken = await this.getAuthToken();
