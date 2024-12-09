@@ -10,44 +10,58 @@ dayjs.extend(customParseFormat);
 
 module.exports = {
   site: 'yes.co.il',
-  days: 1,
+  days: 3,
   request: {
     cache: {
       ttl: 60 * 60 * 1000 // 1 hour
     }
   },
-  url({ date }) {
-    const formattedDate = date.utc().format('YYYYMMDD');
-    return `https://www.yes.co.il/o/yes/servletlinearsched/getscheduale?startdate=${formattedDate}&p_auth=ue2qQse6`;
+  url({ channel, date }) {
+    return `https://www.yes.co.il/o/yes/servletlinearsched/getscheduale?startdate=${date.format('YYYYMMDD')}&p_auth=${channel.p_auth}`;
   },
-  parser({ content }) {
-    const programs = JSON.parse(content).schedule || [];
+  async parser({ content }) {
+    const shows = [];
+    const data = JSON.parse(content);
 
-    return programs.map(program => {
-      return {
+    data.forEach(program => {
+      const show = {
+        channel: program.channelID,
         title: program.scheduleItemName,
-        description: item.scheduleItemSynopsis || 'No description available',
-        start: dayjs(item.startDate).utc().format(),
-      stop: dayjs(item.startDate).add(dayjs.duration(item.broadcastItemDuration)).utc().format()
+        description: program.scheduleItemSynopsis || 'No description available',
+        start: dayjs(program.startDate).utc().format(),
+        stop: dayjs(program.startDate).add(dayjs.duration(program.broadcastItemDuration)).utc().format()
       };
+      shows.push(show);
     });
+
+    return shows;
   },
-  async function getChannels() {
-  try {
-    const response = await axios.get('https://www.yes.co.il/o/yes/servletlinearsched/getchannels?p_auth=ue2qQse6');
-
-    if (!response.data || !Array.isArray(response.data)) {
-      throw new Error('Invalid response format');
+  async channels() {
+    const authToken = await this.getAuthToken();
+    const url = `https://www.yes.co.il/o/yes/servletlinearsched/getchannels?p_auth=${authToken}`;
+    
+    try {
+      const response = await axios.get(url);
+      const channels = response.data.map(channel => ({
+        lang: 'he',
+        name: channel.channelID,
+        site_id: channel.channelID,
+        p_auth: authToken
+      }));
+      return channels;
+    } catch (error) {
+      console.error('Error fetching channels:', error);
+      return [];
     }
-
-    return response.data.map(channel => ({
-      lang: 'he',
-      name: channel.channelName,
-      site_id: channel.channelID
-    }));
-  } catch (error) {
-    console.error('Error fetching channels:', error);
-    return [];
+  },
+  async getAuthToken() {
+    const url = 'https://www.yes.co.il/content/tvguide';
+    const response = await axios.get(url);
+    const textToSearch = ';Liferay.authToken =';
+    const mainPageHtml = response.data;
+    const idx = mainPageHtml.indexOf(textToSearch);
+    const val = mainPageHtml.substring(idx + textToSearch.length + 1, 30);
+    const authToken = val.split(';')[0].substring(0, val.length - 1);
+    return authToken;
   }
-}
 };
