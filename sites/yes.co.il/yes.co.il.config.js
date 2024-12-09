@@ -20,7 +20,7 @@ module.exports = {
   },
   url({ date }) {
     const formattedDate = date.utc().format('YYYYMMDD');
-    return `${API_ENDPOINT}/getscheduale?startdate=${formattedDate}&p_auth=uteRb3wY`;
+    return `${API_ENDPOINT}/getscheduale?startdate=${formattedDate}&p_auth=ue2qQse6`;
   },
   parser({ content }) {
     const programs = JSON.parse(content).schedule || [];
@@ -38,7 +38,7 @@ module.exports = {
     // Modify this part based on how you fetch channels information
     const axios = require('axios');
     try {
-      const response = await axios.get('${API_ENDPOINT}/getchannels?p_auth=uteRb3wY');
+      const response = await axios.get('${API_ENDPOINT}/getchannels?p_auth=ue2qQse6');
       return response.data.map(channel => {
         return {
 		  lang: 'he',
