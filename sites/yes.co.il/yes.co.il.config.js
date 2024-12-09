@@ -41,19 +41,23 @@ module.exports = {
     const url = `https://www.yes.co.il/o/yes/servletlinearsched/getchannels?p_auth=${authToken}`;
     
     try {
-      const response = await axios.get(url);
-      const channels = response.data.map(channel => ({
-        lang: 'he',
-        name: channel.channelID,
-        site_id: channel.channelID,
-        p_auth: authToken
-      }));
-      return channels;
+        const response = await axios.get(url);
+        if (Array.isArray(response.data)) {
+            const channels = response.data.map(channel => ({
+                lang: 'he',
+                name: channel.channelID,
+                site_id: channel.channelID,
+                p_auth: authToken
+            }));
+            return channels;
+        } else {
+            throw new TypeError('Response data is not an array');
+        }
     } catch (error) {
-      console.error('Error fetching channels:', error);
-      return [];
+        console.error('Error fetching channels:', error);
+        return [];
     }
-  },
+},
   async getAuthToken() {
     const url = 'https://www.yes.co.il/content/tvguide';
     const response = await axios.get(url);
