@@ -4,86 +4,51 @@ const utc = require('dayjs/plugin/utc');
 const timezone = require('dayjs/plugin/timezone');
 const customParseFormat = require('dayjs/plugin/customParseFormat');
 
+const API_ENDPOINT = 'https://www.yes.co.il/o/yes/servletlinearsched';
+
 dayjs.extend(utc);
 dayjs.extend(timezone);
 dayjs.extend(customParseFormat);
 
 module.exports = {
   site: 'yes.co.il',
-  days: 7, // maxdays=7
+  days: 1,
   request: {
     cache: {
       ttl: 60 * 60 * 1000 // 1 hour
     }
   },
-  url({ date, authToken }) {
-    return `https://www.yes.co.il/o/yes/servletlinearsched/getscheduale?startdate=${date.format('YYYYMMDD')}&p_auth=${authToken}`;
+  url({ date }) {
+    const formattedDate = date.utc().format('YYYYMMDD');
+    return `${API_ENDPOINT}/getscheduale?startdate=${formattedDate}&p_auth=uteRb3wY`;
   },
-  async parser({ content, date, channel }) {
-    let programs = [];
-    let data;
+  parser({ content }) {
+    const programs = JSON.parse(content).schedule || [];
 
-    try {
-      if (!content || content.trim().length === 0) {
-        throw new Error('Empty response content');
-      }
-      data = JSON.parse(content);
-      if (!data || !Array.isArray(data)) {
-        return programs;
-      }
-    } catch (error) {
-      console.error('Error parsing JSON:', error);
-      return programs; // Return empty programs array if parsing fails
-    }
-
-    programs = data.map(item => ({
-      title: item.scheduleItemName,
-      description: item.scheduleItemSynopsis || 'No description available',
-      start: dayjs(item.startDate).utc().format(),
+    return programs.map(program => {
+      return {
+        title: program.scheduleItemName,
+        description: item.scheduleItemSynopsis || 'No description available',
+        start: dayjs(item.startDate).utc().format(),
       stop: dayjs(item.startDate).add(dayjs.duration(item.broadcastItemDuration)).utc().format()
-    }));
-
-    return programs;
+      };
+    });
   },
   async channels() {
-    const authToken = await this.getAuthToken();
-    let data;
-
+    // Modify this part based on how you fetch channels information
+    const axios = require('axios');
     try {
-      const response = await axios.get(`https://www.yes.co.il/o/yes/servletlinearsched/getchannels?p_auth=${authToken}`);
-      data = response.data;
-
-      if (!data || !Array.isArray(data)) {
-        return [];
-      }
-
-      return data.map(item => ({
-        lang: 'he',
-        site_id: item.channelID,
-        name: item.channelName,
-        p_auth: authToken
-      }));
+      const response = await axios.get('${API_ENDPOINT}/getchannels?p_auth=uteRb3wY');
+      return response.data.map(channel => {
+        return {
+		  lang: 'he',
+          name: channel.name,
+          site_id: channel.id
+        };
+      });
     } catch (error) {
       console.error('Error fetching channels:', error);
       return [];
-    }
-  },
-  async getAuthToken() {
-    try {
-      const url = 'https://www.yes.co.il/content/tvguide';
-      const response = await axios.get(url);
-      const textToSearch = ';Liferay.authToken=';
-      const mainPageHtml = response.data;
-      const idx = mainPageHtml.indexOf(textToSearch);
-      if (idx === -1) {
-        throw new Error('Auth token not found');
-      }
-      const val = mainPageHtml.substring(idx + textToSearch.length);
-      const authToken = val.split(';')[0].trim();
-      return authToken;
-    } catch (error) {
-      console.error('Error fetching auth token:', error);
-      return null;
     }
   }
 };
