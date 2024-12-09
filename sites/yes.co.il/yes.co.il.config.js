@@ -36,37 +36,59 @@ module.exports = {
 
     return shows;
   },
-  async channels() {
-    const authToken = await this.getAuthToken();
-    const url = `https://www.yes.co.il/o/yes/servletlinearsched/getchannels?p_auth=${authToken}`;
-    
-    try {
-        const response = await axios.get(url);
-        if (response.data && Array.isArray(response.data)) {
-            const channels = response.data.map(channel => ({
-                lang: 'he',
-                name: channel.channelID,
-                site_id: channel.channelID,
-                p_auth: authToken
-            }));
-            return channels;
-        } else {
-            console.error('Response data is not an array:', response.data);
-            return [];
-        }
-    } catch (error) {
-        console.error('Error fetching channels:', error);
-        return [];
-    }
-},
-  async getAuthToken() {
+  async function getAuthToken() {
+  try {
     const url = 'https://www.yes.co.il/content/tvguide';
     const response = await axios.get(url);
-    const textToSearch = ';Liferay.authToken =';
+    const textToSearch = ';Liferay.authToken=';
     const mainPageHtml = response.data;
     const idx = mainPageHtml.indexOf(textToSearch);
-    const val = mainPageHtml.substring(idx + textToSearch.length + 1, 30);
-    const authToken = val.split(';')[0].substring(0, val.length - 1);
+    if (idx === -1) {
+      throw new Error('Auth token not found');
+    }
+    const val = mainPageHtml.substring(idx + textToSearch.length);
+    const authToken = val.split(';')[0].trim();
     return authToken;
+  } catch (error) {
+    console.error('Error fetching auth token:', error);
+    return null;
   }
+}
+
+async function channels() {
+  const authToken = await getAuthToken();
+  if (!authToken) {
+    console.error('No auth token available');
+    return [];
+  }
+
+  const url = `https://www.yes.co.il/o/yes/servletlinearsched/getchannels?p_auth=${authToken}`;
+
+  try {
+    const response = await axios.get(url);
+
+    if (response.data && Array.isArray(response.data)) {
+      const channels = response.data.map(channel => {
+        const channelKey = methods.getChannelKey(channel.channelNumberStr);
+        channel.channelNumber = parseInt(channel.channelNumberStr);
+        channel.imageUrl = channel.imagePath;
+        channel.items = {};
+        return {
+          lang: 'he',
+          name: channel.channelName,
+          site_id: channel.channelID,
+          p_auth: authToken
+        };
+      });
+      return channels;
+    } else {
+      console.error('Response data is not an array:', response.data);
+      return [];
+    }
+  } catch (error) {
+    console.error('Error fetching channels:', error);
+    return [];
+  }
+}
+
 };
