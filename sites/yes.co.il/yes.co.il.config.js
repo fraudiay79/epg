@@ -19,19 +19,33 @@ module.exports = {
   url({ channel, date }) {
     return `https://www.yes.co.il/o/yes/servletlinearsched/getscheduale?startdate=${date.format('YYYYMMDD')}&p_auth=${channel.p_auth}`;
   },
-  parser: function ({ content, date, channel }) {
-    let programs = []
-    const data = JSON.parse(content)
-	if (!data || !Array.isArray(data)) return []
-    return data.map(item => ({
-        title: item.scheduleItemName,
-        description: item.scheduleItemSynopsis || 'No description available',
-        start: dayjs(item.startDate).utc().format(),
-        stop: dayjs(item.startDate).add(dayjs.duration(item.broadcastItemDuration)).utc().format()
-    }))
+  async function parser({ content }) {
+  const shows = [];
+  let data;
 
-    return programs
-  },
+  try {
+    if (!content || content.trim().length === 0) {
+      throw new Error('Empty response content');
+    }
+    data = JSON.parse(content);
+  } catch (error) {
+    console.error('Error parsing JSON:', error);
+    return shows; // Return empty shows array if parsing fails
+  }
+
+  data.forEach(program => {
+    const show = {
+      channel: program.channelID,
+      title: program.scheduleItemName,
+      description: program.scheduleItemSynopsis || 'No description available',
+      start: dayjs(program.startDate).utc().format(),
+      stop: dayjs(program.startDate).add(dayjs.duration(program.broadcastItemDuration)).utc().format()
+    };
+    shows.push(show);
+  });
+
+  return shows;
+},
   async channels() {
     const authToken = await this.getAuthToken();
     const url = `https://www.yes.co.il/o/yes/servletlinearsched/getchannels?p_auth=${authToken}`;
