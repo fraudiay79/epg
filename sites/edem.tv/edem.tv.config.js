@@ -9,12 +9,15 @@ dayjs.extend(customParseFormat)
 
 module.exports = {
   site: 'edem.tv',
-  cookie: 'cf_clearance=5kbZVJTTEx3XXnqHPSCDmfx.OYsDmwrz._plf8m0Gu0-1733763951-1.2.1.1-c3ruiaHnuLbnb8Mm2C7zhzi0sXtHpQgXRYzAncvSkKrVhH_V8rfyiplBWd7ehmyMLeDjc7as3eqaza1dC2XeODdmIf1CmXPOrlzY6AqF0B75HAHNFq1h0GI2GmlFvOrTd1z9kwYvD.v7TwruiAUfJqiwMPV8eRO7sE10kzMEIXV0bBRQRRjbMM39o1tRqFbUu.QMWZfMQ.NyjXMsQvQ61c6bxT5J2z5voqurCDX_4QXEMUBg.TjdH2Xh1VFz4WkOimJQJDhXCiyl.E2pETUGpyZouPtwX8CBt_dzD7nUBd02pmTF7P_nqYrO0rr4uun9lpP_rF9um18Jseii3sDkCbD.rS.yS1vzc_Uk9AJrUOH.UlX0TWqhQh6J4GOvLwm56CWKTeEfcJeDIYrH7xoXk4UgQdUlB30nZwGULDdqaXipr.HyYXG6Rfks4g_x4CHM',
   channels: 'edem.tv.channels.xml',
   days: 2,
   request: {
     cache: {
       ttl: 60 * 60 * 1000 // 1 hour
+    },
+    headers: {
+      'Cookie': 'cf_clearance=5kbZVJTTEx3XXnqHPSCDmfx.OYsDmwrz._plf8m0Gu0-1733763951-1.2.1.1-c3ruiaHnuLbnb8Mm2C7zhzi0sXtHpQgXRYzAncvSkKrVhH_V8rfyiplBWd7ehmyMLeDjc7as3eqaza1dC2XeODdmIf1CmXPOrlzY6AqF0B75HAHNFq1h0GI2GmlFvOrTd1z9kwYvD.v7TwruiAUfJqiwMPV8eRO7sE10kzMEIXV0bBRQRRjbMM39o1tRqFbUu.QMWZfMQ.NyjXMsQvQ61c6bxT5J2z5voqurCDX_4QXEMUBg.TjdH2Xh1VFz4WkOimJQJDhXCiyl.E2pETUGpyZouPtwX8CBt_dzD7nUBd02pmTF7P_nqYrO0rr4uun9lpP_rF9um18Jseii3sDkCbD.rS.yS1vzc_Uk9AJrUOH.UlX0TWqhQh6J4GOvLwm56CWKTeEfcJeDIYrH7xoXk4UgQdUlB30nZwGULDdqaXipr.HyYXG6Rfks4g_x4CHM',
+      'Accept-Encoding': 'gzip, deflate, br'
     }
   },
   url({ channel, date }) {
