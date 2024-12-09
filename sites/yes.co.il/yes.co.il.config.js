@@ -10,7 +10,7 @@ dayjs.extend(customParseFormat);
 
 module.exports = {
   site: 'yes.co.il',
-  days: 3,
+  days: 7, // maxdays=7
   request: {
     cache: {
       ttl: 60 * 60 * 1000 // 1 hour
@@ -19,7 +19,7 @@ module.exports = {
   url({ channel, date }) {
     return `https://www.yes.co.il/o/yes/servletlinearsched/getscheduale?startdate=${date.format('YYYYMMDD')}&p_auth=${channel.p_auth}`;
   },
-  parser: async function ({ content, date, channel }) {
+  async parser({ content, date, channel }) {
     let programs = [];
     let data;
 
@@ -60,7 +60,8 @@ module.exports = {
       return data.map(item => ({
         lang: 'he',
         site_id: item.channelID,
-        name: item.channelName
+        name: item.channelName,
+        p_auth: authToken
       }));
     } catch (error) {
       console.error('Error fetching channels:', error);
