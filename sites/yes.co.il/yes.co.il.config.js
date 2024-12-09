@@ -42,7 +42,7 @@ module.exports = {
     
     try {
         const response = await axios.get(url);
-        if (Array.isArray(response.data)) {
+        if (response.data && Array.isArray(response.data)) {
             const channels = response.data.map(channel => ({
                 lang: 'he',
                 name: channel.channelID,
@@ -51,7 +51,8 @@ module.exports = {
             }));
             return channels;
         } else {
-            throw new TypeError('Response data is not an array');
+            console.error('Response data is not an array:', response.data);
+            return [];
         }
     } catch (error) {
         console.error('Error fetching channels:', error);
