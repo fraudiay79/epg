@@ -9,7 +9,7 @@ dayjs.extend(customParseFormat)
 
 module.exports = {
   site: 'edem.tv',
-  channels: 'edem.tv.channels.xml'
+  channels: 'edem.tv.channels.xml',
   days: 2,
   request: {
     cache: {
