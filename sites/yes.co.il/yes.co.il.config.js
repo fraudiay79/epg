@@ -45,7 +45,7 @@ module.exports = {
 
     return programs;
   },
-  async channels({ authToken }) {
+  async channels() {
     const authToken = await this.getAuthToken();
     let data;
 
