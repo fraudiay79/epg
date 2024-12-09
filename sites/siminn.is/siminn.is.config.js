@@ -31,7 +31,6 @@ module.exports = {
     return data.map(item => ({
         title: item.title,
         description: item.description,
-        rating: parseRating(item),
         episode: item.episode ? {
          title: item.episode.title,
          description: item.episode.description,
