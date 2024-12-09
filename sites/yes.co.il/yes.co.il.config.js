@@ -36,7 +36,7 @@ module.exports = {
 
     return shows;
   },
-  async function getAuthToken() {
+  async getAuthToken() {
   try {
     const url = 'https://www.yes.co.il/content/tvguide';
     const response = await axios.get(url);
@@ -53,7 +53,7 @@ module.exports = {
     console.error('Error fetching auth token:', error);
     return null;
   }
-}
+},
 
 async function channels() {
   const authToken = await getAuthToken();
