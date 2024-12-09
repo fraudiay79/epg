@@ -17,7 +17,7 @@ module.exports = {
     }
   },
   url({ channel, date }) {
-    return `http://epg.drm-play.com/edem%2Fepg%2F${channel.site_id}.json`
+    return `http://epg.drm-play.com/edem/epg/${channel.site_id}.json`
   },
   parser: function ({ content }) {
     const data = JSON.parse(content)
