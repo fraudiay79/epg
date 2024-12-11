@@ -27,19 +27,19 @@ jobs:
           #npm run grab -- --channels=../sites/canalplus.com/canalplus.com_cm.channels.xml--maxConnections=20 --gzip --output=guides/propg.net.xml --days=2 --timeout=90000
           #npm run channels:parse -- --config=./sites/raspberrytv.net/raspberrytv.net.config.js --output=./sites/raspberrytv.net/raspberrytv.net.channels.xml
           #npm run channels:parse -- --config=./sites/tv.magenta.me/tv.magenta.me.config.js --output=./sites/tv.magenta.me/tv.magenta.me.channels.xml
-          #npm run grab -- --site=tv.magenta.mk --maxConnections=20 --gzip --output=guides/tv.magenta.mk.xml --days=2 --timeout=90000
+          npm run grab -- --site=tv.magenta.mk --maxConnections=20 --gzip --output=guides/tv.magenta.mk.xml --days=1 --timeout=90000
           #npm run grab -- --site=propg.net --maxConnections=20 --gzip --output=guides/propg.net.xml --days=2 --timeout=90000
           #npm run grab -- --site=hot.net.il --maxConnections=20 --gzip --output=guides/hot.net.il.xml --days=2 --timeout=90000
-          npm run grab -- --site=raspberrytv.net --maxConnections=20 --output=guides/raspberrytv.net.xml --days=1 --timeout=90000
+          #npm run grab -- --site=raspberrytv.net --maxConnections=20 --output=guides/raspberrytv.net.xml --days=1 --timeout=90000
    
     - name: Commit changes
       run: |
         git config --local user.email "your-email@example.com"
         git config --local user.name "Your Name"
         #git add -f sites/canalplus.com/canalplus.com_test.channels.xml
-        #git add -f guides/tv.magenta.mk.xml
+        git add -f guides/tv.magenta.mk.xml
         #git add -f guides/hot.net.il.xml
-        git add -f guides/raspberrytv.net.xml
+        #git add -f guides/raspberrytv.net.xml
         #git add -f sites/raspberrytv.net/raspberrytv.net.channels.xml
         git commit -m "Update xml"
         git push
