@@ -10,7 +10,7 @@ dayjs.extend(customParseFormat)
 module.exports = {
   site: 'edem.tv',
   channels: 'edem.tv.channels.xml',
-  days: 2,
+  days: 1,
   request: {
     cache: {
       ttl: 60 * 60 * 1000 // 1 hour
@@ -22,7 +22,7 @@ module.exports = {
     }
   },
   url({ channel, date }) {
-    return `http://epg.drm-play.com/edem/epg/${channel.site_id}.json`
+    return `http://epg.drm-play.com/cbilling%2Fepg%2F${channel.site_id}.json`
   },
   parser: function ({ content }) {
     const data = JSON.parse(content)
@@ -30,10 +30,10 @@ module.exports = {
 
   data.forEach(item => {
     programs.push({
-      name: item.epg_data.epg,
-      description: item.epg_data.desc || 'No description available',
-      start: dayjs.unix(item.epg_data.start),
-      stop: dayjs.unix(item.epg_data.stop)
+      name: item.epg_data.name,
+      description: item.epg_data.descr || 'No description available',
+      start: dayjs.unix(item.epg_data.time),
+      stop: dayjs.unix(item.epg_data.time_to)
     })
   })
 
