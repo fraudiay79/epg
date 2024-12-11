@@ -57,11 +57,6 @@ module.exports = {
       programs.push({
         title: item.description,
         description: parseDescription(detail),
-        date: parseDate(item),
-        category: parseCategory(item),
-        image: detail.poster_image_url,
-        season: parseSeason(item),
-        episode: parseEpisode(item),
         start: parseStart(item),
         stop: parseStop(item)
       })
